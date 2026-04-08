@@ -1,0 +1,683 @@
+\documentclass{beamer}
+
+\usepackage{beamerthemesplit}
+
+\title[Finite generation of pluricanonical rings]{Finite generation of pluricanonical rings}
+\author{Christopher Hacon}
+\institute{University of Utah}
+\date{January, 2007}
+
+\usepackage{amsmath,amssymb,amsthm,amscd,epic,eepic}
+%\usepackage{amsmath,amssymb,amstext,amsthm,amscd,epic,eepic}
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{pro}{Proposition}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{con}{Conjecture}
+\newtheorem*{que}{Question}
+\newtheorem*{cla}{Claim}
+\theoremstyle{definition}
+\newtheorem*{defi}{Definition}
+\newtheorem*{ack}{Acknowledgements}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{rems}{Remarks}
+\newtheorem*{ex}{Example}
+\newtheorem*{exs}{Examples}
+
+% Varie
+\def\rup#1.{\ulcorner#1\urcorner}
+\def\R{\mathbb {R}}
+\def\Q{\mathbb {Q}}
+\def\OO{\mathcal {O}}
+\def\bs{\boldsymbol}
+\def\ds{\displaystyle}
+\def\pf{{\em Proof.}\ \,}
+\def\ipf{{\em Idea of the Proof.}\ \,}
+\def\br{\buildrel}
+\def\ov{\overline}
+\def\su{\subset}
+\def\suq{\subseteq}
+\def\({\left(}
+\def\){\right)}
+\def\un{\underline}
+
+% Frecce
+\def\inc{\hookrightarrow}
+\def\fun{\rightarrow}
+\def\lfun{{\longrightarrow}}
+\def\funn{\twoheadrightarrow}
+
+% Greek
+\def\om{\omega}
+\def\Th{\Theta}
+
+% \mathbb
+\def\bA{{\mathbb{A}}}
+\def\bC{{\mathbb{C}}}
+\def\bN{{\mathbb{N}}}
+\def\bP{{\mathbb{P}}}
+\def\bQ{{\mathbb{Q}}}
+\def\bR{{\mathbb{R}}}
+\def\bZ{{\mathbb{Z}}}
+\def\Mob{{\operatorname{Mov}}}
+% \mathcal
+\def\cA{{\mathcal A}}
+\def\cB{{\mathcal B}}
+\def\BL{{\mathcal BL}}
+\def\cC{{\mathcal C}}
+\def\cD{{\mathcal D}}
+\def\cE{{\mathcal E}}
+\def\cExt{{\mathcal E}xt}
+\def\cF{{\mathcal F}}
+\def\cG{{\mathcal G}}
+\def\cH{{\mathcal H}}
+\def\cHom{{\mathcal H}om}
+\def\cI{{\mathcal I}}
+\def\cL{{\mathcal L}}
+\def\cM{{\mathcal M}}
+\def\cN{{\mathcal N}}
+\def\cO{{\mathcal O}}
+\def\cP{{\mathcal P}}
+\def\cT{{\mathcal T}}
+\def\cTor{{\mathcal T}or}
+\def\cU{{\mathcal U}}
+\def\cZ{{\mathcal Z}}
+
+% \widetilde
+\def\wt{\widetilde}
+\def\tC{{\widetilde{C}}}
+\def\tE{{\widetilde{E}}}
+\def\tH{{\widetilde{H}}}
+\def\tX{{\widetilde{X}}}
+\def\tY{{\widetilde{Y}}}
+\def\tp{{\widetilde{p}}}
+\def\tg{{\widetilde{g}}}
+\def\tTh{{\widetilde{\Theta}}}
+\def\tcA{{\widetilde{\cA}}}
+\def\tcM{{\widetilde{\cM}}}
+\def\tcU{{\widetilde{\cU}}}
+\def\tPic{{\widetilde{\textrm{Pic}}}}
+
+% \mathfrak
+\def\mP{\mathfrak{P}}
+
+% Math Text
+\def\ch{{\textrm{ch}}}
+\def\codim{{\textrm{codim\,}}}
+\def\coker{{\textrm{coker\,}}}
+\def\ecoker{{\emph{coker}\,}}
+\def\Ext{{\textrm{Ext\,}}}
+\def\eExt{{\emph{Ext}\,}}
+\def\Gr{{\textrm{Gr}}}
+\def\Hilb{{\textrm{Hilb\,}}}
+\def\eHilb{{\emph{Hilb\,}}}
+\def\Hom{{\textrm{Hom\,}}}
+\def\eHom{{\emph{Hom}\,}}
+\def\id{{\textrm{id}}}
+\def\Im{{\textrm{Im\,}}}
+\def\im{{\textrm{im\,}}}
+\def\NS{{\textrm{NS}}}
+\def\Pic{{\textrm{Pic}}}
+\def\ePic{{\emph{Pic}}}
+\def\etPic{{\widetilde{\emph{Pic}}}}
+\def\Re{{\textrm{Re\,}}}
+\def\rk{{\textrm{\,rk}}}
+\def\Span{{\textrm{Span\,}}}
+\def\Spec{{\textrm{Spec\,}}}
+\def\Stab{{\textrm{Stab}}}
+\def\eStab{{\emph{Stab}}}
+\def\td{{\textrm{td}}}
+\def\Tor{{\textrm{Tor\,}}}
+\def\eTor{{\emph{Tor\,}}}
+\def\Tors{{\textrm{Tors\,}}}
+\def\eTors{{\emph{Tors}\,}}
+
+\mode<presentation>
+{
+  \setbeamertemplate{background canvas}[vertical shading][bottom=red!10,top=blue!10]
+
+  \usetheme{Warsaw}
+  \usefonttheme[onlysmall]{structurebold}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Outline of the talk}
+  \tableofcontents[pausesections, hideallsubsections]
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline of the talk}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
+
+\section{Introduction}
+
+%\subsection{The minimal model program for 3-folds}
+
+\subsection{The main Theorem}
+\begin{frame}
+  \frametitle{Notation}
+\begin{itemize}
+\item I am interested in the birational classification of complex projective
+varieties.
+\pause
+\item $X\subset \mathbb{P}_{\mathbb{C}}^N$ is defined by homogeneous
+polynomials $P_1,\cdots , P_t\in \mathbb{C}[x_0,\cdots ,x_N]$.
+\pause
+\item $X,X'$ are birational if they have isomorphic open subsets $U\cong U'$.
+\pause
+\item If $X$ is smooth of dimension $n$, then $T_X$ denotes the {\bf tangent bundle} of $X$ and $\omega _X=\Lambda ^nT_X^\vee$ is the {\bf canonical line bundle} of $X$.
+\pause
+\item $K_X$ denotes (a choice of) the canonical divisor i.e. a formal linear combination of codimension $1$ subvarieties of $X$ given by the zeroes of
+a section $s\ne 0$ of $\omega _X$.
+\pause
+\item We would like to use $\omega _X$ to understand the geometry of $X$.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Birational invariants}
+\begin{itemize}
+\item If $X$ and $X'$ are birational, then $\forall m\geq 0$
+$$H^0(X,\omega _{X}^{\otimes m})\cong H^0(X',\omega _{X'}^{\otimes m}).$$ 
+\pause
+\item The numbers $P_m(X):=h^0(\omega _{X}^{\otimes m})$ are the {\bf plurigenera} of $X$.
+\pause
+\item The {\bf pluricanonical ring} of $X$ is given by $$\mathfrak{R}(K_X)=\bigoplus _{m\in \mathbb {N}}H^0(X,\omega _{X}^{\otimes m}).$$ 
+\pause
+\item The {\bf Kodaira dimension} of $X$ is $$\kappa (X):={\rm tr.deg.}_{\mathbb {C}} \mathfrak{R}(K_X) -1.$$
+\pause
+\item If $\kappa (X)={\rm dim}X$, we say that $X$ is of {\bf general type}.
+\pause
+\item One would like to understand the structure of this ring and to use its features to classify complex projective varieties.
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+  \frametitle{Finite generation}
+Today I would like to discuss a recent result of
+Birkar-Cascini-Hacon-M\textsuperscript{c}Kernan and Siu:
+\begin{theorem} Let $X$ be a smooth projective variety, then $  \mathfrak{R}(K_X)$ is finitely generated.\end{theorem}
+\pause
+The two proofs are independent. Our proof is algebraic and uses the ideas of the MMP (minimal model program). Siu's proof is analytic and requires $X$ to be of general type.
+\end{frame}
+\subsection{Curves}
+
+\begin{frame}
+  \frametitle{Curves}
+\begin{itemize}
+\item Any two birational curves are isomorphic.
+\pause
+\item Curves are topologically determined by their genus. 
+\pause
+\item $g=0$: ${\mathbb P} ^1$ and $\mathfrak{R}(K)\cong \mathbb {C}$
+\pause
+\item $g=1$: There is a $1$-dimensional family of elliptic curves; $K=0$ so 
+$\mathfrak{R}(K)\cong \mathbb {C}[t]$.
+\pause
+\item $g\geq 2$: Curves of general type. 
+
+These form a $3g-3$-dimensional family.  
+
+$K$ is ample and $|3K|$ determines an embedding.
+
+\pause
+\item $\mathfrak{R}(K)$ is then finitely generated (by Serre-Vanishing).
+\end{itemize}
+
+\end{frame}
+
+\subsection{Surfaces}
+
+\begin{frame}
+  \frametitle{Surfaces of general type}
+\begin{itemize}
+\item If $S$ is a surface of general type and $K_S$ is nef (i.e. $K_S\cdot C\geq 0$ for all curves $C\subset S$), then we say that $S$ is a minimal surface.
+In this case $K_S$ is semiample.
+\pause
+\item Therefore, there is a birational morphism $\nu :S\to \bar{S}\subset \mathbb{P}^N$ to a surface (with rational double points) so that $\omega _X^{\otimes m}=\nu ^* \OO _{\bar{S}}(1)$.
+\pause
+\item It is known that $\mathfrak{R}(K_S)$ is finitely generated if and only if $$\mathfrak{R}(K_S)^{(m)}=\bigoplus _{i\in \mathbb N}H^0(\OO _S(imK_S))$$
+\vskip-.2cm is finitely generated (for any $m>0$).
+\pause
+\item By Serre vanishing $\mathfrak{R}(K_S)^{(m)}\cong \mathfrak{R} (\OO _{\bar{S}}(1))$ is finitely generated.
+\pause
+\item Note that we may take $m=5$, $\nu$ contracts rational curves $E$ with $E\cdot K_S=0$ and $\bar{S}={\rm Proj} \mathfrak{R}(K_S)$. 
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Surfaces of general type II}
+
+\begin{itemize}\item If $S$ is of general type, but $K_S$ is not nef, then there is a rational curve $E$ such that $E^2=E\cdot K_S=-1$. 
+\pause
+\item We may contract $E$, i.e. there is a morphism of smooth surfaces
+$\nu_1:S\to S_1$ which is an isomorphism on $S-E$ and such that $E$ maps to a point. 
+\pause
+\item Since $K_S=\nu_1^*K_{S_1}+E$, we have $\mathfrak{R}(K_S)\cong
+\mathfrak{R}(K_{S_1})$.
+\pause
+\item If $K_{S_1}$ is not nef, we may repeat the procedure and we obtain a sequence of morphisms $S\to S_1\to S_2 \to \cdots$.
+\pause
+\item It is easy to see that $0<\rho (S_{i+1})=\rho (S_{i})-1$
+and so this sequence of morphism is finite, i.e. there is an integer $t>0$ such that $K_{S_t}$ is nef i.e. $S_t$ is a minimal model of $S$.
+\pause
+\item Then $\mathfrak{R}(K_{S_t})$ is finitely generated and so is 
+$\mathfrak{R}(K_S)$.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Surfaces with $\kappa \leq 2$}
+
+\begin{itemize}
+\item If $S$ is not of general type, then $\kappa (S)\in \{-1,0,1\}$.
+\pause
+\item If $\kappa (S)=-1$, then $\mathfrak{R}(K_S)\cong \mathbb{C}$.
+\pause
+\item If $\kappa (S)=0$, then $\mathfrak{R}(K_S)^{(m)}\cong \mathbb{C}[t]$
+for some $m>0$. (For surfaces $m=12$.)
+\pause
+\item If $\kappa (S)=1$, then we first contract all $-1$ curves to obtain
+a morphism $\nu :S\to S'$ such that $K_{S'}$ is nef (i.e. $S'$ is minimal).
+Then $K_{S'}$ is semiample and it gives a morphism $f:S'\to C$
+whose general fiber is an elliptic curve.
+\pause
+\item We have that $mK_{S'}=f^*H$ where $m>0$ is an integer and
+$H$ is an ample divisor on $C$.
+\pause
+\item Therefore, $ \mathfrak{R}(K_S)^{(m)}\cong \mathfrak{R}(K_{S'})^{(m)}
+\cong \mathfrak{R}( H)$ is finitely generated.
+\end{itemize}
+\end{frame}
+
+\section{Higher dimensional varieties}
+\subsection{Reduction to log pairs of general type}
+\begin{frame}
+ \frametitle{Log pairs}
+
+\begin{itemize}
+\item One would like to generalize the above approach to 
+higher dimensional varieties.
+\pause
+\item In order to achieve this one has to allow varieties with mild singularities and the minimal models will not be unique.
+\pause
+\item We would also like to have more flexibility and so we work
+with log-pairs.
+\pause
+\item The proof will in fact proceed by induction on the dimension.
+We will need to relate $K_X$ to it's restriction to a divisor $S$ (which typically belongs to $S\in |mK_X|$).
+\pause
+\item This is achieved by the adjunction formula which has the form
+$(K_X+S)|_S=K_S+\Delta _S$ for some $\Q$-divisor $\Delta _S$. 
+\end{itemize}
+\end{frame}
+\begin{frame}
+ \frametitle{KLT Log Pairs}
+\begin{itemize}
+\item We consider log pairs $(X,\Delta )$ where $X$ is a normal $\Q$-factorial variety and $\Delta$ is a divisor with positive real coefficients.
+\pause
+\item Then $K_X+\Delta$ is $\mathbb{R}$-Cartier and so $(K_X+\Delta )\cdot C$ and
+$f^*(K_X+\Delta )$ still make sense.
+\pause
+\item Consider a map $f:X'\to X$ such that $X'$ is smooth and $f^* \Delta +{\rm Exc}(f)$ has simple normal crossings support.
+Write $$K_{X'}+\Delta '=f^*(K_X+\Delta ).$$
+\pause
+\item $(X,\Delta )$ is KLT if each coefficient of $\Delta '$ is less than $1$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+ \frametitle{A Theorem of Fujino-Mori}
+Mori and Fujino have shown that:
+\begin{theorem} Let $(X,\Delta )$ be any KLT $\Q$-factorial pair with 
+$\Delta \in {\rm Div }_\Q (X)$. Then there exists a {\bf big} KLT $\Q$-factorial 
+pair $(Y,\Gamma )$ with $\Gamma \in {\rm Div }_\Q (Y)$ such that
+$$\mathfrak{R}(K_X+\Delta )^{(m)}\cong \mathfrak{R}(K_Y+\Gamma )^{(m)}$$
+for any sufficiently divisible integer $m>0$.
+\end{theorem}
+\pause
+Recall that $K_Y+\Gamma$ is big if ${\rm tr.deg.}_{\mathbb C}\mathfrak{R}(K_Y+\Gamma )^{(m)}=\dim Y$ or equivalently if $K_Y+\Gamma\sim _\Q A+B$ with $A$ ample and $B\geq 0$.
+
+\pause
+It follows that to show the main theorem (i.e. that $\mathfrak{R}(K_X)$ 
+is finitely generated), it suffices to prove the corresponding statement 
+for big KLT log pairs.
+\end{frame}
+\begin{frame}
+\subsection{The MMP with scaling}
+\frametitle{The MMP with scaling}
+\begin{itemize}\item From now on we will consider 
+$\Q$-factorial KLT pairs $(X,\Delta )$ 
+such that $\Delta$ is big. We allow $\Delta \in {\rm Div }_{\mathbb {R}}(X)$.
+\pause
+\item Note that if $K_X+\Delta$ is big, then there is an effective divisor
+$D\sim _{\mathbb {R}}K_X+\Delta$ and so for all $0<\epsilon \ll 1$
+the pair $(X,\Delta+\epsilon D)$ is KLT, $\Delta+\epsilon D$ is big  
+and $K_X+\Delta+\epsilon D\sim _{\mathbb {R}}(1+\epsilon)(K_X+\Delta)$.
+\pause
+\item We would like to find a finite sequence of KLT 
+log pairs $(X_i,\Delta _i)$ with $\Delta _i$ big 
+and birational maps
+$X\dasharrow X_{1}\dasharrow X_{2}$ such that $$\mathfrak {R}(K_{X_i}+\Delta _i
+)\cong \mathfrak {R}(K_{X_{i+1}}+\Delta _{i+1}),$$
+and $K_{X_t}+\Delta _t$ is nef.
+\pause
+\item Then by the base point free theorem, $K_{X_t}+\Delta _t$ is
+semiample so that $\mathfrak {R}(K_{X_t}+\Delta _t)$ is finitely generated (if $\Delta \in {\rm Div}_\Q$).
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+ \frametitle{The MMP with scaling II}
+\begin{itemize}
+\item Assume that $A$ is ample and $K_X+\Delta+A$ is nef. 
+\pause
+\item Let $\lambda ={\rm inf}\{t\geq 0|K_X+\Delta +tA\}$ is nef.
+\pause
+\item If $\lambda =0$ we STOP ($K_X+\Delta$ is nef). 
+\pause
+\item Otherwise, by the cone theorem,
+there is an extremal ray $R$ such that $(K_X+\Delta +\lambda A)\cdot R=0$ and $(K_X+\Delta +tA)\cdot R<0$
+for $0\leq t<\lambda$.
+\pause
+\item Let ${\rm cont}_R:X\to Z$ be the corresponding morphism which contracts 
+a curve $C$ iff $[C]=R$.
+\pause
+\item If ${\rm cont}_R$ is not birational, we STOP (we
+have a Mori-Fano fiber space and $\mathfrak {R}(K_X+\Delta)\cong \mathbb{C}$).
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{The MMP with scaling III}
+\begin{itemize}
+\item If ${\rm cont}_R$ is birational and divisorial (i.e. it contracts a divisor), then we replace $X$ by the image of the corresponding contraction and we may continue this procedure.
+\pause
+\item If ${\rm cont}_R$ is birational and small, (i.e. ${\rm Exc}({\rm cont}_R)$ has codimension $\geq 2$) then the image of the corresponding contraction
+is not KLT. Therefore, we can NOT replace $X$ by the corresponding contraction!
+\pause
+\item Instead we replace $(X,\Delta)$ by the corresponding flip 
+$\phi :X\dasharrow
+X^+$ (assuming it exists).
+\pause
+\item Let $\Delta ^+=\phi _* \Delta$. The flip is a codimension $2$ surgery 
+which replaces $K_X+\Delta$ negative curves by
+ $K_{X^+}+\Delta^+$ positive curves.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Flips}
+\begin{itemize}
+\item More precisely, $f={\rm cont} _R:X\to Z$ is a flipping contraction i.e. a small birational morphism with $\rho (X/Z)=1$ and $-(K_X+\Delta)$ ample over $Z$.
+\pause
+\item The flip $f^+:X^+\to Z$ (if it exists) is a small birational morphism such that $\rho (X^+/Z)=1$ and $K_{X^+}+\Delta  ^+$ is  ample over $Z$.
+\pause
+\item The flip $f^+:X^+\to Z$ (if it exists) is given by
+$$X^+={\rm Proj}_Z \bigoplus_{m\in \mathbb {N}} f_*\OO _X( [m(K_X+\Delta)]).$$
+\pause
+\item Note that after peturbing $\Delta$, we may assume that $\Delta \in{\rm Div }_\Q (X)$.
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+ \frametitle{Flips II}
+\begin{itemize}
+\item The problem of existence of flips is local over $Z$ and hence we may
+assume that $Z$ is affine. It suffices then to show that
+$\mathfrak{R}(K_X+\Delta)$ is finitely generated.
+So this is a local version of the original problem.
+\pause
+\item To run this MMP with scaling, we must therefore show that such flips
+exist and terminate (i.e. there is no infinite sequence of such flips).
+\pause
+\item Note that after each divisorial contraction, the Picard number drops by $1$ and so there are only finitely many divisorial contractions.
+\end{itemize}
+
+\end{frame}
+
+\section{Towards the minimal model program in higher dimensions}
+\subsection{Recent results}
+
+\begin{frame}
+ \frametitle{Existence and termination of flips}
+\begin{thm}[Birkar-Cascini-Hacon-M$^{\rm c}$Kernan] Let $(X,\Delta)$ be a KLT log pair and $f:X\to Z$ a flipping contraction, then the flip $f^+:X^+\to Z$ of $f$ exists.
+
+If moreover $\Delta $ is big, then any sequence of flips for the $K_X+\Delta$ MMP with scaling must terminate.\end{thm}
+\pause
+\begin{cor} Let $(X,\Delta )$ be a KLT pair with $K_X+\Delta$-pseudo-effective
+and $\Delta$ big, then $K_X+\Delta$ has a minimal model. (In particular flips exist.)
+\end{cor}
+\pause
+$K_X+\Delta$-pseudo-effective means that given any ample $\mathbb{Q}$-divisor $H$, $K_X+\Delta+H$ is big (i.e. $\kappa (K_X+\Delta+H)$ $=\dim X$).
+This is a necessary condition.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Finite Generation}
+\begin{cor} [Birkar-Cascini-Hacon-M$^{\rm c}$Kernan, Siu]
+Let $X$ be a smooth projective variety, then
+$\mathfrak{R}(K_X)$ is finitely generated.
+\end{cor}
+\begin{itemize}\pause
+\item Proof: Assume that $X$ is of general type.
+We may find $\Delta \sim \epsilon K_X$ with $0<\epsilon \ll 1$.
+A minimal model for $K_X+\Delta$ is then a minimal model for $K_X$.
+The result then follows from the base point free theorem.
+\pause
+\item As mentioned above, the general case is a consequence of a result of Fujino and Mori.
+\pause
+\item Siu's proof relies on analytic techniques.
+\end{itemize}
+\end{frame}
+\subsection{The structure of the proof}
+\begin{frame}
+\frametitle{The structure of the proof}
+We proceed by induction on $n=\dim X$. We show that for an $n$-dimensional KLT pair $(X,\Delta)$:
+
+\pause
+{\bf Claim 1.} Flips exist.
+
+{\pause
+\bf Claim 2.} If $K_X+\Delta \sim _{\mathbb{R}}D\geq 0$ and $\Delta$ is big, then
+$(X,\Delta )$ has a minimal model.
+
+\pause
+{\bf Claim 3.} The set of minimal models for KLT pairs with $A\leq \Delta
+\leq \Delta _0$ where $A$ is ample and $(X,\Delta _0)$ is KLT, is finite.
+
+\pause
+{\bf Claim 4.} If $\Delta $ is big and $K_X+\Delta$ is pseudo-effective, then there is a $\Q$-divisor $D$ such that
+$K_X+\Delta \sim _{\mathbb {R}}D\geq 0$.
+
+\pause
+All statements should be relative over a base.
+
+\end{frame}
+\begin{frame}
+\frametitle{The structure of the proof II}
+\begin{itemize}
+\item Roughly speaking, the inductive structure of the proof is:
+$$ (1-4)_{n-1}\Rightarrow 1_n\Rightarrow 2_n\Rightarrow 3_n \Rightarrow 4_n.$$
+\pause
+\item Note that that $(1-4)_{n-1}\Rightarrow 1_n$ was obtained by
+Hacon M$^{\rm c}$Kernan in 2005 using ideas of Shokurov and 
+an extension result base on work of Siu, Kawamata and Tsuji.
+
+\pause
+\item The remaining implications heavily use the ideas of the MMP established by
+Kawamata, Koll\'ar, Mori, Reid, Shokurov and others.
+\end{itemize}
+
+
+\end{frame}
+
+\subsection{Existence of Flips}
+
+\begin{frame}
+\frametitle{Reduction to PL Flips}
+\begin{itemize}
+\item Shokurov has shown that to construct flips it suffices to construct PL-flips.
+\pause
+\item That is, we assume that $\Delta$ has a component $S$ of multiplicity $1$, $-S$ is relatively ample and $K_X+\Delta$ is ``almost KLT''.
+\pause
+\item By adjunction $(K_X+\Delta )|_S=K_S+\Delta _S$ and $(S,\Delta _S)$ is KLT. 
+\pause
+\item As we have remarked above, the existence of flips is equivalent to showing that $\mathfrak {R}=\mathfrak {R}(K_X+\Delta )$
+is finitely generated. (Here we assume $Z$ is affine.)
+\pause
+\item This is equivalent to showing that the algebra
+$\mathfrak {R}_S$ given by the image of the restriction map
+$$\bigoplus _{m\in \mathbb{N}}H^0(\OO _X(m(K_X+\Delta )))\to 
+\bigoplus _{m\in \mathbb{N}}H^0(\OO _S(m(K_S+\Delta _S)))$$
+is finitely generated.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Existence of flips}
+\begin{itemize}
+\item If $\mathfrak {R}_S=\oplus _{m\in \mathbb{N}}H^0(\OO _S(m(K_S+\Delta _S)))$ we would be done by induction on the dimension.
+\pause
+\item This is too much to hope for.
+\pause
+\item Instead, we show that $\mathfrak {R}_S$ has very special properties.
+\pause
+\item Roughly speaking we show that there exists a divisor $0\leq \Theta \leq \Delta _S$ on $S$ such that
+$$\mathfrak {R}_S=\bigoplus _{m\in \mathbb{N}}H^0(\OO _S(m(K_S+\Theta))).$$
+\pause
+\item This is proved using some extension theorems that were inspired by work of Siu, Kawamata and Tsuji.
+\pause
+\item These extension theorems determine/define $\Theta$.
+\end{itemize}
+\end{frame}
+\subsection{Existence of minimal models}
+
+\begin{frame}
+\frametitle{Termination of MMP with scaling}
+\begin{itemize}
+\item Since we are unable to show that an arbitrary sequence of flips 
+must terminate, we run a MMP with scaling.
+\pause
+\item The idea is that if $A$ is sufficiently ample, then $K_X+\Delta +A$ is ample and so it is a minimal model. We then consider $K_X+\Delta +tA$ and let $t$ go to $0$.
+\pause
+\item Proceeding this way we get a sequence of pairs $(X_i,\Delta _i+\lambda _i A_i)$ such that $K_{X_i}+\Delta _i+\lambda _i A_i$ is nef and trivial on some $K_{X_i}+\Delta _i$ extremal ray. We then flip/contract.
+\pause
+\item Each $(X_i,\Delta _i+\lambda _i A_i)$ is a minimal model for $(X,\Delta +\lambda _iA)$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Termination of MMP with scaling II}
+\begin{itemize}
+\item If we could assume Claim $3_n$, we would be done. 
+(As $\Delta $ is big, we may assume that $A'\leq \Delta\leq \Delta +tA$ for some ample divisor $A'$ and we let  $\Delta_0=
+\Delta +A$ .)
+\pause
+\item Since we can only assume $3_{n-1}$, we replace $(X,\Delta)$ by
+an appropriate DLT pair $(X',\Delta ')$ and we run a MMP with scaling
+such that all flips/contractions are contained in $[\Delta ']$.
+
+\pause
+\item This step is similar to Shokurov's reduction to PL-flips.
+\end{itemize}
+\end{frame}
+\subsection{Finiteness of models}
+\begin{frame}
+\frametitle{Finiteness of models}
+\begin{thm} Assume that $(X,\Delta _0)$ is KLT, $A$ is an ample $\mathbb {Q}$-divisor and $\Delta =\sum _{i=1}^r
+\delta _i \Delta _i$. Let
+$\mathcal{C}\subset [0,1]^r$ be a rational polytope such that
+for any $(\delta _1,\cdots ,\delta _r)\in \mathcal{C}$, the pair
+$(X,\sum _{i=1}^r
+\delta _i \Delta _i+A)$ is KLT. 
+
+Then the set of isomorphism classes $$\{Y|Y\ {\rm is\ a\ min.\ model\
+for \ }(X,\Delta +A);\ 
+(\delta _1,\cdots ,\delta _r)\in \mathcal{C}\}$$
+is finite.\end{thm}
+\pause
+The proof is based on ideas of Shokurov (1996). It requires a compactness argument
+and so it is necessary to work with $\mathbb{R}$-divisors.
+\end{frame}
+\begin{frame}
+\frametitle{Finiteness of models II}
+\begin{itemize} 
+\item We pick $\Delta \in \mathcal{C}$ and work in a sufficiently small neighborhood $U$ of $\Delta$.
+\pause
+\item After running a MMP with scaling, we may assume that $K_X+\Delta$ is nef.\pause
+\item By the base-point free theorem, there is a morphism 
+$f:X\to Z$ such that $K_X+\Delta \sim _{\mathbb R}f^*H$.
+\pause
+\item Working over $Z$, we may assume that $K_X+\Delta \sim _{\mathbb R} 0$.
+\pause
+\item Therefore $\mathcal{C}\cap U$ is a cone over $\Delta$ and we are 
+done by induction on the dimension of the subspace of ${\rm Div }_{\mathbb {R}}(X)$ spanned by the components of $\Delta$.
+\end{itemize}
+
+\end{frame}
+
+\subsection{Non-vanishing}
+\begin{frame}
+\frametitle{Non-vanishing}
+\begin{itemize} 
+\item We must show that if $\Delta$ is big and $K_X+\Delta$ is 
+pseudo-effective, then $K_X+\Delta \sim _{\mathbb {R}}D\geq 0$.
+\pause
+\item If $h^0(\OO _X(m(K_X+\Delta)+A))$ is bounded (for $A$ ample),
+then the result follows from work of Nakayama.
+\pause
+\item If $h^0(\OO _X(m(K_X+\Delta)+A))$ is un-bounded, then we can produce a
+log canonical center not contained in the stable base locus of
+$K_X+\Delta+\epsilon A$ for $0<\epsilon \ll 1$.
+\pause
+\item So we study a log smooth PLT pair $(X',\Delta ')$ where $S=[\Delta ']$
+is irreducible.
+\pause
+\item Then $K_S+(\Delta '-S)|_S$ is pseudo-effective, $(\Delta '-S)|_S$ is 
+big and so $h^0(\OO _S(m(K_S+(\Delta '-S)|_S)))>0$ for some $m>0$.
+\pause
+\item Using Kawamata-Viehweg vanishing, we can lift this section to $m(K_X+\Delta)$.
+\end{itemize}
+
+\end{frame}
+\subsection{Open problems}
+\begin{frame}
+\frametitle{Open problems}
+\begin{itemize}
+\item Abundance: If $K_X+\Delta$ is nef and KLT show that it is semiample.
+(When $\Delta$ is big, this follows from the Base Point Free Theorem.
+In dim. 2, it follows from the classification. It also holds in dim. 3)
+\pause
+\item Existence of Minimal models for Log Canonical pairs (should be equivalent to Abundance).
+\pause
+\item Termination of flips (would follow from the Borisov-Alexeev-Borisov
+conjecture).
+\pause
+\item Characteristic $p$ (need resolution of singularities; there is no Kawamata-Viehweg vanishing Thm, but .... ).
+\end{itemize}
+\end{frame}
+
+\end{document}

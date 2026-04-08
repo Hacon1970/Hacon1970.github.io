@@ -1,0 +1,21 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 6}
+a) Define finite maps of affine varieties. 
+
+A dominant regular map of affine varieties $f:X\to Y$ is finite if $k[X]$ is a finitely generated module over $f^*k[Y]\subset k[X]$.
+
+b) Show that all fibers of any such map have finite cardinality and 
+
+Assume $X\subset \mathbb A ^n$ and let $x_i\in k[X]$ be the images of the coordinate functions on $\mathbb A ^n$. 
+As $k[X]$ is a finitely generated module over $f^*k[Y]\subset k[X]$, there exists a monic polynomial $P_i(z)=z^n+a_1z^{n-1}+\ldots +a_{n-1}z+a_n\in k[Y][z]$ such that 
+$P_i(x_i)=0$. For any $\bar x\in X$ and $\bar y=f(\bar x)\in Y$, the coordinate $\bar x _i$ is a solution of $z^n+a_1(\bar y)z^{n-1}+\ldots +a_{n-1}(\bar y)z+a_n(\bar y)=0$. This is a polynomial of degree $n$ in $k[z]$, and hence has at most $n$ solutions. Thus for any $\bar y=\in Y$, the set $f^{-1}(\bar y)$ is finite.
+
+c) show by example that the converse does not hold.
+
+Let $f:\mathbb A ^1\setminus 0\to \mathbb A ^1$ be the dominant map corresponding to the inclusion $k[x]\to k[x,x^{-1}]$. It is easy to see that $x^{-1}$ does not satisfy a {\bf monic} polynomial with coefficients in $k[x]$ and hence 
+$f$ is not finite.
+
+\end{document}
+\end

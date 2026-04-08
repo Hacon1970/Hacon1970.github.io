@@ -1,0 +1,11 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 4}
+
+ Let $X\subset \mathbb A ^n$ be an irreducible closed subset. Show that if 
+$\phi \in k(X)$ is regular at all $x\in X$, then $\phi \in k[X]$.
+
+{\bf Proof.} For all $x\in X$ we can write $\phi =f_x/g_x$ where $f_x,g_x\in k[X]$ and $g_x\ne 0$. Let $J=(g_x|x\in X)\subset k[X]$. As $k[X]$ is Noetherian, $J=(g_{x_1},\ldots ,g_{x_r} )$ is finitely generated. Note that $V(J)=\emptyset$ (as for any $x\in X$, $g_x\in J$ and $g_x(x)\ne 0$). Thus $J=(1)$ so that $1=\sum _{i=1}^rh_ig_{x_i}$. But then $$\phi= \sum  _{i=1}^rh_ig_{x_i}\phi= \sum  _{i=1}^rh_ig_{x_i}f_{x_i}/g_{x_i}= \sum  _{i=1}^rh_if_{x_i}\in k[X].$$
+\end{document}
+\end

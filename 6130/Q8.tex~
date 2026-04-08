@@ -1,0 +1,9 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 8}
+ Let  $x\in X$ be a point on an irreducible affine variety. Define $\Theta 
+_{x,X}$ and show that $\Theta _{x,X}\cong (\frak m _x/\frak m_x ^2)^\vee$.
+
+\end{document}
+\end

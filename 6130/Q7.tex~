@@ -1,0 +1,13 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 7}
+\begin{enumerate}
+\item  Let $X$ be a quasi-projective variety. Define $\dim X$ and show that if $X
+$ is irreducible then $\dim X$ is a birational invariant.
+\item Show that every irreducible component of a hyprsurface in $\mathbb A ^N$ 
+has codimension $1$.
+
+\end{enumerate}
+\end{document}
+\end

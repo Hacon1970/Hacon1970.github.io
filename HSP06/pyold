@@ -1,0 +1,556 @@
+Python Excercise sets:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+1) Find all solutions to Pell's equation x**2-2*y**2=1 with 0<=x<=200,
+0<=y<=200
+
+2) Write a list of all primes <=1,000
+
+3) Factor 1965289, 828301
+
+4) Find a number such that 29*x=1 mod 101 (and mod 103)
+
+5) Compute 2**{n-1} mod n for 10<=n<=31. Can you see a pattern.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solutions 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) 
+def search(N):
+  for x in range(0,N):
+    for y in range (0,N):
+      if x*x-2*y*y == 1:
+        print x, y
+
+
+>>> search(200)
+1 0
+3 2
+17 12
+99 70
+
+2) Eratosthenes sieve
+from math import *
+
+def primes(n):
+   if n<=1:return[]
+   X=range(3,n+1,2)
+   P=[2]
+   sqrt_n=sqrt(n)
+   while len(X)>0 and X[0] <=sqrt_n:
+      p = X[0]
+      P.append(p)
+      X=[a for a in X if a%p !=0]
+   return P+X
+
+>>> primes(1000)
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 
+73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 
+157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 
+239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 
+331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 
+421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 
+509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 
+613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 
+709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 
+821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 
+919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]
+
+3) finds a divisor of n between n and sqrt(n)
+def factor(n):
+   for k in range (2,sqrt(n)+1):
+     if n%k==0:
+       return k
+
+factor(1965289)
+__main__:2: DeprecationWarning: integer argument expected, got float
+
+Its prime!
+
+>>> factor(828301) 
+59
+>>> 828301//59
+14039
+>>> factor(14039)
+101
+>>> 14039//101
+139
+
+So 828301=59*101*139
+
+4) 
+def inv(n):
+   for k in range (2,101):
+     if n*k%101 ==1:
+       return k
+>>> inv(29)
+7
+>>> for k in range (2,31):
+...  print k,                 
+...  print 2**(k-1)%k
+... 
+2 0
+3 1
+4 0
+5 1
+6 2
+7 1
+8 0
+9 4
+10 2
+11 1
+12 8
+13 1
+14 2
+15 4
+16 0
+17 1
+18 14
+19 1
+20 8
+21 4
+22 2
+23 1
+24 8
+25 16
+26 2
+27 13
+28 8
+29 1
+30 2
+ The pattern is that if k is prime, then 2**(k-1)%k=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) write  a python programm that checks if n is a square
+
+2) write a python programm that looks for solutions of Pell's equation by 
+checking if 1+2y**2 is a square. Find all solutions with y<=10,000
+
+3) Write a program to find solutions to x**2-Ny**2=1
+
+4) Write a program that checks if n is a prime.
+
+5) write a program that generates a random prime with 8 digits 
+
+6) Solve 65657657x+21344345y=35
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solutions 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1)
+
+def issquare(n):
+  isqrt = int(sqrt(n))
+  if n == isqrt*isqrt:
+    return 1
+  else:
+    return 0
+
+
+2) 
+
+for k in range (1,10000):
+  if issquare(2*k*k+1)==1:
+    print k
+2
+12
+70
+408
+2378
+
+3) 
+def sol(N):
+  for k in range (1,10000):
+    if issquare(N*k*k+1)==1:
+      print k
+
+4) %finds number of divisors of n between n and sqrt(n)
+
+def isprime(n):
+    s = 0 
+    for k in range (2,sqrt(n)+1):
+      if n%k == 0:
+        s=s+1
+    return s
+
+5)
+%generates random prime with k digits
+%from random import randrange
+%<5sec for k=10
+def ranprime(k):
+  s=1
+  n = randrange(10**(k-1), 10**k)
+  while isprime(n) > 0:
+    n += 1
+  return n
+6) The extended Euclidean algorithm:
+def egcd(a,b): 
+  q,r = divmod(a,b)
+  x,y,u,v=1,-q,0,1
+  while r>0:
+    qq,rr = divmod(b,r)
+    xx,yy=u-qq*x,v-qq*y
+    a,b,r,q,x,y,u,v=b,r,rr,qq,xx,yy,x,y
+    print a,b,r,q,x,y,u,v
+  return u,v,b
+
+5528368*65657657-17005895*21344345=1
+so x=5528368*35=193492880, y=17005895*35=595206325
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Day 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+1) Compute 2**(17946) mod 17947. Is 17947 prime?
+
+2) Write a program that computes the GCD of two numbers a and b.
+
+3) The following program computes numbers u,v such that GCD(a,b)=u*a+v*b
+
+def egcd(a,b): 
+  q,r = divmod(a,b)
+  x,y,u,v=1,-q,0,1
+  while r>0:
+    qq,rr = divmod(b,r)
+    xx,yy=u-qq*x,v-qq*y
+    a,b,r,q,x,y,u,v=b,r,rr,qq,xx,yy,x,y
+    print a,b,r,q,x,y,u,v
+  return u,v,b
+
+Try it out with a few numbers to convince yourself that it works?
+Can you explain how it works?
+
+4) Use egcd(a,b) to find the inverse of 117 mod 103, of 222 mod 17947
+and of 1234567 mod  1812647
+
+5) My date of birth x was encoded using the function  f(x)=1234567*x mod  
+1812647. If f(x)=1629056, what is my date of birth x?
+
+6) Write a program that computes the inverse of a mod b.
+Check that it works for 117 mod 103 and for 222 mod 17947
+What happens for 123 mod 309?
+
+7) If you have time, write a program that computes the order of 2 mod b (ie. the smallest power of a such that 2**t=1 mod b).
+Try this for b =5*7, 5*11, 5*13, 7*13, 11*13 etc... can you guess a pattern?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solutions 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1)>>> 2**(17946)%17947
+4125L
+
+By fermat's Little Theorem, 17947 is not prime
+
+4) >>> egcd(103,117)
+117 103 14 1 -1 1 1 0
+103 14 5 7 8 -7 -1 1
+14 5 4 2 -17 15 8 -7
+5 4 1 1 25 -22 -17 15
+4 1 0 4 -117 103 25 -22
+(25, -22, 1)
+
+So 103*(-1)=25 mod 117
+
+>>> egcd(222,17947)
+17947 222 187 80 -80 1 1 0
+222 187 35 1 81 -1 -80 1
+187 35 12 5 -485 6 81 -1
+35 12 11 2 1051 -13 -485 6
+12 11 1 1 -1536 19 1051 -13
+11 1 0 11 17947 -222 -1536 19
+(-1536, 19, 1)
+
+So 222*(-1)=-1536=16411 mod 17947
+
+>>> egcd(1234567,1812647)..........
+(769682, -524219, 1)
+
+so 1234567*(-1)=769682 mod 1812647
+
+5) 1234567*x=1629056 mod 1812647   so
+x=769682*1629056%1812647=21470
+
+6) 
+def inv(a,b): 
+  q,r = divmod(a,b)
+  x,y,u,v=1,-q,0,1
+  while r>0:
+    qq,rr = divmod(b,r)
+    xx,yy=u-qq*x,v-qq*y
+    a,b,r,q,x,y,u,v=b,r,rr,qq,xx,yy,x,y
+  if b==1:
+   return u
+  else:
+   return 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+1) Write a code that looks for positive integer solutions to x**2+y**2=z**2,
+x**3+y**3=z**3 and to x**3+y**3+z**3=w**3.
+
+2) Write a code to compute a**b mod e via repeated squaring. (Or
+check that the code below works for various examples and try and understand
+how it works)
+
+
+%modppower(b,e,m) computes b^e mod m using the  method of repeated squaring.
+
+Example: 
+
+   >>> modpower(2,100,101)
+   1
+
+----------------------------------------
+
+def modpower(b,e,m):
+  """modpower(b,e,m) = b^e mod m"""
+  P = 1
+  S = b
+  while e > 0:
+    r = e%2
+    e = e/2
+    if r == 1:
+          P = P*S % m
+    S = S*S % m
+  return P
+
+
+
+3) What is 1431354254365645**765686989879879797987 mod 7987987908098
+(can you do it without the code?)
+
+4) Write a code that counts all numbers between 1 and N-1 that are relatively prime to N. Check that this computes the Euler phi function for N=1800
+and N=10403
+
+5) Use Fermat's little theorem to check if 89809099 is prime.
+How about  75307568412715349903 ?
+How about 19605263919318560687 ? 
+How about  4934982252898127823466590164729439608121366410104686716378205258797050794163803176579697937348881157 ?
+
+Can you factor the ones that are not prime?
+
+6) I encoded my credit card number via the algorith x->x**97   
+mod 3035568337 (Hint 3035568337 factors as 77929*38953 )
+The answer was 1047598204, 248322888
+What is my credit card number (given in 2 blocks of 8 numbers)?
+
+7) Write a code that expands a number in to a continued fraction.
+eg. pi-->[3;7,15,1,292,....] (see python notes on page 13)
+
+8) Find the continued fraction expansion for (1+sqrt(5) )/2 and for sqrt(97)
+
+9) Can you find the fundamental solution to x**2-97*y**2=1?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Write a program that generates a random prime number with 6 digits.
+
+2) You can use T Davis' code as a text to number translation scheme:
+type:
+>>> from tdavis import *
+
+To convert 'hello' to strings of 4 numbers, type 	
+
+>>> s2b('hello',2)
+[4441, 4848, 5171]
+
+try s2b('hello',3) and s2b('hello',6)
+
+To convert [4441, 4848, 5171] back, type	
+
+>>> b2s(_)
+'hello@'
+
+note the padding '@'.
+
+Practice this by encoding and decoding longer text messages.
+
+3) pick two random prime (secret) prime numbers p,q and an integer 0<k<pq.
+Encode a message via x->x**k mod m where m=p*q (and GCD(m,k)=1 !). 
+Share m,k with your neighbour and see if they can decode your message.
+(Don't forget to compute x->x**k mod m via the repeated squaring method used
+last time).
+
+4) Send m,k to clay@math.utah.edu to get your message to decode.
+
+5) Write a program that checks if a number m is prime by picking 10 (or 100) 
+random numbers t and checking if t**{m-1}=1 mod m. 
+(Do this by repeated squaring!)
+
+6) Write a program that generates a random prime number with 20 digits
+(with high probability!) Can you do this for 100 digits?
+
+7) Write a program that counts all primes <= 100, 200, 400, 800, 1600, 3200,
+6400, 12800, 25600.. How does this compare to the Prime Number Theorem?
+
+8) Write a program that generates random numbers with 4,5,6,7,8 digits
+and checks if they are prime. Can you use this to test the probability that
+such a random number is prime? How does this compare with the Prime Number 
+Theorem
+
+9) Write a program that checks by brute force if -1 is a square mod p.
+Try this for all primes <= 103. Do you see a pattern?
+
+Do the same for 2 instead of -1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%finds number of divisors of n between n and sqrt(n)
+def isprime(n):
+    s = 0 
+    for k in range (2,sqrt(n)+1):
+      if n%k == 0:
+        s=s+1
+    return s
+
+def modpower(b,e,m):
+  """modpower(b,e,m) = b^e mod m"""
+  P = 1
+  S = b
+  while e > 0:
+    r = e%2
+    e = e/2
+    if r == 1:
+          P = P*S % m
+    S = S*S % m
+  return P
+
+%generates random prime with k digits
+%from random import randrange
+%<5sec for k=10
+def ranprime(k):
+  s=1
+  n = randrange(10**(k-1), 10**k)
+  while isprime(n) > 0:
+    n += 1
+  return n
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Write a code to check that a number is prime by using the Miller-Rabin 
+test, or try the code below. How many "false positives" do you get for
+the number 561? Pick a composite 5 digit number. How often does it fail the
+Miller-Rabin test?
+
+%Miller-Rabin primility test for n with t trials
+def mrprime(n,t):
+ if n%2 == 0: return False
+ if n in [2,3]: return True
+ if n<=4: return False
+ m=n-1
+ k=0
+ smo = False
+ while m%2 == 0:
+  k += 1; m /= 2
+# Now n-1 =(2**k) * m with m odd
+  for i in range(1,t):
+   a=randrange(2,n-1)
+   apow=modpower(a, m, n)
+   if not (apow in [1, n-1]):
+    smo = False
+    for r in range(k-1):
+     apow=(apow*apow)%n
+     if apow == n-1:
+      smo = True
+      break
+   if not ((apow in [1,n-1]) or smo):
+    return False
+  return True
+
+2) Write a code to find a random 100 digit prime with high probability (eg. 
+10 -40 tests). Can you generate a 200 digit prime? How long does it take? 
+How long do you think it might take to generate a 1000 digit prime?
+After you have found your large prime, use the Miller-Rabin primility test
+to test the number for primality say 100 times.
+
+3) Pick two random 100 digit (secret) prime numbers p,q and an integer 0<k<pq.
+Encode a message via x->x**k mod m where m=p*q (and GCD(m,k)=1 !). 
+Share m,k with your neighbour and see if they can decode your message.
+
+4) Use your random primes generator to generate 10 primes with 4 digits
+(by doing 10 Miller Rabin tests). 
+Check that these are really prime numbers. Write a program that does this
+for 100 (or 1000) random primes with 4 (or 5, 6) digits. Report your 
+findings.
+What if you use 40 Miller Rabin tests?
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Write a code that looks for a primitive element mod p by brute force.
+Find a primitive element for p=251. Compute an element of all possible orders.
+
+2) Generate a random 6 digit prime and find a primitive element mod p.
+(You should first factor p-1. Then to check that a is primitive mod p,
+you just need to check that a**((p-1)/q) is not 1 for all q primes dividing 
+p-1). Compute an element of all possible orders.
+
+3) Write a code that checks (by brute force) if a is a square mod m
+
+4) Check if 2 is a  square mod a prime number p for p <=103
+(Do the same for -1 mod p).
+Do you see a pattern.
+
+5) Write a code that checks if p=1 mod 4 and one that checks if
+p=1 or 7 mod 8
+
+6) Email me a title for your presentation (hacon@math.utah.edu)
+Make sure the topic has not been allready chosen 
+see http://www.math.utah.edu/~hacon/HSP06/pres
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Use python to check Euler's Criterion a**((p-1)/2)=(a:p) mod p 
+(here (a:p) is the Legendre symbol). Do this for a 3 and a 4 digit prime 
+and several random integers 2<=a<=p-1.
+
+2) Write a code that computes (-1:p) and one that computes (2:p)
+
+3) Use python to check that (q:p)=(p:q) if p=1 mod 4 or q=1 mod 4
+and (q:p)=-(p:q) if p=3 mod 4 and q=3 mod 4.
+Do this for several random prime numbers with 3 and 4 digits.
+
+4) Does x**2+3212*x+34654 have a solution mod 38953?
+
+5) Use the remaining time to prepare your 15 min presentation.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Write a code that checks if a number a is the sum of 2 squares.
+
+2) Write a code that generates a random 4 digit prime number and checks that
+if p=1 mod 4, then p is the sum of 2 squares and if p=3 mod 4, then p is not
+the sum of 2 squares.
+
+3) Which numbers <=100 are the sum of 2 squares? Can you see the pattern?
+
+4) Which primes <=101 are the sum of 3 squares? Can you see a pattern?
+
+5) What is the smallest number that is the sum of 2 cubes in two different 
+ways (eg. 9=2**3+1**3 is the sum of 2 cubes in 1 way. Hint: the answer is a 
+number <=5000.) Can you find more than one of these numbers?
+

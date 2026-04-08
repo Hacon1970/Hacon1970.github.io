@@ -1,0 +1,23 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 1}
+
+(1) Show that $x^2+2xy=3$ is rational (over an 
+algebraically closed field of characteristic $\ne 2,3$).
+
+{\bf Solution:} Project from the point $P=(1,1)$. So $y-1=t(x-1)$ and hence $$0=x^2+2x(t(x-1)+1)-3=(1+2t)x^2+2(1-t)x-3.$$
+Since one solution is $x=1$, the other solution satisfies $-x-1=\frac{2-2t}{1+2t}$ and hence $x=\frac {-3}{1+2t}$. Finally $y=t(\frac {-3}{1+2t}-1)+1=-\frac{2t^2+2t-1}{2t-1}$. (Alternatively, let $x=t$ and $y=\frac {3-x^2}{2x}=\frac {3 -t^2}{2t}$.)
+
+We must exclude $p=2,3$ because if this is the case then the curve is reducible (Thanks to Todd Harry Reeb for pointing out a typo in the previous version.)
+
+(2) Define the field of rational functions $k(X)$ of a plane curve $X$. When is a rational function regular at a point $P\in X$?
+
+{\bf Solution:} Suppose $X=\{f(x,y)=0\}$, where $f=f(x,y)\in k[x,y]$ is irreducible. If $a,b,c,d\in k[x,y]$ and $b,d\not\in (f)$, then we will say that $\frac ab \equiv \frac cd$ if $ad-bc\in (f)$ (i.e. $ad-bc$ is divisible by $f$). Then
+$$k(X):=\{\frac pq| p,q\in k[x,y],q\not\in (f)\} / \equiv $$
+is the field of rational functions $k(X)$.
+
+Let $P\in X$ and $u\in k(X)$, then we say that $u$ is regular at $p$ if there is a representative $u=\frac pq$ such that $q(P)\ne 0$.
+
+\end{document}
+\end

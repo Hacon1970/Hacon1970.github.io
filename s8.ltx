@@ -1,0 +1,99 @@
+\section{Rationality of the restricted algebra}
+\label{s_rationality}
+
+In this section we will prove:
+\begin{theorem}\label{t_rational} Let $\pi\colon\map X.Z.$ be a projective morphism 
+to an affine normal variety $Z$ and let $D$ be an integral divisor.  Suppose that $D
+\sim_{\mathbb{Q}} k(K_X+\Delta)$ for some positive integer $k$, where $(X,\Delta=S+A+B)$
+is a log smooth purely log terminal pair, $S=\rdown \Delta.$ is irreducible,
+$A\geq 0$ is a general ample $\mathbb Q$-divisor and $B$ is an effective $\mathbb Q$-divisor.  
+Let $\Omega=(A+B)|_S$.   
+Assume that $(S,\Omega )$ is canonical and
+$S$ is not a component of the base
+locus of $|D|$. Let $F_m={\rm Fix}(|mD|_S)$, let
+$$
+F={\rm lim\ inf}\frac{F_m}{mk},
+$$
+and let $\Theta=\Omega-\Omega\wedge F$.
+
+Then $\Theta$ is rational and if moreover $l$ is sufficiently divisible, then 
+$lk(K_S+\Theta)$ is Cartier and
+$$
+|lk(K_S+\Theta)|+lk(\Omega-\Theta)=|lD|_S.
+$$
+ In particular
+$$
+R_S(X,lD)\cong R(S,lk(K_S+\Theta)).
+$$
+\end{theorem}
+\begin{proof}
+
+We let $\Theta _m=\Omega-\Omega \wedge \frac {F_m}{mk}$.
+For any fixed integer $l>0$ and any integer $m>0$, we have $F_{ml}\leq lF_m$ so that
+$$F={\rm lim\ inf}\frac {F_m}{mk}\geq {\rm lim\ inf}\frac {F_{ml}}{mlk}\geq
+{\rm lim\ inf}\frac {F_m}{mk}=F,$$
+and hence ${\rm lim\ sup}\Theta _{ml}=\Theta$.
+Passing to a subsequence $I\subset \mathbb N$, we may then assume that 
+$${\rm lim}_{m\in I}\Theta _{ml}=\Theta.$$
+Pick a positive rational
+number $\epsilon>0$ such that
+\begin{itemize} 
+\item $\frac 12 A|_S+G$ is ample for any $\mathbb Q$-divisor $G$ on $S$ such that $-\epsilon\Theta \leq G\leq \epsilon \Theta$,
+%\item $(S,(1+\epsilon )\Theta)$ is terminal, and
+\item $(S,\Omega +\epsilon \Theta )$ is kawamata log terminal.  
+\end{itemize} 
+Let $\Theta =\sum \theta _iP _i$ and $l_0$ be an integer such that
+if $\theta _i\in \mathbb {Q}$, then $l_0\theta _i \in \mathbb N$.
+%We may also assume that for all positive integers $l$ divisible by $l_0$, we have $\Theta -\Theta _l\leq \frac \epsilon {lk}\Theta$ so that $$0\leq lk(\Theta -\Theta _{ml})\leq \epsilon \Theta.$$
+Let $l>0$ be an integer 
+divisible by $l_0$ and $\Phi=\Phi_l$ be a $\mathbb Q$-divisor such that $M=lk(K_S+\Phi )$ is integral and
+$$-\epsilon \Theta \leq M-lk(K_S+\Theta)=lk(\Phi -\Theta)\leq \epsilon \Theta.$$
+
+We have $$ lk(\Phi -\Theta _{ml})=lk(\Phi-\Theta)+lk(\Theta-\Theta _{ml}).$$
+Therefore, for $m\in I$ sufficiently big 
+\[ \label{e-1}mlk(\Theta_{ml}-\Phi )+mA|_S\qquad  {\rm is\  very\ ample\ and}\tag{a}
+\]
+\[\label{e-2}
+(S,\Omega +lk(\Phi-\Theta _{ml}))\qquad{\rm is\ kawamata\ log\ terminal}.\tag{b}
+\]
+
+
+By (2) of \eqref{t_int}, we have
+$$
+|M|+lk(\Omega-\Phi)\subset |lD|_S.
+$$
+It follows that if $\theta _i\not \in \mathbb Q$ and ${\rm mult}_{P _i}(\Phi -\Theta)>0$,
+then $P _i\subset {\rm Bs}(lk(K_S+\Phi))$.
+Let $V\subset {\rm Div}_{\mathbb R}(S)$ be the vector space spanned by the
+components of $\Theta-A|_S$. 
+Pick a log terminal model $\nu:S\dasharrow S'$ for $(S,\Theta)$ and let 
+$\mathcal P\subset V+A|_{S}$ be the open rational polytope containing $\Theta$ such that
+$\nu$ is a log terminal model for a kawamata log terminal pair $(S,\Phi )$ with
+$\Phi \in V+A|_S$ if and only if $\Phi \in 
+\mathcal P$ cf. \cite[Corollary 1.1.5]{BCHM06}.
+By \cite{Kollar93b}, after possibly shrinking $\mathcal P$, we may assume that there is a positive 
+integer $r$ such that if $s(K_S+\Phi)$ is integral for some $\Phi \in \mathcal P$ and some positive integer $s$, then $rs(K_{S'}+\nu _*\Phi)$ is base point 
+free. 
+
+Suppose that $\theta _i$ is not rational, then by Diophantine approximation, 
+we may find an integer $l=l_i$ and a divisor $\Phi =\Phi _{l_i}$ 
+as above such that \begin{itemize}
+\item $\Phi\in \mathcal P$,
+\item $\frac 1 r lk(K_S+\Phi )$ is integral,
+\item $-\epsilon \Theta \leq lk(\Phi -\Theta )\leq \epsilon \Theta$, and
+\item ${\rm mult}_{P _i}(\Phi -\Theta )>0$.\end{itemize} 
+But then, as $ P _i\subset {\rm Bs}|lk(K_S+\Phi)|$ and $lk(K_{S'}+\nu _*
+\Phi)$ is base point free, the divisor $P _i$ is contracted by $\nu$.
+Therefore $\nu$ contracts all irrational components of $\Theta$ so that for any $l$ sufficiently divisible and any $t>0$,
+$\nu _* \Theta _{tl}=\nu _* \Theta _l$. 
+Moreover, as $l$ is sufficiently divisible, we may assume that 
+$tlk(K_{S'}+\nu _*\Theta_{tl})=tlk(K_{S'}+\nu _*\Theta_{l})$ is Cartier and generated.
+Then 
+$$|tlk(K_S+\Theta_{tl})|=|tlk(K_S+\Theta _l)|+tlk(\Theta _{tl} -\Theta _l).$$
+By \eqref{t_int}, we have
+$$|tlk(K_S+\Theta _{tl})|+tlk(\Omega-\Theta _{tl})= |tlD|_S.$$
+But then $tlk(\Theta _{tl} -\Theta _l)$ is contained in $tlk\Theta _{tl}$
+and in ${\rm Fix }(|tlD|_S)$ so that $\Theta _{tl} =\Theta _l$ and hence 
+$\Theta =\Theta _l$ is rational. The Theorem now follows by what we have already proven.
+\end{proof}
+

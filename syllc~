@@ -1,0 +1,225 @@
+\magnification=1050
+\UseAMSsymbols
+\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 2250-3}
+\centerline{\bf Ordinary Differential Equations and  Linear Algebra}
+\centerline{Fall semester 1999}
+\bigskip
+\line{ \vbox{
+  \hbox{\bf texts:\qquad}
+  \hbox{}
+  \hbox{}
+  \hbox{}
+  \hbox{}
+  \hbox{}
+  \hbox{\bf when:}
+  \hbox{\bf where:}}
+ \vbox{
+  \hbox{\it Differential Equations,}
+  \hbox{{\it Computing Projects for Differential Equations} supplement,}
+  \hbox{and {\it Elementary Linear Algebra} Chapters 1-4}
+  \hbox{\qquad by C.H. Edwards Jr. and David E. Penney}
+  \hbox{M, W, F 10.45-11.35  A.M.}
+  \hbox{NS 204}}
+ \hfill}
+\medskip
+\line{ \vbox{
+  \hbox{\bf instructor:}
+  \hbox{\bf \qquad office:}
+  \hbox{\bf \qquad telephone:}
+  \hbox{\bf \qquad email:}
+  \hbox{\bf \qquad office hours:\qquad}}
+ \vbox{
+  \hbox{Prof. Christopher Hacon}
+  \hbox{JWB 118}
+  \hbox{581-8341}
+  \hbox{hacon{\@}math.utah.edu}
+  \hbox{M 9:45-10:35, W 9:45-10:35, F 12:40-1:20. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}}
+
+\bigskip
+\noindent
+{\bf course outline:}
+This course is an introduction to differential equations, and how they
+are used to model problems arising in engineering and science.
+Linear algebra is introduced as a tool for analyzing systems of
+differential equations, as well as standard linear equations.
+Particular attention is paid throughout the course
+to qualitative behavior
+of solutions, stability, and numerical approaches.  Computer
+projects will be assigned to enhance the material.
+
+We will start by quickly covering most of Chapters 1 and 2 in Edwards and Penny on linear differential equations.
+Then we will study linear algebra for four weeks covering the four chapters of the supplemental text. Then we will
+return to diffential equations and study higher order equations (Chapter 3), systems of differential equations (Chapters
+4 and 5) and end with Chapter 7 studying Laplace Transforms. 
+
+There will be four computer projects assigned during the
+semester, related to the classroom material.  They will
+be written  in the software
+package MAPLE. There is a Math Department Computer
+Lab at which you all automatically have accounts, and
+there are other labs around campus where Maple is also available,
+for example at the College of Engineering.   
+You are responsible for learning to use a computer system and the 
+programs needed to complete the
+assignments. Introductory lectures on the computer lab and 
+Maple will be given in the first three weeks of the
+semester. There will be a
+tutoring center support for these projects (and for your other
+homework) as well.
+The Math Department Lab and Engineering Math
+Tutoring Center are both located in Building 129, between JWB and
+LCB. 
+
+You will be
+permitted to work your solutions to the computer projects
+in different languages,
+such as Mathematica or Matlab, if you prefer these, although
+it will be easier to find help if you are using Maple.  Notice that the
+text and the {\it Computing Projects} supplement support all
+three of these languages.
+\medskip
+\noindent
+{\bf grading:}\qquad There will be three midterms, a comprehensive final 
+examination, and homework.  Each midterm will count for 20\% of your grade
+(only the highest two midterm grades will be considered, you will be 
+allowed to drop your lowest score, however there will be no make up tests),  
+homework will count for 15\% (you will be allowed to drop your lowest 
+3 homework scores, however late homework will not be accepted), 
+maple assignments will count for 15\%,
+and the final exam will make up the 
+remaining 30\%.  The book homework will be assigned and collected 
+weekly, on Fridays. Maple project homework will generally be due 
+one week after it is assigned.
+A homework grader will partially grade your assignments. 
+The value of carefully working homework problems is that mathematics  
+(like anything) must be practiced and experienced to be learned.
+\medskip
+It is the Math Department policy, and mine as well, to grant any
+withdrawal request until the University deadline of October 22
+(there is no tuition penalty if dropped by September 3rd).
+
+\medskip\noindent
+{\bf Final:} Wed. Dec. 15 from 9:15 to 11:15.
+
+
+
+\medskip\noindent
+{\bf Tutoring and help:}
+The Math Department's tutoring center is available for help with homework
+from approximately 8 a.m. to 8 p.m. M-Th and 8 a.m. to 2 p.m. on Friday. 
+Additionally the computer lab is staffed with assistants and is open
+M-Th 8am-10pm, Friday 8am-6pm and 10am-5pm on the weekends. The computer 
+lab assistants are provided
+to help with general computing questions and basic Maple questions but they 
+may not be able to offer specific
+help on the mathematics of this course. 
+ 
+
+\medskip\noindent
+{\bf Homepage:} You may refer to the course homepage
+for further information and future handouts.
+
+\noindent
+{ {http://www.math.utah.edu/\~ {} hacon/math2250.html}}
+
+
+\medskip\noindent
+{\bf ADA statement:}  The American with Disabilities Act requires 
+that reasonable accommodations be provided for students with physical, 
+sensory, 
+cognitive, systemic, learning, and psychiatric disabilities.  
+Please contact me at the beginning of the semester to discuss 
+any such accommodations for the course.
+
+
+\enddocument
+\end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

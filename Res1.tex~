@@ -1,0 +1,120 @@
+\documentclass[12pt] {amsart}
+\setlength{\textwidth}{420pt}
+\setlength{\oddsidemargin}{30pt}
+\setlength{\evensidemargin}{30pt}
+\textheight=610pt
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{assu}[thm]{Assumption}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{pb}[thm]{Problem}
+\newcommand{\ot}{{\otimes}}
+\newcommand{\OO}{{\mathcal {O}}}
+\newcommand{\III}{{\mathcal {I}}}
+\newcommand{\Q}{{\mathbb {Q}}}
+\begin{document}
+\begin{center}
+{\Large \textbf{AMS Centennial Fellowship Application}}
+
+\vspace{10pt}
+
+{\Large \textbf{Research plan}}
+
+\vspace{10pt}
+
+{Christopher D. Hacon}
+\end{center}
+
+
+My research focuses on the birational geometry of algebraic varieties. I am particularly interested in the birational geometry of irregular varieties and of linear systems on abelian varieties, in the birational geometry of surfaces and 3-folds and in natural questions on the birational geometry of higher dimensional varieties which arise in the context of the minimal model program. 
+
+\vskip.3cm
+\noindent
+{\bf Questions closely connected to the minimal model program:}
+There are 3 main conjectures in the minimal model program: the existence of flips, the termination of flips and abundance. In recent joint work with J. M$^c$Kernan, following ideas of Shokurov, we have shown that the existence of flips in dimension $n$ follows from the termination of flips in dimension $n-1$. We hope to apply a similar approach to the following well known conjecture\footnote{It appears that Y.T. Siu has obtained significant results towards this conjecture. To the best of my knowledge, there is no preprint available on Siu's work regarding this conjecture and I do not know what the statements of his results are.}: 
+\begin{conj}\label{C} Let $(X,\Delta )$ be a $\mathbb Q$-factorial kawamata log terminal pair.
+If $(K_X+\Delta)$ is big, then the ring $$\mathfrak {R}=\oplus _{n\in \mathbb{N}}H^0(X,\OO _X(n(K_X+\Delta ))$$ is finitely generated.
+\end{conj} 
+As in our proof of the existence of flips, the plan would be to restrict the ring $\mathfrak {R}$ to an appropriate divisor $S$ and then show that the restricted algebra is finitely generated. 
+There are of course significant technical difficulties. First of all, one may no longer assume that $-(K_X+\Delta )$ is nef and big. However, this assumption was only used to extend certain sections from a divisor to the ambient variety (via the use of the Kawamata-Viehweg vanishing theorem). We plan to replace this part of the argument by the use of our extension theorem for pluri-canonical log-forms (see [24] and [26]).
+A second and more problematic technical issue, is that we may no longer assume that $-S$ is ample as in the case of flips. This means that once one shows that $\mathfrak {R}_S$ is finitely generated, it is not immediately clear that it follows that $\mathfrak {R}$ is also finitely generated. We hope to solve this by using techniques similar to the proof of the non-vanishing theorem.
+
+
+It is then possible that \eqref{C} would imply termination of flips directly (at least when $K_X+\Delta$ is big). This seems do deserve further investigation and to be unknown to the experts in this field.
+There are also other approaches due to Shokurov to the termination of flips.
+For example, when $K_X+\Delta$ is big, Birkhar has shown that termination of flips is implied by
+a conjecture known as the ascending chain condition for minimal log discrepancies. It turns out that this is closely connected to the following conjecture of Borisov:
+\begin{conj} For any integer $n>0$ and any real number $\epsilon >0$, the family of all complex normal projective varieties with $-K_X$ ample, $\mathbb Q$-Cartier and $\epsilon $ log terminal is bounded.
+\end{conj}
+It is well known that it suffices to bound the top self intersection
+$(-K_X)^n$. This has been achieved by J. M$^c$Kernan under the additional
+(rather strong) hypothesis that $X$ is of bounded index (i.e. there exists
+a fixed integer $r>0$ such that $rK_X$ is Cartier).
+One possible strategy, would be to produce effective $\Q$-divisors 
+$G_x\sim _\Q -\lambda K_X$ 
+with an isolated center of log canonical singularity
+at a general point $x\in X$ and with $0<\lambda <1/2$.
+It is then clear that for general $x,y\in X$, the divisor
+$G_x+G_y$ has disconnected locus of log canonical
+singularities contradicting a result of Shokurov and Koll\'ar. If $(-K_X)^n$ is sufficiently big, it is easy
+to produce centers of log canonical singularities $V$ of
+ $G\sim _\Q -\lambda K_X$ through a general point
+$x\in X$ with $0<\lambda \ll 1$.
+Applying Kawamata's subadjunction Theorem, one sees that
+$(1-\lambda )K_X|V\sim K_V+B$ for an appropriate
+pseudo-effective divisor $B$. Since $(1-\lambda )>0$,
+one sees that $-(K_V+B)$ is ample and it makes sense to try
+and proceed inductively. The problem is now to show that
+the volume of $-(K_V+B)$ is bounded from below. This is in general not true,
+but we hope that the additional hypothesis on the log-discrepancies
+of $X$ give a way of controlling the volume of $-(K_V+B)$.
+
+\vskip.3cm
+\noindent {\bf The birational geometry of $3$-folds:}
+There are many beautiful results in the literature regarding Gorenstein minimal 3-folds of general type. Recently, following work of Tsuji, Hacon-M$^c$Kernan and Takayama, it appears that these results may generalize to almost all non-Gorenstein $3$-folds of general type. For example, my student G. Todorov is working on showing that: {\it For all but finitely many families of $3$-folds of general type, one has $P_2>0$ and $|5K_X|$ induces a birational map.} I am also interested in seeing if there are positive constants $A,B$ such that for any $3$-fold of general type, one has $P_2(X)\geq AK_X^3-B$. One application of an inequality of the above form would then be to generalize the results on the boundedness of the degree of pluricanonical maps of Gorenstein minimal $3$-folds of general type to the case of index grater than $1$.  
+
+
+\vskip.3cm
+\noindent {\bf The geometry of irregular varieties:} 
+One of the most interesting open questions in this area is the following conjecture due to Ueno:
+
+{\bf Conjecture K.} 
+{\it Let $X$ be a smooth projective variety with $\kappa (X)=0$
+and let $a:X\to A$ be its Albanese morphism. Then 
+(1) $a$ is an algebraic fiber space and 
+(2) Let $F$ be a general fiber of $a$. Then $\kappa (F)=0$. }
+
+(1) was answered affirmatively by Y. Kawamata.
+In joint work with Alfred Chen, we have obtained various results
+towards (2) of this conjecture.
+
+I am particularly interested in the possibility of using the analytic methods developed by Siu to attack this problem. One possible approach would be to show
+that: {\it Given any section of $H^0(X,\omega _X^N)$ which deforms
+to first order in a direction $v \in H^1(X,\OO _X)\cong T(Pic ^0(X))$
+then it deforms to arbitrarily high order.} It would then follow, using the theory of Fourier Mukai transforms, that if $P_N(X)=1$ and $\kappa (X)=0$, then $a_*(\omega _X^{\ot N})=\OO _A$ and in particular $P_N (F)=1$ as required.
+
+A related approach would be to study pushforwards of sheaves of the form $\omega _X\otimes L\otimes {\mathcal{I}}(h)$
+where $X$ is a smooth projective variety, $L$ is a pseudo-effective line bundle on $X$ and $h$ is a singular hermitian metric on $L$. It seems plausible that $f_*(\omega _X\otimes L\otimes {\mathcal{I}}(h))$ might retain some of the Hodge-theoretic properties enjoyed by higher direct images of dualizing sheaves (or more generally by higher direct images of 
+sheaves of the form $\omega _X \ot L\ot \III (||L||)$ for any line bundle $L$ with $\kappa (L)\geq 0$).
+
+Some of the other questions regarding irregular varieties that I plan to pursue are:
+
+\noindent
+(1) A conjecture of Luo and Zhang: {\it Let $X$ be a smooth projective variety of general type, then for any $\omega\in H^0(\Omega ^1_X)$ one has $Zeroes(\omega )\ne 
+\emptyset$.} 
+
+\noindent
+(2) A conjecture of Zhang: {\it Let $X$ be a K\"ahler manifold such that $-K_X$ is nef, then 
+the albanese map of $X$ is surjective.}
+
+
+
+
+\end{document}
+\end

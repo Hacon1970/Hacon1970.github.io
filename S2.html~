@@ -1,0 +1,93 @@
+
+<HTML>
+<HEAD>
+<TITLE>
+Turning the sphere inside out
+</TITLE>
+
+
+<!-- Begin inclusion of top.html  -->
+
+<BODY BGCOLOR="f5efee" link="#5050C0"  vlink="#AA4040" >
+
+<table border="0">
+
+<tr>
+
+<!-- Column 1: blank left margin -->
+<td width=80 valign=top> 
+
+</td>
+
+<!-- BEGIN Column 2: main page text -->
+<td align = top>
+
+<center>
+<!-- img src = "/~hacon/images/redbar.jpg" border = 0 align=bottom --></a>
+</center>
+
+
+<hr>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+<hr>
+
+
+<br>
+
+<!-- End inclusion of top.html  -->
+<P><A HREF="http://torus.math.uiuc.edu/optiverse/qt/s11.qt">The Optiverse</A>
+<P><A HREF="http://www.cs.berkeley.edu/~sequin/SCULPTS/SnowSculpt04/MORIN/VISUALIZATION/visualiz.htm">Morin-Max eversion</A>
+<P><A HREF="http://www.geom.uiuc.edu/docs/outreach/oi/moregraphics.html">Outside In</A>
+<P><A HREF="http://front.math.ucdavis.edu/1008.0916">The `Holiverse': holistic eversion of the 2-sphere in $\R^3$</A>
+<P><A HREF="http://www.math.utah.edu/~hacon/sphereeversion.pdf">Sphere eversion by Derek Hacon (mid 70's?)</A>
+<P><A HREF="http://www.math.univ-toulouse.fr/~cheritat/lab/e_labo.html">Torus eversion by Arnaud Chéritat</A>
+
+<!-- Begin inclusion of bottom.html  -->
+
+<FONT SIZE=2>
+<P>
+<HR>
+<center>
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+
+
+
+
+
+
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+</center>
+<HR>
+
+
+</FONT>
+
+<!-- END Column 2: main page text -->
+</td>
+
+<!-- Column 3: blank right margin -->
+<td width=60 valign=top> 
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- End inclusion of bottom.html  -->
+
+</HTML>
+
+

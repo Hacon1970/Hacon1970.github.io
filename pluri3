@@ -1,0 +1,579 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Divisors on principally                %
+%  polarized abelian varieties             %
+%                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Christopher D. Hacon                     %
+%                                          %
+% e-mail: chhacon@math.ucla.edu            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                          %
+% AMS-TeX 2.1                              %
+%                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input amstex
+\documentstyle{amsppt}
+
+%%%%%%%%%%%%
+\refstyle {A}
+\widestnumber\key{AAAAA}
+%%%%%%%%%%%%
+\magnification=1200
+\baselineskip=15pt
+\parskip 3pt
+\pagewidth{5.5in}
+\pageheight{7.4in}
+\font\bftwelve=cmbx10 at 12pt
+%%%%%%%%%%
+\def\OO{{\Cal O}}
+\def\BB{{B^ {(1)}}}
+\def\PP{{\Cal P}}
+\def\ZZ{{\Bbb Z}}
+\def\QQ{{\Bbb Q}}
+\def\CC{{\Bbb C}}
+\def\II{{\Cal I}}
+\def\L1{{\Cal L ^{(1)}}}
+\def\LL{{\Cal L }}
+\def\rk{{\text{\rm rk}}}
+\def\Pic{{\text{\rm Pic}}}
+\def\sbdef{{\text{\sevenrm def}}}
+\def\lra{\longrightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\topmatter
+
+\title { Divisors on Principally Polarized Abelian Varieties}\endtitle
+\author {Christopher D. Hacon} \endauthor
+\address Christopher Derek Hacon, UCLA, Department of Mathematics, Los
+Angeles, CA 90095, USA %%@
+\endaddress
+
+\email   chhacon\@math.ucla.edu   \endemail
+\subjclass Primary 14K25; Secondary 14E05\endsubjclass
+
+\footnote""{Partially supported by
+Consiglio Nazionale delle Ricerche}
+\abstract
+The purpose of this paper is to show how generalizations of generic 
+vanishing theorems to a $\QQ$-divisor setting can be used to study the 
+geometric properties of pluritheta divisors on a principally polarized 
+abelian variety (PPAV for short).
+\endabstract
+\keywords abelian variety, theta divisor, singularity
+\endkeywords
+\date February 15, 1998 \enddate
+\endtopmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\document
+\noindent{\bf Introduction} 
+
+Abelian varieties are some of the most studied higher dimensional algebraic
+varieties. They appear to be very simple, as they are constructed by 
+quotienting ${\Bbb C}^n$ by an integral lattice. However, there are many open 
+problems concerning their geometry. One of the techniques that has been used to
+investigate the properties of PPAVs is the study of the singularities
+of their theta divisor. This connection was first 
+exploited by Andreotti and Mayer [AM], in their study of the Schottky problem.
+In another direction Kempf [Ke] showed that if $A$ is the Jacobian variety of some curve
+then the theta divisor has only rational singularities.  
+In a joint article [AD], Albarello and De Concini suggest that if $(A,\Theta )$
+is an irreducible principally polarized abelian variety, then the singular
+locus of the theta divisor has codimension at least 3 in $A$.
+At any rate, Koll\'{a}r [K] proved that the singularities of the theta divisor
+ on a principally polarized abelian variety are mild in the following sense:
+
+\noindent
+\proclaim{\rm {THEOREM (Koll\'{a}r)}}  Let $(A,\Theta )$ be a PPAV, then
+the pair $(A,\Theta )$ is log canonical.
+\endproclaim
+
+This implies for example that if
+$$\Sigma _k(\Theta )=\{ x\in A\ |\ mult_x(\Theta )\ge k\ \},$$
+then every component of $\Sigma _k(\Theta )$
+has codimension at least $k$ in $A$.
+
+It is easy to construct examples in which the codimension is exactly
+$k$, by just considering a $k$-fold product of PPAVs. Ein and Lazarsfeld
+[EL] proved that this is essentially the only case in which
+such a phenomenon can occur.
+\proclaim {\rm {THEOREM (Ein, Lazarsfeld)}} If $\Theta \subset A$ is an 
+irreducible theta divisor, then $\Theta$ is normal and has only
+rational singularities.
+\endproclaim 
+Consequently, if $(A,\Theta )$ is any PPAV for which $\Sigma _k(\Theta )$ 
+contains an irreducible
+component of 
+codimension $k$ then $(A,\Theta )$ splits as
+a $k$-fold product of PPAVs.
+They also generalized the result of Koll\'{a}r to
+${\Bbb {Q}}$-divisors in the following sense:
+\proclaim {\rm {THEOREM (Ein, Lazarsfeld)}} If $D$ is a divisor in the
+linear series $|m\Theta |$, then the pair $(A,\frac {1}{m} D)$
+is log-canonical.
+\endproclaim
+In the same spirit as the first of the two theorems of Ein and Lazarsfeld, 
+we prove the following:
+\proclaim{\rm {THEOREM 1}} Let 
+$(A,\Theta )$ be a principally polarized abelian variety
+and for $m\geq 1$ let $D$ be a divisor in the linear series
+$| m\Theta |$ such that $\lfloor \frac {1}{m}D  \rfloor = 0$. Then
+the pair $(A,\frac {1}{m}D)$ is log terminal.
+\endproclaim
+The condition that $\lfloor \frac {1}{m}D \rfloor =0$ is equivalent to
+requiring that  the multiplicity of every irreducible component of $D$
+is strictly less than $m$. 
+\proclaim{\rm {COROLLARY 2}} Let $(A,\Theta )$ be a principally polarized 
+abelian variety,
+and for $m\geq 1$ let $D$ be a divisor in the linear series
+$| m\Theta |$. If $k\geq 1$ is the greatest integer such that
+$\Sigma _{mk}(D)$
+contains an irreducible component
+of codimension $k$, then $(A,\Theta )$ splits as a 
+product of at least $k$ PPAVs   
+$$(A,\Theta )\cong (A_1,\Theta _1)\times ... \times (A_k,\Theta _k) 
+\times (A',\Theta ')$$
+(the component $(A',\Theta ')$ being possibly trivial).
+Moreover, the divisor $D$ decomposes as follows
+$$D=m\sum _{i=1} ^k p_i^* (\Theta _i) + {p'} ^* D'$$
+where $D' \in |m \Theta '|$, and the pair $(A',\frac {1}{m}D' )$ is log terminal.
+\endproclaim
+\noindent{{REMARK.}} The component $(A',\Theta ')$ is trivial precisely
+when $D'=0$, ie when $\lfloor \frac {1}{m}D \rfloor =\frac {1}{m}D$.
+Similarly $(A,\Theta )\cong (A',\Theta ')$ (ie $k=0$) precisely when
+$\lfloor \frac {1}{m}D \rfloor =0$. This is the case treated in theorem 1.
+
+\noindent {{ACKNOWLEDGMENT.}} I would like to thank Professor R. Lazarsfeld for
+introducing me to this circle of ideas and for the many interesting 
+conversations. I would also like to express my debt to R. Donagi 
+who originally discussed the problem with Lazarsfeld.  
+\bigskip
+\noindent{\bf 0. Notation and conventions}
+
+$f^*D$          pull-back
+
+$D_{red}$        reduced divisor associated to $D$
+
+$\Omega ^i _X<D>$       sheaf of holomorphic $i$-forms with logarithmic poles along $D_{red}$
+
+$|D|$    linear series associated to the divisor $D$
+
+$Bs|D|$  the base locus of the linear series associated to the divisor $D$
+
+$\equiv $ numerical equivalence
+
+$\omega _X = \Omega ^n_X $  canonical sheaf of $X$
+
+$K_X$  linear equivalence class of a canonical divisor on $X$
+
+$\omega _{X/Y}:=\omega _X \otimes (f^*\omega _Y)^*$
+relative canonical sheaf of a morphism $f:X\lra Y$
+
+Unless otherwise stated $X,\ Y$ will denote smooth complex projective
+varieties. If $D$ is a $\QQ$-divisor we will denote by $\lfloor D \rfloor $
+and by $\lceil D \rceil$ the round down and the round up of $D$ respectively.
+\bigskip
+\noindent{\bf 1. Preliminaries}
+ 
+Let $X$ be a smooth complex projective variety and let $D$ be a 
+$\Bbb Q$-divisor on $X$. We will say that $f:Y\lra X$ is a log-resolution 
+of the pair $(X,D)$, if $f$ is a proper birational morphism such that 
+$f^{-1}D \cup \{ \ exceptional\ set\ of \ f\ \}$
+is a divisor with normal crossing support. Given a 
+log-resolution of the pair $(X,D)$, we can define the multiplier ideal sheaf
+associated to the divisor $D$,
+$$\II (D):=f_* (\OO _Y (K_{Y/X}-\lfloor f^* D \rfloor ))\ .$$
+The definition is independent of the choice of the log-resolution.
+Multiplier ideal sheaves may be defined in much grater generality. 
+Their properties have been extensively studied 
+eg. [N], [Sk], [De] and [E]. Under the above 
+assumptions, we will say that the pair  $(X,D)$  is log canonical 
+(respectively  log terminal) if the 
+multiplier ideal sheaf associated to the divisor 
+$(1-\epsilon )D$ is trivial, for $0<\epsilon < 1$ (respectively $0\leqq \epsilon < 1$).
+
+As in [EV] given an invertible sheaf $\LL $, an effective divisor
+$$B=\sum b_i B_i$$
+and a positive natural number $N$ such that $\LL ^N = \OO _X(B)$, we will 
+denote by $\L1 $ the sheaf 
+$$\L1 :=\LL \otimes \OO _X(-\lfloor \frac {1}{N} B\rfloor )$$
+and by $\BB$ the divisor 
+$$\BB=\sum _{N \nmid  b_i}B_i\ \ .$$
+We will study the loci 
+$$V^i(\omega _X \otimes \L1 ):= \{ \PP \in Pic ^0(X)\ |\ 
+h^i(\omega _X\otimes \L1 \otimes \PP )\neq 0\}\ .$$
+
+Assume now that $B$ is a divisor with normal crossing support, 
+then the deformation theory
+of the cohomology groups $H^i(X, \omega _X\otimes \L1 \otimes \PP )$ behaves 
+analogously to the deformation theory of the cohomology groups 
+$H^i(X, \omega _X\otimes \PP )$. In fact, 
+the geometry of these loci is governed
+by the following theorem which parallels the theory developed in
+[GL1] and in [GL2], (see Thm. 1.2 of [EL] for an analogous formulation).
+\proclaim{\rm {THEOREM 1.1}} Let $T\subset Pic^0(X)$ be any irreducible component
+of $V^i(\omega _X \otimes \L1 )$, and let $\PP \in T$ be a general point. Then
+
+a. $T$ is (a translate of) a sub-torus of $Pic^0(X)$
+
+b. $codim _{ Pic^0(X) }T \geq i-(dim X -dim\ alb_X(X))$
+
+c. $Pic^0(X)\supset V^0(\omega _X \otimes \L1 )\supset V^1(\omega _X 
+\otimes \L1 )
+\supset \ ...\ \supset V^n(\omega _X \otimes \L1 )$
+
+d. If $0\neq v \in H^1(X, \OO _X)\cong T_{\PP }Pic^0(X)$ is not tangent to $T$, then the sequence
+$$H^{n-i-1}(X,(\L1 \otimes \PP)^*) \overset {\cup v} \to {\longrightarrow} 
+H^{n-i}(X,(\L1 \otimes \PP)^*)  \overset {\cup v} \to {\longrightarrow } 
+H^{n-i+1}(X,(\L1 \otimes \PP)^*) $$
+is exact. If $v\neq 0$
+is tangent to $T$, then the 
+maps in the above sequence vanish.
+\endproclaim
+
+The statements a. b. c. are well known. For a., the reader may refer to
+[B] and [S], for b., to [D]; c. is analogous to Lemma 1.8 [EL];
+the second part of d. is [EV] Lemma 12.6 c). As for the first assertion in d.,
+one may proceed as in [GL2]. The main point is to represent the
+cohomology groups $H^i(X,(\L1 \otimes P)^*)$ in terms of harmonic 
+$L^{(2)}$ forms with coefficients in an appropriate unitary local 
+constant system cf. [EV] and [EV2] appendix D.  
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent{\bf 2. Proofs} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Proof of theorem 1. Let $D$ be a divisor in the linear series 
+$|m\Theta |$. Consider its decomposition into 
+irreducible reduced components
+$$D=\sum d_i D_i\ .$$
+We may assume that $1\leqq d_i \leqq m-1$. Now consider a log resolution 
+$f:X\longrightarrow A$ of the pair $(A, D)$. Define the sheaf
+$$\L1 := \OO _X(f^{*} (\Theta )-\lfloor \frac {1}{m} f^{*} D\rfloor )$$
+and observe that (cf. \cite {E})
+$$f_* (\omega _X\otimes \L1 )=f_{*} (\omega _{X/A} \otimes f^{*} (\Theta )
+-\lfloor \frac {1}{m} f^* D\rfloor )=\II (\frac {1}{m} D)\otimes \OO _A(
+\Theta )$$
+$$R^if_*(\omega _X\otimes \L1 )=0\ \ \forall \ i>0\ .$$
+We must show that the multiplier ideal $\II :=\II (\frac {1}{m} D )$ is trivial.
+As before, let
+$$V_i:= \{ \PP \in Pic^0 (X) \ |\ h^i(\omega _X\otimes \L1 \otimes \PP )\neq 0\ \}$$ 
+$$\ \ \ \ = \{ \PP \in Pic^0 (A) \ |\ h^i(\OO _A(\Theta )\otimes \II (\frac {1}{m} D)\otimes \PP ) \neq 0\ \},$$ 
+and consider $S$ an irreducible component of $V_0$ of dimension $k$.
+
+By Theorem 1.1.a, we have that $S$ is (a translate of) a subtorous of $Pic^0 (X)$,
+so we may consider the dual abelian variety $C:=S^*$ and the dual map
+$$\pi : A \longrightarrow C\ .$$
+The component $S$ is not empty, as otherwise, we would have (Theorem 1.1.c)
+$H^i(X,\omega _X\otimes \L1 \otimes \PP )=0$ for all ${\Cal {P}}\in Pic^0(X)$ 
+and all integers $0\leqq i\leqq n$.
+Therefore, by a result of Mukai [M], $\omega _X\otimes \L1 \otimes \PP =0$ 
+and this is a contradiction.
+\proclaim{\rm {PROPOSITION 2.1}} Let $F$ be any component of the divisor $D$ 
+such that $\pi (F)=C$. 
+Then 
+$$F\subset Bs|\Theta \otimes \PP\otimes \II (\frac {1}{m} D)|$$
+for general $\PP \in S$. 
+\endproclaim
+
+Proof.  Let $B:=f^* D=\sum b_i B_i$, then the divisor  
+$\BB=\sum_{m \nmid b_i}B_i$
+contains the proper transforms of all the components of $D$.
+Now consider 
+$$ H^0(X,\Omega ^{n-1}_X<\BB >\otimes \L1 \otimes \PP (-\BB ))
+\overset {\wedge \omega } \to {\longrightarrow }
+H^0(X,\omega _X\otimes \L1 \otimes \PP)\ \ \ \ \ \ (1)$$
+where $\omega \in H^0(X,\Omega ^1_X)$ is a global holomorphic 1-form. 
+By [T], this is the conjugate of the last map in the complex in theorem 1.1,d .
+The conjugate $v=\overline {\omega }\in H^1(X,\OO _X)$ may be identified 
+with a vector in the tangent space $T_{\PP }(Pic^0 (X))$. Recall that if
+$v \notin T_{\PP }S$, then $(1)$ is onto. In order to recover the required 
+information from (1), we must make the appropriate choice of the holomorphic
+1-form $\omega$. To this end, consider any component $F$ of $D$ such that $\pi (F)=C$. Let $E$ be the proper transform of $F$ under the map $f:X\lra A$.
+$E$ is a component of $\BB$. Let 
+$p$ a general smooth point of the 
+divisor $E$, and choose local parameters $z_1,...,z_n$ on an appropriate open set $U$,
+such that $E$ is defined on $U$ 
+by the equation $z_1=0$. Choose $\omega \in H^0(X,\Omega ^1_X)$ 
+such that $\omega (p)=dz_1$. By choosing $p\in E$ generically, we may 
+assume that $\overline {\omega }$ is not tangent to $S$, and so $(1)$ is onto.
+Let $s$ be a section of  $H^0(X,\Omega ^{n-1}_X<\BB >
+\otimes \L1 \otimes \PP (-\BB ))$. Then restricting to the open set $U$,
+we may write
+$$s=\sum \eta _i z_1 a_i\ ,$$
+where $\eta _1= dz_2\wedge ... \wedge dz_n$,
+$\eta _i= \frac {dz_1}{z_1}\wedge ...\wedge dz_{i-1} \wedge dz_{i+1}\wedge ...
+  \wedge dz_n$ for $2\leqq i \leqq n$, and 
+$a_i\in \Gamma (U,\L1 \otimes \PP )$. Therefore,
+$$ (s\wedge \omega)_{(p)}=(a_1 z_1\ dz_1\wedge ...\wedge dz_n ) _{(p)}=0\ ,$$
+so $p\in Bs |\omega _X\otimes \L1 \otimes \PP |$. Moreover,  
+$p$ is a general point of 
+$E$, so $E\in Bs|\omega _X\otimes \L1 \otimes \PP |$.
+Since $$H^0(X,\omega _X \otimes \L1 \otimes \PP )\cong H^0(A,\OO _A(\Theta )
+\otimes \PP \otimes \II )\ ,$$ and $E$ is the proper transform of $F$,
+it follows that
+$$ F\subset Bs|\Theta \otimes \PP\otimes \II (\frac {1}{m} D)|\ \ \square$$
+   
+\proclaim{\rm {COROLLARY 2.2}} The divisor
+$$\Theta - \sum _{\pi (D_i)=C} D_i $$
+is algebraically equivalent to an effective divisor, and hence
+is nef. 
+\endproclaim
+
+Now consider the divisor
+$$H:=D-\sum _{\pi (D_i)=C}d_iD_i\ .$$ 
+Using the corollary, we may rewrite the divisor $H$ as a sum of an ample divisor, a nef divisor and effective divisor  
+$$H\equiv \Theta +(m-1)(\Theta - \sum _{\pi (D_i)=C}D_i)+
+\sum _{\pi (D_i)=C} (m-1-d_i)D_i\ .$$
+On an PPAV, any effective divisor is nef, and the sum of
+an ample divisor with a nef divisor is always ample.
+Therefore the divisor 
+$H$ is ample.
+
+The theorem follows, since as $H$ is ample and contained in the 
+pullback of a divisor on $C$, the map $\pi $ must be an isomorphism, and 
+hence $S=Pic^0(A)$. So 
+$$H^0(A, \OO _A(\Theta )\otimes \PP \otimes \II ( \frac {1} {m} D ) )\neq 0$$
+ for all $\PP
+\in Pic^0(A)$. This means that all translates of $\Theta $ must vanish
+along the cosupport of $\II $, but then $\II =\OO _A\ \ \ \square $ 
+
+Proof of corollary 2. In order 
+to prove corollary 2, we will need the following lemmas:
+\proclaim {\rm {LEMMA 2.2}} The components of the divisor $D\in |m\Theta |$
+have multiplicity at most equal to $m$.
+\endproclaim
+
+Proof. Suppose that there exists a component $F$ of $D$ of multiplicity
+$f>m$, and let 
+$$D=fF+\sum d_iD_i$$
+be a decomposition of $D$ into distinct irreducible components. 
+We have the following numerical equivalence of $\QQ $-divisors 
+$$\Theta -F\equiv _{\QQ } \frac {1}{m} (D - mF)\ .$$
+Since $f\geq m+1$, it follows (after an easy calculation)
+that $\frac {f-m}{m}\geq \frac {1}{m+1}\frac
+{f}{m}$. 
+Consequently 
+$$(\Theta -F).C=\frac {1}{m} (D - mF).C
+= \frac {1}{m}((f-m)F+\sum d_iD_i).C\geq$$
+$$\geq  \frac {1}{m}(\frac {f}{m+1}F+\sum \frac {d_i}{m+1}D_i).C=(\frac {1}{m+1}) \Theta . C$$ 
+for any curve $C$, and hence
+$(\Theta -F)$ is ample. By Riemann-Roch, $h^0 (\Theta -F)>0$, 
+so $h^0 (\Theta -F)=
+h^0 (\Theta)=1$. This means that $(\Theta -F)^n=(\Theta )^n$. On an 
+abelian variety this is a contradiction unless the component $F$ is empty 
+$\square$
+
+Now we may assume that the divisor $D$ decomposes as follows
+$$D=\sum _{i=1}^{\delta } d_iD_i +m\Delta \ ,$$
+where $1\leqq d_i \leqq m-1$, and $\Delta =\sum _{d_i=m}D_i$ is the reduced
+Cartier divisor whose components are the components of $D$ of multiplicity 
+exactly $m$.
+\proclaim {\rm {LEMMA 2.3}} There exist PPAVs $(A_0,\Theta _0)$ and $(A',\Theta ')$,
+and projections $p_0 :A\longrightarrow A_0$, 
+$p' :A\longrightarrow A'$ such that the map 
+$$(p_0\times p'):A\longrightarrow A_0\times A'$$
+is an isomorphism of PPAVs. Moreover 
+$$\Delta = p_0^* \Delta _0$$
+$$D_i= {p'} ^* D_i'$$
+where $\Delta _0 = \Theta _0$ and $D'= \sum _{i=1}^{\delta } d_i
+D_i'\equiv m\Theta '$.
+\endproclaim
+
+Proof. We will use the notation and the results of [LB]
+chapters 3.3 and 4.3. The divisor $m(\Theta -\Delta )$ is linearly equivalent
+to the effective divisor $\sum d_iD_i$, hence
+$\OO _A (m(\Theta -\Delta ))$ and $\OO _A (\Theta -\Delta )$
+are positive semidefinite line bundles. Therefore, there
+exists a topologically trivial line bundle $P\in Pic^0(A)$ such that
+$h^0(\OO _A(\Theta -\Delta )\otimes P)\neq 0$. 
+Define $p_0:A\longrightarrow A_0:=
+A/K(\Delta )_0$ and 
+$p':A\longrightarrow A':=
+A/K(\Theta -\Delta +P)_0$.
+By [LB] 3.3.2, there exist positive definite line bundles
+${\Cal {M}}'$ on $A'$ and ${\Cal {M}}_0$ on
+$A_0$ such that 
+$${\Cal {O}} _A(\Delta )=p_0^*
+{\Cal {M}}_0\ \ \ and \ \ \ H^0(A,{\Cal {O}} _A(\Delta ))
+= p_0^*(H^0(A_0,{\Cal {M }}_0))$$
+$${\Cal {O}} _A(\Theta -\Delta )\otimes P={p'}^*
+{\Cal {M}}'\ \ \ and \ \ \ H^0(A,{\Cal {O}} _A(\Theta -\Delta  )\otimes P)
+= {p'}^*(H^0(A',{\Cal {M }}'))$$
+for some $P\in Pic^0(A)$. By the decomposition theorem
+[LB] 4.3.1, the map
+$$(p_0,p'):A\longrightarrow A_0\times A'$$
+is an isomorphism of the PPAVs $(A,\Theta \otimes P)$ and $(A_0\times A',
+{p_0}^*{\Cal {M}}_0\otimes {p'}^*{\Cal {M}}')$.
+Finally, since $K(\Theta -\Delta )_0=K(
+(\Theta -\Delta )\otimes P)_0=K(m(\Theta -\Delta ))_0$, it follows that
+$$H^0(A,{\Cal {O}} _A(m(\Theta -\Delta ) ))
+= {p'}^*(H^0(A',m{\Cal {M }}')),$$
+so $\Delta =p_0^*\Delta _0$ and $\sum d _i
+D_i = {p'}^* D'\ \ \ \ \square $
+
+Suppose that there exists $S$ an irreducible component of 
+$\Sigma _{mk} (D)$ of codimension $k$.
+Then there exist positive integers $k_0$ and $k'$ such that
+$mk=k_0+k'$ and 
+$$S\subset \Sigma _{k_0} (m \Delta _0)\times \Sigma _{k'} 
+(\sum _{i=1}^{\delta } d_iD_i')\ .$$
+
+From the second of the two theorems due to Ein and Lazarsfeld,
+we know that 
+$$codim _{A_0} \Sigma _{k_0} (m \Delta _0)=codim _{A_0} 
+\Sigma _{\lceil \frac {k_0}{m} \rceil } 
+( \Delta _0) \geq \lceil \frac {k_0}{m}\rceil \ .$$
+Also, by theorem 1, we know that if $k'>0$, then
+$$codim _{A'} \Sigma _{k'}(\sum _{i=1}^{\delta } d_iD_i ')
+\geq \lfloor \frac {k'}{m}\rfloor +1\ .$$
+Therefore, 
+$$k=codim _A S\geq codim _{A_0} \Sigma _{k_0} (m \Delta _0)+
+codim _{A'} \Sigma _{k'}(\sum _{i=1}^{\delta } d_iD_i ')\geq$$
+$$\geq \lceil \frac {k_0}{m}\rceil +\lfloor \frac {k'}{m}\rfloor +1= k+1\ .$$
+This implies that $k'=0$ , $mk=k_0$ and $codim _{A_0} \Sigma _{k} ( \Delta _0)=k$. 
+The corollary now follows directly from the first of the  
+two theorems due to Ein and Lazarsfeld $\square$
+
+ \bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Refs
+\widestnumber\key{AACGH}
+
+\ref\key AM
+\by A. Andreotti, A. Mayer
+\paper On period relations for abelian integrals on algebraic curves
+\jour Ann. Scuola Normale Superiore Pisa 21 (1967) 189-238
+\endref
+
+\ref\key AD
+\by E. Albarello C. DeConcini
+\paper Another proof of a conjecture of S.D. Novikov on periods of abelian
+integrals on Riemann surfaces
+\jour  Duke Math. J. 54 (1987) 163-178
+\endref
+
+\ref\key B
+\by I. Biswas
+\paper On cohomology of parabolic line bundles
+\jour Preprint, (1996) 
+\endref
+
+\ref\key De
+\by J. P. Demailly
+\paper Theorie de Hodge $L^2$ et theorems d'annulation 
+\jour Soci\'{e}t\'{e} Math\'{e}matique de France 1996
+\endref
+
+\ref\key D
+\by H. Dunio
+\paper \"{U}ber generische Verschwindungssatze. 
+\jour Diplomarbeit, Essen (1991) 
+\endref
+
+\ref\key E
+\by L. Ein
+\paper Multiplier Ideals, Vanishing Theorem and applications. 
+\jour Algebraic geometry---Santa Cruz 1995, 203--219, 
+Proc. Sympos. Pure Math., 62, Part 1, Amer. Math. Soc., Providence, RI, 1997 
+\endref
+
+
+\ref\key EL
+\by L. Ein, R. Lazarsfeld
+\paper Singularities of theta divisors, and the birational geometry of
+irregular varieties. 
+\jour Jour. Amer. Math. Soc. 10 (1997), 243-258 
+\endref
+
+\ref\key EV
+\by H. Esnault, E. Viehweg
+\paper Lectures on vanishing theorems 
+\jour Birkhauser (1992) 
+\endref
+
+\ref\key EV2
+\by H. Esnault, E. Viehweg
+\paper Logarithmic De Rham complexes and vanishing theorems 
+\jour Inventiones Math. 86 (1986), 161-194
+\endref
+
+\ref\key GL1
+\by M. Green, R. Lazarsfeld
+\paper Deformation theory, generic vanishing theorems, and some conjectures
+of Enriques, Catanese and Beauville 
+\jour Inventiones Math. 90 (1987), 389-407 
+\endref
+
+\ref\key GL2
+\by M. Green, R. Lazarsfeld
+\paper Higher obstructions to deforming cohomology groups of line bundles
+\jour J. Amer. Math. Soc. 4 (1991), 87-103
+\endref
+
+\ref\key K
+\by J. Koll\'{a}r
+\paper Shafarevich maps and automorphic forms 
+\jour Princeton University Press (1995) 
+\endref
+
+\ref\key Ke
+\by G. Kempf
+\paper On the geometry of a theorem of Riemann
+\jour  Ann. of Math. 98 (1973), 178-185
+\endref
+
+\ref\key LB
+\by H. Lange C. Birkenhake
+\paper Complex Abelian Varieties 
+\jour  Grundlehren der mathematischen Wissenschaften, Springer Verlag
+\endref
+
+\ref\key M
+\by S. Mukai
+\paper Duality between $D(X)$ and $D(\hat {X})$, with application to Picard sheaves 
+\jour Nagoya math. J. 81 (1981), 153-175 
+\endref
+
+\ref\key N
+\by A. M. Nadel
+\paper Multiplier ideal sheaves and Kahler-Einstein metrics of positive scalar curvature
+\jour Proc. Nat. Acad. Sci. U.S.A. 86 (1989) 7299-7300 and Annals of Math. 132 (1990) 549-596
+\endref
+
+\ref\key S
+\by C. Simpson
+\paper Subspaces of moduli spaces of rank one local systems  
+\jour Ann. Sci. \'{E}cole Norm. Sup. (4) 26 (1993), no. 3 361--401
+\endref
+
+\ref\key Sk
+\by K. H. Skoda 
+\paper Sous-ensembles analytiques d'orde fini ou infini dans $\Bbb {C}^n$
+\jour Bull. Soc. Math. France 100 (1972) 353-408
+\endref
+
+\ref\key T
+\by K. Timmerscheidt
+\paper Mixed Hodge theory for unitary local systems 
+\jour Journal reine angew. Math. 379 (1987), 152-171 
+\endref
+\endRefs
+\vskip.8cm
+
+
+
+ 
+
+                         
+
+
+\enddocument
+\end
+

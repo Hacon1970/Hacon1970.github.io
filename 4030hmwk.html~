@@ -1,0 +1,104 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+  Eprints
+</TITLE>
+
+
+<!-- Begin inclusion of top.html  -->
+
+<BODY BGCOLOR="f5efee" link="#5050C0"  vlink="#AA4040" >
+
+<table border="0">
+
+<tr>
+
+<!-- Column 1: blank left margin -->
+<td width=80 valign=top> 
+
+</td>
+
+<!-- BEGIN Column 2: main page text -->
+<td align = top>
+
+<center>
+<!-- img src = "/~hacon/images/redbar.jpg" border = 0 align=bottom --></a>
+</center>
+
+
+<hr>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+<hr>
+
+
+<br>
+
+<!-- End inclusion of top.html  -->
+
+
+
+
+
+
+
+	
+
+<H2>Mathematics 4030 --- Supplemental Exercises</H2> 
+
+
+<P>1.7. Prove that if a,b,c are natural numbers such tha ac=bc, then a=b.
+
+<P>1.8 Show that if r is the greatest common divisor of two natural
+numbers n,m, then there exist integers h,k such that r=hn+km.
+(Integers are defined in chapter 2.)
+
+
+
+<!-- Begin inclusion of bottom.html  -->
+
+<FONT SIZE=2>
+<P>
+<HR>
+<center>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+</center>
+<HR>
+
+<center>
+Last modified on Monday, 06-Aug-2001 16:39:14 MDT
+</center>
+
+</FONT>
+
+<!-- END Column 2: main page text -->
+</td>
+
+<!-- Column 3: blank right margin -->
+<td width=60 valign=top> 
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- End inclusion of bottom.html  -->
+
+</HTML>
+

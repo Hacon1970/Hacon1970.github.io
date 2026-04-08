@@ -1,0 +1,123 @@
+\section{Lifting sections}
+\label{s_lift}
+
+\begin{theorem}\label{t_lift} Let $\pi\colon\map X.Z.$ be a projective morphism 
+to a normal affine variety $Z$ and let $D$ be a Cartier divisor on $X$.  Suppose that
+$D\sim_{\mathbb{Q}} k(K_X+\Delta)$ for some positive integer $k$, where $(X,\Delta=S+A+B)$
+is a log smooth purely log terminal pair, $S=\rdown\Delta.$ is irreducible, $A\geq 0$ is
+ample and $B\geq 0$.  
+
+If the stable base locus of $D$ contains no log canonical centres of $(X,\rup\Delta.)$
+then the map
+$$
+\map {H^0(X,\ring X.(D))}.{H^0(S,\ring S.(D))}.,
+$$
+is surjective.
+\end{theorem}
+\begin{proof} Pick $\tau\in H^0(S,\ring S.(mD))$ and $\sigma\in H^0(S,\ring S.(mA))$.
+Since
+$$
+H^0(S,\mathcal{J}_{\|mD|_S\|}((mD)|_S))=H^0(S,\ring S.(mD)),
+$$
+it follows that 
+$$
+\sigma\cdot \tau \in H^0(S,\mathcal{J}_{\|mD|_S\|}((mD+mA)|_S)).
+$$
+On the other hand, it is shown in the proof of \eqref{t_multiplier}, that for $m\gg 0$,
+$H^0(X,\mathcal{J}_{\|mD|_S\|}(mD+mA))$ is contained in the image of
+\[
+\map {H^0(X,\ring X.(mD+mA))}.{H^0(S,\ring S.(mD+mA))}.,
+\]
+and the result follows by \eqref{c_squeeze}.  \end{proof}
+
+\begin{theorem}\label{t_int} Let $\pi\colon\map X.Z.$ be a projective morphism 
+to an affine normal variety $Z$ and let $D$ be an integral divisor.  Suppose that $D
+\sim_{\mathbb{Q}} k(K_X+\Delta)$ for some positive integer $k$, where $(X,\Delta=S+A+B)$
+is a log smooth purely log terminal pair, $S=\rdown \Delta.$ is irreducible, $A\geq 0$ is
+a general ample $\mathbb Q$-divisor and $B$ is an effective $\mathbb Q$-divisor.  Let
+$\Omega=(A+B)|_S$.  Assume that $(S,\Omega )$ is canonical and $S$ is not a component of
+the base locus of $|D|$. Let $m$ be a positive integer and
+$$
+\Theta _m=\Omega -\Omega\wedge \frac{F_m}{mk}.
+$$
+Then $mk\Theta _{m}$ is integral and
+\begin{enumerate}
+\item If $H$ is a semiample divisor on $X$, 
+then 
+$$
+|mk(K_S+\Theta _m)+H|_S|+mk(\Omega-\Theta_m)=|mD+H|_S.
+$$
+\item If $l>0$ is a fixed integer, $\Phi$ is a $\mathbb Q$-divisor on $S$ such that $\Phi
+\leq \Omega$ and $M=lk(K_S+\Phi)$ is integral and there are infinitely many integers $m>0$
+such that $mlk(\Theta _{ml}-\Phi)+mA|_S$ is very ample and $(S,\Omega +lk(\Phi -\Theta
+_{ml}))$ is kawamata log terminal, then 
+$$
+|M|+lk(\Omega -\Phi)\subset |lD|_S.
+$$
+\end{enumerate}
+\end{theorem}
+
+\begin{lemma}\label{l_psh} Let $(X,\Delta=S+A+B)$ be a log smooth purely log terminal 
+pair such that $S=\rdown \Delta .$ is irreducible, $A\geq 0$ is a general ample $\mathbb
+Q$-divisor and $B$ is an effective $\mathbb Q$-divisor. Assume that $D\sim _{\mathbb
+  Q}k(K_X+\Delta)$ for some positive integer $k>0$.  For any $m>0$, we let $\Theta
+_m=\Omega -\Omega \wedge \frac 1{mk} F_m$ where $\Omega =(\Delta -S)|_S$ and $F_m={\rm
+  Fix}(|mD|_S)$.  Pick any log resolution $g\colon Y\to X$ of $|mD|+\Delta $ and write
+$$
+K_Y+\Psi =g^*(K_X+\Delta)+E,
+$$ 
+where $\Psi\geq 0$ and $E\geq 0$ have no common components, $g_*\Psi =\Delta $ and
+$g_*E=0$.  Let $$\Gamma =\Psi -\Psi \wedge \frac {\fix(mk(K_Y+\Psi ))}{mk}$$ and
+$h=g|_T\colon T\to S$.
+
+If $(S,\Omega )$ is canonical and the components of $(\Gamma -T)|_{T}$ are disjoint, then
+the base locus of $|mk(K_Y+\Gamma)|$ contains no canonical centers of $(T,(\Gamma -T)|_T
+)$, $h_*(\Gamma -T)|_T=\Theta _m$, $mk\Theta _m$ is integral and $H^0(T,\ring
+T.(mk(K_Y+\Gamma)))\cong H^0(S,\ring S. (mk(K_S+\Theta _m)))$.
+\end{lemma}
+\begin{proof} For any divisor $P$ in $T$ given by a component of $\Supp(\Psi -T)|_T$,
+we have that $\mult_P (E|_T)=0$ and if $P$ is not $h$-exceptional then
+$$\mult_P(|mD|_S)=\mult_P(|mg^*D|_T)=\mult_P(|mk(K_Y+\Psi)|_{T}),$$
+and $\mult_P(\Omega )=\mult_P((\Psi -T)|_T)$.
+It follows that for these divisors $\mult_P((\Gamma -T)|_T)=\mult_P\Theta _m$. 
+As $(S,\Omega )$ is canonical, 
+$$
+(\Gamma -T)|_T=(h^{-1})_*\Theta _m.
+$$  
+Therefore $h_*(\Gamma -T)|_T =\Theta _m$ and $H^0(T,\ring T.(mk(K_Y+\Gamma)))\cong
+H^0(S,\ring S. (mk(K_S+\Theta _m)))$.  Note also that by definition $mk\Gamma$ is integral
+and so $mk \Theta _m$ is also integral.
+
+As the only canonical centers of $(T,(\Gamma -T)|_T )$ are the components of $(\Gamma
+-T)|_T\leq (\Psi -T)|_T$ and $\Supp(\Psi ) +\fix(mk(K_Y+\Psi))$ has normal
+crossings, it follows that no component of $(\Gamma -T)|_T$ is contained in ${\rm
+  Fix}(mk(K_Y+\Gamma ))={\rm Bs}(mk(K_Y+\Gamma ))$.
+\end{proof}
+
+
+\begin{proof}[Proof of \eqref{t_int}] Let $g\colon Y\to X$ be a log resolution of
+$|mk(K_X+\Delta )|+ \Delta$. We may write
+$$K_Y+\Psi =g^*(K_X+\Delta )+E$$ where $\Psi \geq 0$ and $E\geq 0$
+have no common components, $g_*\Psi =\Delta$ and $g_*E=0$.  We may assume that the
+components of $\Psi-(g^{-1})_{*}S$ are disjoint.  Let $C=g^*A$. Note that $C=(g^{-1})_*A$
+so that $C\leq \Psi$. Let $$\Gamma =\Psi -\Psi \wedge \frac {{\rm
+    Fix}|mk(K_Y+\Psi)|}{mk}.$$ Pick a $\mathbb Q$-divisor $G$ such that $pG$ is a general
+element of $|pg ^*H|$ for some $p\gg 0$ sufficiently divisible. By \eqref{l_psh} one sees
+that $mk\Theta _m$ is integral and no log canonical center of $(Y,\rup \Gamma +G.)$ is
+contained in the base locus of $mk(K_Y+\Gamma+\frac 1{mk}G)$. Let $T=(g^{-1})_*S$ and
+$h=g|_T\colon T\to S$.  Since $\Gamma \geq C$ and there is an effective and exceptional divisor
+$F$ such that $C-F$ is ample, it follows that ${\bf B}_+(\Gamma -T+\frac 1{mk}G/Z)$ does
+not contain $T$.  By \eqref{t_lift} (applied to $D=mk(K_Y+\Gamma +\frac1{mk}g^*H)$) we
+have that $$H^0(Y,\ring Y.(mk(K_Y+\Gamma )+g^*H))\to H^0(T,\ring T.(mk(K_Y+\Gamma
+)+g^*H))$$ is surjective. Therefore
+$$|(mk(K_Y+\Gamma )+g^*H)|_T|+mk(\Psi -\Gamma)|_T\subset 
+|mk(K_Y+\Psi)+g^*H|_T.$$ By \eqref{l_psh}, $h_*(K_Y+\Gamma )|_T=K_S+\Theta _{m}$ and
+$mk\Theta _{mk}$ is integral so that pushing forward to $X$, (1) follows.
+
+(2) follows from \eqref{t_squeeze}, where the divisors $M_m$, $C_m$, $M$ and $D$
+correspond to the divisors $mlk(K_S+\Theta _{ml})$, $mlk(\Omega-\Theta _{ml})$, $M$ and
+$lD$ respectively. Condition (1) of \eqref{t_squeeze} is immediate and condition (2)
+follows from what we have just proved.  Conditions (3) and (4), follow since we have
+assumed that $mlk(\Theta _{ml}-\Phi)+mA|_S$ is very ample and $(S,B|_S+lk(\Phi
+-\Theta_{ml}))$ is kawamata log terminal.
+\end{proof}

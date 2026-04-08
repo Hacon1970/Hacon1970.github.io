@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<link href="Summer%20Mathematics%20Program%20for%20High%20School%20Students,%20June%202005_files/jc2.css" rel="stylesheet" type="text/css" media="all"><title>Summer Mathematics Program for High School Students, June 2006</title></head><body>
+
+
+<div id="container">
+
+<div id="content2">
+
+<h2>Problems of the day</h2>
+
+<p><a href="http://www.math.utah.edu/~hacon/HSP06/py">New Python problems</a></p>
+
+<p><a href="http://www.math.utah.edu/~hacon/HSP06/pyold">Old Python problems and solutions</a></p>
+
+<h2>Schedule</h2>
+
+<p><a href="http://www.math.utah.edu/~hacon/HSP06/schedule1.html">Week 1: June 12&#8212;15</a></p>
+
+<p><a href="http://www.math.utah.edu/~hacon/HSP06/schedule2.html">Week 2: June 19&#8212;22</a></p>
+
+<p><a href="http://www.math.utah.edu/~hacon/HSP06/schedule3.html">Week 3: June 26&#8212;29</a></p>
+
+
+
+
+<h2>References</h2>
+
+<p>A Friendly Introduction to Number Theory, Joseph Silverman</p>
+
+<p>The Higher Arithmetic, Harold Davenport</p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/ent.pdf">Elementary Number Theory</a>, William Stein</p>
+
+<p><a href="http://theory.lcs.mit.edu/%7Erivest/rsapaper.pdf">1978 paper by Rivest, Shamir, and Adleman</a></p>
+
+<p><a href="http://www-db.stanford.edu/%7Ebackrub/google.html">1998 Brin-Page Paper (Google)</a></p>
+
+<p><a href="http://mathcircle.berkeley.edu/BMC3/crypto.pdf">Cryptography</a>, Tom Davis</p>
+
+<p><a href="http://www.lrz-muenchen.de/%7Ehr/numb/pi-irr.html">Pi is irrational</a> &#8212;
+source for David McKay's talk</p>
+
+<p><a href="http://www-groups.dcs.st-and.ac.uk/%7Ehistory/">History of math web site</a></p>
+
+</div>
+
+
+
+<div id="content1">
+
+<h1>Summer Mathematics Program for High School Students, June 2006</h1>
+
+<h2>Notes and handouts</h2>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/diophantine.pdf">Square-Triangular Numbers</a></p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/eigenvectors.pdf">Eigenvalues and eigenvectors</a></p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/google.pdf">Mathematics of Google</a></p>
+
+
+
+
+
+
+<h2>Python code </h2>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/td.txt">td</a>: td(n) factors n by trial division</p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/gcd.txt">gcd</a>: greatest common divisor</p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/isolve.txt">isolve</a>: solve ax + by = c</p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/modpower.txt">modpower</a>: a<sup>k</sup> mod N</p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/growcf.txt">growcf</a>: growing continued fractions</p>
+
+
+
+
+<hr align="left" width="100">
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/encryption1.txt">Basic encryption</a></p>
+
+<p><a href="http://www.math.utah.edu/%7Ecarlson/hsp2005/python/primetest.txt">Checking up on the Fermat test</a></p>
+
+<hr width="100" align="left" />
+
+
+<!--<p><a href="modular.pdf">Integer and Modular Arithmetic</a></p><p><a href="primes.pdf">Primes</a></p>-->
+
+
+
+
+
+
+
+
+</div> <!-- content1 -->
+</div> <!-- container -->
+
+
+
+
+</body></html>

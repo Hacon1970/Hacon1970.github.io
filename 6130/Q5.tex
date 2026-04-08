@@ -1,0 +1,21 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 5}
+\begin{enumerate}
+\item  Define principal affine open subsets and show that any quasi-projective variety $X$ can be covered by  principal affine open subsets.
+
+{\bf Proof.} A principal affine subset is a subset of the form $U\setminus V(f)$ where $U$ is an affine variety and $f\in k[U]$.
+Since $X$ is quasi-projective, $X=X_0\setminus X_1$ where $X_i\subset \mathbb P ^N$ are closed. Let $x\in X$ and pick $i\in 0,\ldots , N$ such that $x\in X\cap \mathbb A ^N_i$. Then  $X\cap \mathbb A ^N_i=Y_0\setminus Y_1$ where $Y_j=X_j \cap \mathbb A ^N_i$ are affine closed sets.
+Since $x\in Y_0\setminus Y_1$ and $Y_1$ is closed, there exists $f\in k[Y_0]$ such that $Y_1\subset V(f)$ but $x\not\in V(f)$. Thus $x\in V_0\setminus V(f)$ which is a principal affine open subset.
+
+\item Show that $\mathbb A ^2\setminus (0,0)$ is not affine.
+
+
+{\bf Proof.} We have seen that $k[\mathbb A ^2\setminus (0,0)] =k[\mathbb A ^2]$. (This follows from the fact that if $f\in k[\mathbb A ^2]$ is not constant, then $V(f)$ is infinite and hence not contained in $(0,0)$.)
+By the Nullstellensatz, if $\mathbb A ^2\setminus (0,0)$ is affine, 
+since $(1)\ne (x,y)\subset k[x,y]=k[\mathbb A ^2\setminus (0,0)] $, we must have $V(x,y)\ne \emptyset$. This is a contradiction.
+
+\end{enumerate}
+\end{document}
+\end

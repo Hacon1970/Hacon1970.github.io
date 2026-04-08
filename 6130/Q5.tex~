@@ -1,0 +1,10 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 5}
+\begin{enumerate}
+\item  Define principal affine open subsets and show that any quasi-projective variety can be covered by  principal affine open subsets.
+\item Show that $\mathbb A ^2\setminus (0,0)$ is not affine.
+\end{enumerate}
+\end{document}
+\end

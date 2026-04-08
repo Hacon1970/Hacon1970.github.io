@@ -1,0 +1,25 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 9}
+1) Define the normalization of an irreducible quasi projective variety and compute an example where the induced map is not an isomorphism.
+
+Answer: $\nu : X^\nu \to X$ is the normalization of an irreducible quasi projective variety if there exists
+$X=\cup U_i$ a finite cover by affine open subsets such that if $A_i=k[U_i]$ and $B_i=k[V_i]$ where $V_i=\nu ^{-1}(U_i)$, then each $B_i$ is the integral closure of $A_i$ in $k(X)$.
+
+Alternatively, $f:X'\to X$  is the normalization of $X$ iff $f$ is a finite birational morphism from a normal variety. (Recall that $X$ is normal if there exists
+$X=\cup U_i$ a finite cover by affine open subsets such that each $k[U_i]$ is integrally closed in $k(X)$.)
+
+If $X=V(y^2-x^3)\subset \mathbb A ^2$, then $k[X]=k[x,y]/(y^2-x^3)$ is not integrally closed as $y/x\in k(X)$ satisfies the monic polynomial $t^2-x\in k[X][t]$. 
+
+2) Show that an irreducible quasi-projective variety $X$ is normal if and only if $\mathcal O _x$ is normal for all points $x\in X$.
+
+Answer: We may assume that $X$ is affine. Assume that $\mathcal O _x$ is normal for all points $x\in X$. Let $g\in k(X)$ satisfy a monic polynomial $f(t)\in k[X][t]$, then we must show that $g\in k[X]$.
+Since $k[X]=\cap _{x\in X}\mathcal O _x$, for any $x\in X$, $g\in k(X)$ satisfies monic polynomial $f(t)\in \mathcal O _x[t]$ and hence $g\in \mathcal O _x$ (as 
+$\mathcal O _x$ is normal for all points $x\in X$). But then $g\in \cap _{x\in X}\mathcal O _x=k[X]$ as required.
+
+Assume that $X$ is normal. Let $g\in \in k(X)$ satisfy a monic polynomial $f(t)\in \mathcal O _x[t]$. Write $f(t)=t^n+\frac {a_1}{b_1}t^{n-1}+\ldots +\frac {a_n}{b_n}$ and let $b=b_1\cdots b_n$. Multyplying by $b^n$ and letting $T=bt$
+we obtain a polynomial
+$F(T)=T^n+\frac {a_1b}{b_1}T^{n-1}+\ldots + \frac {b^na_n}{b_n}\in k[X][T]$ such that $F(bg)=0$. Thus $bg\in k[X]$ (as $X$ is normal) and so $b\in \mathcal O _x$ (as $b(x)\ne 0$, i.e. $b\not\in \frak m _x$).
+\end{document}
+\end

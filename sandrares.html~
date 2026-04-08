@@ -1,0 +1,264 @@
+
+
+<HTML>
+
+<HEAD>
+  <TITLE>My Resume</TITLE>
+  <BODY BACKGROUND="pics/brnpapr.gif"
+</HEAD>
+ 
+<BODY>
+
+  <CENTER>
+  <B><H1>Aleksandra Jovanovic</H1></B>
+  1622 Barry Ave., #8<BR>
+  Los Angeles, CA 90025<BR>
+  email: ajovanov@math.ucla.edu<BR>
+  http://www.math.ucla.edu/~ajovanov<BR>
+  (310) 826-8547<BR>
+  </CENTER>
+  <BR>
+  
+  <CENTER>
+  <IMG SRC="pics/line9.gif">
+  </CENTER>
+
+  <H2>Education</H2>
+  <PRE>
+	<B>University of California, Los Angeles</B>
+	M.A. Applied Mathematics, expected June 1997, GPA 3.83
+	B.S. Mathematics, June 1995, GPA 3.54 
+	<B>Santa Monica City College, Santa Monica</B>
+        A.A. Liberal Arts, December 1992, with honors
+  </PRE>
+
+  <H2>Technical Skills</H2>
+  <PRE>
+  	<B>Operating Systems:</B>	
+	 	Windows, UNIX
+  	<B>Languages:</B>		
+		Fortran, Pascal,  
+  	<B>Software:</B>		
+		Matlab, Mathematica, Maple, WordPerfect, HTML, Latex2e
+  	<B>Other:</B>
+	        Differential Equations, Numerical Analysis, Probability
+  </PRE>
+  <H2>Employment</H2>
+  <PRE>
+  	<B>Department of Mathematics, UCLA:</B>  
+  	Learning Skill Instructor  9/96-present
+        Held two-hour semi-weekly classes for calculus students, constructed
+        excellent problems sets which should challenge the students and 
+        reinforce course material, encouraged the exchange of ideas in the
+        class and collaborative learning.
+        The objective of the class structure was to naturally inculcates in
+        the students high quality problem-solving skills.
+
+	<B>Department of Mathematics,  UCLA:</B> Grader	9/95-12/96
+        Graded papers under the derection of professors on a weekly basis 
+        for the following undergraduate courses: Matrices and Diff. Equations,
+        and upper division Differential Equations.
+
+	<B>Reifman and Altman Attorneys at Law, Los Angeles</B> 
+        Billing Department Assistant 6/95-1/96
+        Generated bills for the clients, aquired bank deposits.
+
+	<B>North Campus Student Center, UCLA:</B>      
+        Student Supervisor 2/94-10/95
+        Customer service, cash transactions, balanced daily sales on the
+        end of the day.
+
+</PRE>
+<H2>Awards and Honors</H2>
+<PRE>
+        Graduated with Cum Laude Honors, June 1995
+        Steven Sackler Scholarship, September 1994
+	Dean's Honors List
+</PRE>
+
+</BODY>
+</HTML>
+
+<HTML>
+<BODY>
+<CENTER>
+<H1>Aleksandra Jovanovic </H1>  
+<HR>
+  (e-mail:ajovanov@math.ucla.edu) <BR>
+  1622 S. Barry Ave. #8, Los Angeles, CA 90025  (310) 826-8547 <BR>
+</CENTER>
+<BR>
+<BR>
+
+<H3><IMG SRC=ball.gif> Education</H3>
+  <PRE>
+	<B>University of California, Los Angeles</B>
+	M.A. Applied Mathematics, expected September 1997, GPA 3.83
+	B.S. Mathematics, June 1995, GPA 3.54 
+	<B>Santa Monica City College, Santa Monica</B>
+        A.A. Liberal Arts, December 1992, with honors
+</PRE>
+<H3><IMG SRC=ball.gif>  Technical Skills</H3>
+<PRE>
+  	<B>Operating Systems:</B>	
+        	Windows, UNIX
+  	<B>Programming Languages:</B>		
+		Fortran, Pascal  
+  	<B>Software:</B>		
+		Matlab, Mathematica, Maple, WordPerfect, HTML, Latex2e
+  	<B>Other:</B>
+	        Differential Equations, Numerical Analysis, Probability
+</PRE>
+<H3><IMG SRC=ball.gif> Employment</H3>
+<PRE>
+  	<B>Department of Mathematics, UCLA:</B> 
+  	-LEARNING SKILL INSTRUCTOR      9/96-present
+        Held two-hour semi-weekly classes for calculus students, constructed
+        problem sets to challenge students and reinforce course material,
+        encouraged the exchange of ideas and collaborative learning in class.
+
+  	<B>Department of Mathematics, UCLA:</B>
+        -GRADER      9/95-12/96
+        Graded papers under the direction of professors on a weekly basis 
+        for the following undergraduate courses: Matrices and Diff. Equations,
+        upper division Differential Equations.
+
+	<B>Reifman and Altman Attorneys at Law, Los Angeles:</B> 
+        -BILLING DEPARTMENT ASSISTANT      6/95-1/96
+        Generated bills for clients, aquired bank deposits, filed paper work.
+
+	<B>North Campus Student Center, UCLA:</B>      
+	-STUDENT SUPERVISOR      2/94-10/95      
+        Customer service, cash transactions, balanced daily sales.
+</PRE>
+<H3><IMG SRC=ball.gif> Awards and Honors</H3>
+<PRE>
+        Steven Sackler Scholarship, September 1994
+	Dean's Honors List
+</PRE>
+<HR>
+</BODY>
+</HTML>
+
+<HTML>
+<BODY>
+<CENTER>
+<H1>Aleksandra Jovanovic </H1>  
+<HR>
+  (e-mail:ajovanov@math.ucla.edu) <BR>
+  1622 S. Barry Ave. #8, Los Angeles, CA 90025  (310) 826-8547 <BR>
+</CENTER>
+<BR>
+<BR>
+
+<H3><IMG SRC=ball.gif> Education</H3>
+  <PRE>
+	<B>University of California, Los Angeles</B>
+	M.A. Applied Mathematics, expected September 1997, GPA 3.83
+	B.S. Mathematics, June 1995, GPA 3.54 
+	<B>Santa Monica City College, Santa Monica</B>
+        A.A. Liberal Arts, December 1992, with honors
+</PRE>
+<H3><IMG SRC=ball.gif> Employment</H3>
+<PRE>
+        <B>Department of Mathematics, UCLA:</B>
+        -LEARNING SKILL INSTRUCTOR      9/96-present
+        Held two-hour semi-weekly classes for calculus students, constructed
+        problem sets to challenge students and reinforce course material,
+        encouraged the exchange of ideas and collaborative learning in class.
+ 
+        <B>Department of Mathematics, UCLA:</B>
+        -GRADER      9/95-12/96
+        Graded papers under the direction of professors on a weekly basis
+        for the following undergraduate courses: Matrices and Diff. Equations,
+        upper division Differential Equations.
+ 
+        <B>Reifman and Altman Attorneys at Law, Los Angeles:</B>
+        -BILLING DEPARTMENT ASSISTANT      6/95-1/96
+        Generated bills for clients, aquired bank deposits, filed paper work.
+ 
+        <B>North Campus Student Center, UCLA:</B>
+        -STUDENT SUPERVISOR      2/94-10/95
+        Customer service, cash transactions, balanced daily sales.
+</PRE>
+
+<H3><IMG SRC=ball.gif>  Technical Skills</H3>
+<PRE>
+  	<B>Operating Systems:</B>	
+        	Windows, UNIX
+  	<B>Programming Languages:</B>		
+		Fortran, Pascal  
+  	<B>Software:</B>		
+		Matlab, Mathematica, Maple, WordPerfect, HTML, Latex2e
+  	<B>Other:</B>
+	        Differential Equations, Numerical Analysis, Probability
+</PRE>
+<H3><IMG SRC=ball.gif> Awards and Honors</H3>
+<PRE>
+        Steven Sackler Scholarship, September 1994
+	Dean's Honors List
+</PRE>
+<HR>
+</BODY>
+</HTML>
+
+<HTML>
+<BODY>
+<CENTER>
+<H1>Aleksandra Jovanovic-Hacon </H1>  
+<HR>
+  (e-mail:ajovanov@math.ucla.edu) <BR>
+  1622 S. Barry Ave. #8, Los Angeles, CA 90025  (310) 826-8547 <BR>
+</CENTER>
+<BR>
+<BR>
+
+<H3><IMG SRC=ball.gif> Education</H3>
+  <PRE>
+	<B>University of California, Los Angeles</B>
+	M.A. Applied Mathematics, December 1997, GPA 3.83
+	B.S. Mathematics, June 1995, GPA 3.54 
+	<B>Santa Monica City College, Santa Monica</B>
+        A.A. Liberal Arts, December 1992, with honors
+</PRE>
+<H3><IMG SRC=ball.gif> Employment</H3>
+<PRE>
+        <B>Harvard Westlake Upper School, North Hollywood:</B>
+        -Mathematics Instructor      8/97-present
+        Teach algebra II, trigonometry and functions, and precalculus.  
+
+        <B>Department of Mathematics, UCLA:</B>
+        -LEARNING SKILL INSTRUCTOR      9/96-7/97
+        Held two-hour semi-weekly classes for calculus students, constructed
+        problem sets to challenge students and reinforce course material,
+        encouraged the exchange of ideas and collaborative learning in class.
+ 
+        <B>Department of Mathematics, UCLA:</B>
+        -GRADER      9/95-12/96
+        Graded papers under the direction of professors on a weekly basis
+        for the following undergraduate courses: Matrices and Diff. Equations,
+        upper division Differential Equations.
+</PRE>
+
+<H3><IMG SRC=ball.gif>  Technical Skills</H3>
+<PRE>
+  	<B>Operating Systems:</B>	
+        	Windows '95, UNIX
+  	<B>Programming Languages:</B>		
+		Fortran, Pascal  
+  	<B>Software:</B>		
+		Matlab, Mathematica, Maple, WordPerfect, HTML, Latex2e, Micrograde
+  	<B>Other:</B>
+	        Differential Equations, Numerical Analysis
+</PRE>
+<H3><IMG SRC=ball.gif> Awards and Honors</H3>
+<PRE>
+        Steven Sackler Scholarship, September 1994
+	Dean's Honors List
+</PRE>
+<HR>
+</BODY>
+</HTML>
+
+
+

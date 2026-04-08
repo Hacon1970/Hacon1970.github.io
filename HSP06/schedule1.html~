@@ -1,0 +1,76 @@
+<html><head></head><body><table border="1" cellpadding="10">
+
+  <tbody><tr>
+    <td><b>Week 1</b></td>
+    <td><b>Monday 6/13</b></td>
+    <td><b>Tuesday 6/14</b></td>
+    <td><b>Wednesday 6/15</b></td>
+    <td><b>Thursday 6/16</b></td>
+  </tr>
+
+  <tr>
+    <td><b>Session 1, 8:30-9:30</b></td>
+    <td>ST Numbers<br>1-4, Brute force</td>
+    <td>ST Numbers<br> 5-6, Algebraic numbers</td>
+    <td>ST Numbers<br> 6-7, Recursion formulas</td>
+    <td>ST Numbers<br> 8, Continued fractions</td>
+  </tr>
+
+  <tr>
+    <td><b>Break, 9:30-9:40</b></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td><b>Session 2, 9:40-10:45</b></td>
+    <td>Number Theory 1<br> Divisibility and congruences</td>
+    <td>Number Theory 2<br> Euclidean algorithm</td>
+    <td>Number Theory 3<br>Primes, Fermat test</td>
+    <td>Number Theory 4<br><center>??</center></td>
+  </tr>
+
+  <tr>
+    <td><b>Break, 10:45-11:00</b></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td><b>Session 3, 11:00-12:00</b></td>
+    <td>Ken Golden <br> Sea ice</td>
+    <td>Problem Session</td>
+    <td>Problem Session</td>
+    <td>Problem Session</td>
+  </tr>
+
+  <tr>
+    <td><b>Lunch, 12:00-1:00</b></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td><b>Colloquium</b></td>
+    <td>Problem Session</td>
+    <td>Klaus Schmitt <br> Fractals</td>
+    <td>Fred Adler<br> Mathematical Biology</td>
+    <td>Peter Alfeld <br> Hotel Infinity</td>
+  </tr>
+
+  <tr>
+    <td><b>Lab, 2:00-4:00</b></td>
+    <td>Maria: unix, emacs, python <br> Brute force search</td>
+    <td>Euclidean algorithm <br> ax + by = c</td>
+    <td>Modular powers <br> Fermat's test</td>
+    <td>Finding large primes<br>Testing Fermat's test</td>
+  </tr>
+
+</tbody></table>
+</body></html>

@@ -1,0 +1,122 @@
+
+<HTML>
+<HEAD>
+<TITLE>
+  Eprints
+</TITLE>
+
+
+<!-- Begin inclusion of top.html  -->
+
+<BODY BGCOLOR="f5efee" link="#5050C0"  vlink="#AA4040" >
+
+<table border="0">
+
+<tr>
+
+<!-- Column 1: blank left margin -->
+<td width=80 valign=top> 
+
+</td>
+
+<!-- BEGIN Column 2: main page text -->
+<td align = top>
+
+<center>
+<!-- img src = "/~hacon/images/redbar.jpg" border = 0 align=bottom --></a>
+</center>
+
+
+<hr>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+<hr>
+
+
+<br>
+
+<!-- End inclusion of top.html  -->
+
+
+<P><A HREF="http://www.math.utah.edu/~hacon/CIRM.dvi">CIRM lecture notes
+"On the birational geometry of varieties of maximal Albanese dimension"</A>
+
+<P><A HREF="http://www.math.utah.edu/~hacon/RCC.pdf">Wags 04/09/05 lecture notes
+"Shokurov's Rational Connectedness Conjecture"</A>
+
+<P><A HREF="http://www.math.utah.edu/~hacon/EXT.pdf">Seattle 08/05 lecture notes
+"Extension Theorems and their applications"</A>
+<P><A HREF="http://www.math.utah.edu/~hacon/COLL05.pdf">"The birational geometry of algebraic varieties"</A>
+<P><A HREF="http://www.math.utah.edu/~hacon/S2.html">Turning the sphere inside out</A>
+<P><A HREF="http://www.math.utah.edu/~hacon/JAPAN06.pdf">Yuzawa talk (Japan 2006)</A>
+<P><A HREF="http://www.math.utah.edu/~hacon/MSU1.pdf">MSU 2008 talk 1 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/MSU2.pdf">MSU 2008 talk 2 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/MSU3.pdf">MSU 2008 talk 3 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/Fano.pdf">MSRI Jan 2009 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/Talk04-13.pdf">Robfest 2013 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/OHIO13.pdf">Herb's conference 2013 </A>
+<P><A HREF="http://www.math.utah.edu/~hacon/JMM.pdf">JMM talk January 2014
+</A>
+
+<P> <A HREF="http://www.math.utah.edu/vigre/minicourses/">Vigre Mini-course on Arc Spaces and Motivic Integration </A>
+
+<P> <A HREF="http://www.uni-due.de/~bm0056/SaltLakeCity/">Pictures from the Vigre Mini-course on Arc Spaces and Motivic Integration </A>
+
+
+<P> <A HREF="HSP06/SMP06.html ">Summer High School program 2006 </A>
+
+<P> <A HREF="Kyoto2015.pdf">Lectures in Kyoto June 2015</A>
+
+<P> <A HREF="Kyoto2016talks.pdf">Lectures in Kyoto June 2016</A>
+
+<P> <A HREF="AGIntro2016.pdf">Undergraduate summer school in Algebraic Geometry</A>
+<P>  <A HREF="MMP.pdf ">  Notes on the MMP for math 7800</A>
+<!-- Begin inclusion of bottom.html  -->
+
+<FONT SIZE=2>
+<P>
+<HR>
+<center>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+
+
+
+
+
+
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+</center>
+<HR>
+
+
+</FONT>
+
+<!-- END Column 2: main page text -->
+</td>
+
+<!-- Column 3: blank right margin -->
+<td width=60 valign=top> 
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- End inclusion of bottom.html  -->
+
+</HTML>
+
+

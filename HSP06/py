@@ -1,0 +1,25 @@
+Python Excercise sets:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DAY 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1) Write a code that counts the number S(m) of ways you can write a number m 
+as the sum of 2 squares. (eg. S(5)=1, S(15)=0, S(65)=2)
+
+2) Compute S(130), S(1105), S(12345)
+
+3) Compute S(p) for various primes s.t. p=1 mod 4. Do you see a pattern?
+How about S(p*q) where p,q are primes =1 mod 4?
+
+4) Compare the frequency of primes =1 mod 4 versus primes =3 mod 4
+(i.e., compute all such primes <= 100, <=500, <=1000, etc.)
+
+5) How many twin primes can you find (eg. 5,7, 11,13,  17,19 101,103 etc)
+How many / how rare do you think there are? 
+
+6) Write a code that, given A**2+B**2=0 mod p, 
+solves x**2+y**2=p for primes p=1 mod 4 using Fermat's descent.
+
+7) Pick a random 4 digit prime =5 mod 8, compute A=-2 * (-4)**((p-5)/8) mod p.
+Check that A**2+1=0 mod p. Use 6 to write p=x**2+y**2

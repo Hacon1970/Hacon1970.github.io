@@ -1,0 +1,583 @@
+\documentclass[12pt]{amsart} 
+\usepackage{amsfonts,graphics,amsmath,amsthm,
+amsfonts,amscd, amssymb,amsmath,latexsym}
+\pagestyle{plain}
+\usepackage{showlabels}
+\usepackage{epsfig}
+\usepackage{flafter}
+
+%\input diagramms.sty
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exc}[theorem]{Exercise}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition-lemma}[theorem]{Definition-Lemma}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{principle}[theorem]{Principle}
+\newtheorem{axiom}[theorem]{Axiom}
+\def\rdown#1.{\llcorner#1\lrcorner}
+\def\rup#1.{\ulcorner#1\urcorner}
+\def\Proj{\operatorname{Proj}}
+\def\Supp{\operatorname{Supp}}
+\def\dim{\operatorname{dim}}
+\def\cod{\operatorname{codim}}
+\def\deg{\operatorname{deg}}
+\def\prj{\operatorname{Proj}}
+\def\Pic{\operatorname{Pic}}
+\def\Imm{\operatorname{Imm}}
+\def\lcs{\operatorname{LCS}}
+ \def\Div{\operatorname{Div}}
+\def\NS{\operatorname{NS}}
+\def\Princ{\operatorname{Princ}}
+\def\WDiv{\operatorname{WDiv}}
+\def\mult{\operatorname{mult}}
+\def\mov{\operatorname{Mov}}
+\def\vol{\operatorname{vol}}
+\def\OO{\mathcal O}
+\def\CC{\mathcal C}
+\def\FF{\mathcal F}
+\def\GG{\mathcal G}
+\def\JJ{\mathcal J}
+\def\II{\mathcal I}
+\def\KK{\mathcal K}
+\def\lra{\longrightarrow}
+
+\newcommand\q{{\mathbb{Q}}}
+\newcommand\Q{{\mathbb{Q}}}
+\newcommand\R{{\mathbb{R}}}
+\newcommand\N{{\mathbb{N}}}
+\author{Christopher D. Hacon}
+\address{Department of Mathematics, University of Utah, Salt Lake
+  City, 155 South 1400 East, JWB 233, UT 84112-0090, USA}
+\author{James M\textsuperscript{c}Kernan}
+\address{Department of Mathematics, University of California at Santa Barbara, Sant
+a Barbara, CA 93106, USA}
+\title{Higher dimensional log Sarkisov program}
+\begin{document}
+\begin{abstract} Let $\phi:(X,B_X)\to S$ and $\phi ':(X',B_{X'})\to S'$ 
+be two Mori fiber spaces which are the output of a minimal model program for a kawamata log terminal pair $(W,B_W)$. Then $\phi'$ may be obtained from 
+$\phi$ by a finite sequence of Sarkisov links.
+\end{abstract}
+\maketitle
+\section{Introduction}
+Let $(X,B)$ be a kawamata log terminal pair. The minimal model program 
+predicts that there is a finite sequence of well understood
+birational maps (known as $K_X+B$ flips and divisorial
+contractions) inducing a rational map $f:X\dasharrow X'$
+such that if $K_X+B$ is pseudo-effective, then $(X',f_*B)$ is a minimal model 
+(i.e. $K_{X'}+f_*B'$ is nef)
+and if $K_X+B$ is not pseudo-effective, then there is a Mori-fiber space
+$\phi :X'\to S$ (such that $\rho (X'/S)=1$ and $-(K_{X'}+f_*B)$ is ample).
+It is not the case that a given pair $(X,B)$ has a unique 
+minimal model (resp. a unique Mori fiber space), however the minimal model 
+program predicts that any two minimal models (resp. Mori fiber spaces)
+should be related in a very precise manner (the terminalizations of two 
+minimal models are related by a sequence of flops, resp.
+two Mori fiber spaces are related 
+by a sequence of Sarkisov links cf. \eqref{t-main}).
+  
+By \cite{BCHM}, the minimal model program is known to hold when $B$ or $K_X+B$ are big. It is then easy to see that the terminalizations of any two minimal 
+models are connected by a sequence of flops.
+Somewhat suprisingly, Kawamata \cite{Kawamata07} has shown that this holds 
+in full generality (i.e. even when we do not assume that $B$ or $K_X+B$ are big). Note that
+in this more general context, the existence of minimal models is still conjectural.
+
+It is also shown (in full generality) 
+in \cite{BCHM} that if $K_X+B$ is not pseudo-effective, 
+then there is a Mori-fiber space $\phi :X'\to S$. It is then natural to expect 
+that one can prove (in full generality) that any two Mori-fiber spaces
+are related 
+by a sequence of Sarkisov links.
+The purpose of this paper is to show that this is indeed the case.
+\begin{theorem} Let $(X,B)$ be a kawamata log terminal pair such that
+$K_X+B$ is not pseudo-effective. Then any two corresponding Mori
+fiber spaces are related by a sequence of Sarkisov links.
+\end{theorem}
+The proof is based on the original ideas of the Sarkisov program (as explained by Corti and Reid \cite{Corti95}).
+The main twist is that we are unable to show termination of an arbitrary
+sequence of flips, nor the acc property for pseudo-effective thresholds.
+Instead our argument is based of the principle of
+finiteness of minimal models for
+kawamata log terminal
+pairs $(Y,\Gamma )$ such that $\Gamma$ varies in a compact subset
+of the big cone (cf. \cite{BCHM}).
+  
+\medskip
+\noindent{\bf Acknowledgements.}
+   The first author was partially supported by NSF grant
+  0456363 and by an AMS centennial scholarship.  
+ The second author was partially supported by NSF grant...
+\section{Notation and conventions}
+\label{s-notation}
+We work over the field of complex numbers $\mathbb{C}$.  A $\mathbb{R}$-Cartier divisor
+$D$ on a normal variety $X$ is \textit{nef} if $D\cdot C\geq 0$ for any curve $C\subset X$. 
+We say that two $\mathbb{R}$-divisors $D_1$, $D_2$ are $\mathbb{R}$-linearly
+equivalent ($D_1\sim _{\mathbb{R}} D_2$) if $D_1-D_2=\sum r_i(f_i)$
+where $r_i\in \R$ and $f_i$ are rational functions on $X$.
+We say that a $\mathbb{R}$-Weil divisor $D$ is {\it big} 
+if we may
+find an ample $\mathbb{R}$-divisor $A$ and an effective $\mathbb{R}$-divisor $B$, such
+that $D \sim _{\mathbb{R}} A+B$.
+A divisor $D$ is {\it pseudo-effective}, 
+if for any ample divisor $A$ and any rational number $\epsilon >0$, the
+divisor $D+\epsilon A$ is big.
+If $A$ is a $\mathbb Q$-divisor, we say that $A$ is a {\it general ample
+divisor} if $A$ is ample and there is a sufficiently divisible integer $M>0$
+such that $MA$ is very ample and $MA\in |MA|$ is very general.
+If $A$ is a $\mathbb R$-divisor, we say that $A$ is a {\it general ample
+divisor} if $A=\sum r_iA_i$ where $r_i\in \R$ and $A_i$ are general ample
+$\mathbb Q$-divisors.
+
+A \textit{log pair} $(X,\Delta)$ is a normal variety $X$ and an effective
+$\mathbb{R}$-Weil divisor $\Delta$ such that $K_X+\Delta$ is 
+$\mathbb{R}$-Cartier. 
+ We say
+that a log pair $(X,\Delta)$ is \textit{log smooth}, if $X$ is smooth and the support of
+$\Delta$ is a divisor with global normal crossings.  A projective morphism $g \colon
+Y\to X$ is a \textit{log resolution} of the pair $(X,\Delta )$ if $Y$ is smooth and
+$g^{-1}(\Delta )\cup \{\,\text {exceptional set of $g$}\,\}$ is a divisor with normal
+crossings support.  We write $g^*(K_X +\Delta )=K_Y +\Gamma$ and $\Gamma =\sum b_i\Gamma
+_i$ where $\Gamma _i$ are distinct reduced irreducible divisors and $g_*\Gamma =\Delta$.  The discrepancy of
+$\Gamma_i$ is $a(\Gamma _i,X,\Delta)=-b_i$.  
+
+A pair $(X,\Delta)$ is {\it kawamata
+log terminal} (KLT) if $b_i<1$ for all $i$.
+We say that the pair
+$(X,\Delta)$ is \textit{log canonical} if $b_i\leq 1$ for all $i$.
+We say that the pair
+$(X,\Delta)$ is \textit{terminal} if the discrepancy of any exceptional
+divisor is greater than zero.
+
+\section{Preliminaries}
+
+\begin{lemma}\label{l-2} Let $(W,B_W)$ be a terminal pair, $(X,B_X)$ a log 
+pair and $f:W\dasharrow X$ a birational map that extracts no 
+divisors. If $K_X+B_X$ is nef and
+$a(E,X,B_X)\geq a(E,W,B_{W})$ for all divisors $E\subset W$
+then $a(E,X,B_X)\geq a(E,W,B_{W})$ for all divisors $E$ over $W$.
+In particular \begin{enumerate}
+\item$(X,B_X)$ is kawamata log terminal,
+\item if $X'\to X$ is a divisorial blow up extracting a divisor $E'$,
+with $a(E',X,B_X)\leq 0$ then $E'$ is a divisor contained in $W$, and 
+\item if $X'\to X$ is a terminalization of $(X,B_X)$, then $f':W\dasharrow X'$ extracts
+no divisors.
+\end{enumerate}
+\end{lemma}
+\begin{proof} Let $Z$ be a common log resolution and $p:Z\to X$ and $q:Z\to W$
+be the induced morphisms. Then we may write
+$$q^*(K_W+B_W)=p^*(K_X+B_X)+F$$ where $$q_*F=\sum _{E\subset W}(a(E,X,B_X)-a(E,W,B_W))E\geq 0.$$ By the Negativity Lemma, it follows that
+$F\geq 0$ and hence that $a(E,X,B_X)\geq a(E,W,B_{W})$ for all divisors $E$ over $W$. 
+
+As $a(E,W,B_{W})>-1$ for all divisors $E$ over $W$, it follows 
+immediately that $(X,B_X)$ is kawamata log terminal.
+
+To see (2), it suffices to notice that 
+as $(W,B_W)$ is terminal and $a(E',W,B_W)\leq a(E',X,B_X)\leq 0$, then
+$E'$ is not exceptional over $W$. Similarly, a terminalization only extracts divisors $E'_i$ of
+discrepancy $a(E'_i,X,B_X)\leq 0$.
+\end{proof}
+\begin{definition}\label{d-1} Let $(X,B_X)$ and $(W,B_W)$ two $\Q$-factorial log pairs and $f:W\dasharrow X$ a birational map that extracts no divisors. We will write
+$(W,B_W)\geq (X,B_X)$ if 
+$a(E,W,B_W)\leq a(E,X,B_X)$ for all divisors $E\subset W$.
+\end{definition}
+\begin{definition}Let $(X,B_X)$ and $(X',B_{X'})$ be kawamata log terminal pairs. Then $(X,B_X)$ and $(X',B_{X'})$ are Sarkisov related if there exists a 
+kawamata log terminal pair $(W,B_W)$ such that $(X,B_X)$ and $(X',B_{X'})$ are
+the output of a $(W,B_W)$-MMP.\end{definition}
+Notice that if $(X,B_X)$ and $(X',B_{X'})$ are Sarkisov related, then
+we may find a log smooth terminal pair
+$(W',B_{W'})$ and morphisms $p:W'\to X$ and $q:W'\to X'$ such that $(X,B_X)$ and $(X',B_{X'})$ are
+the output of a $(W',B_{W'})$-MMP.
+%In this case we will replace $W$ by $W'$ and write $$K_{W}+B_{W}=p^*(K_X+B_X)+E_X$$ and
+
+\section{The main result}
+\begin{theorem}\label{t-main} A birational map of $n$-dimensional
+Sarkisov related kawamata log terminal pairs
+$(X,B_X)$ and $(X',B_{X'})$
+$$
+\CD
+X @.\overset\Phi\dashrightarrow @.X' \\
+@V\phi VV @.@VV\phi' V \\
+S @.@. S' \\
+\endCD
+$$
+between a $K_X+B_X$-Mori fiber space and a $K_{X'}+B_{X'}$-Mori fiber space
+is a composite of a finite sequence of birational maps given by the 
+following 4
+types of links.%\footnote{These links are simpler than the usual ones, there is no sequence of flips. Did I make a mistake? Do you have a reference for the 2 ray game? If there is a mistake, most of the proof goes through unchanged with the more traditional links, but we have to be more careful with the termination.}
+
+Links of type (I)
+
+$$
+\begin{matrix}
+& &  Z &\dashrightarrow & X_1\\
+& \swarrow &  & & \\
+X & & & & \downarrow \\
+\downarrow & & & & \\
+S & & \leftarrow & & S_1 \\
+\end{matrix}
+$$
+where $Z\dasharrow X_1$ is a sequence of flips,
+$Z \rightarrow X$ is a extremal divisorial contraction, 
+$X_1 \to S_1$ is a Mori fiber space and
+$\rho(S_1/S) = 1$.
+
+\vskip.1in
+
+Links of type (II)
+
+$$
+\begin{matrix}
+& & Z &\dasharrow & Z' & & \\
+& \swarrow & & & & \searrow & \\
+X & & & & & & X_1 \\
+\downarrow & & & & & & \downarrow \\
+S & & & \overset\sim \leftarrow & & & S_1 \\
+\end{matrix}
+$$
+where $Z\dasharrow Z'$ is a sequence of flips,
+$Z \rightarrow X$ and $Z' \rightarrow X_1$ are extremal
+divisorial
+contractions
+and $X_1 \to S_1$ is a Mori fiber space.
+
+\vskip.1in
+
+Links of type (III) 
+
+$$
+\begin{matrix}
+X & & \\
+& \searrow & \\
+\downarrow & & X_1 \\
+& & \downarrow \\
+S &  \rightarrow  & S_1 \\
+\end{matrix}
+$$
+where 
+$X \rightarrow X_1$ is an extremal divisorial contraction,
+$X_1 \to S_1$ is a Mori fiber space
+and
+$\rho(S/S_1) = 1$.
+
+\vskip.1in
+
+Links of type (IV)
+
+$$
+\begin{matrix}
+X & & \dashrightarrow & & X_1 \\
+\downarrow & & & & \downarrow \\
+S & & & & S_1 \\
+& \searrow & & \swarrow & \\
+& & T & & \\
+\end{matrix}
+$$
+where  $X \dashrightarrow X'$ is the identity (case IVa) or a log flip
+(case IVb), 
+$X_1 \to S_1$ is a Mori fiber space and $\rho(S/T) = \rho(S_1/T) = 1$.
+\end{theorem}
+\begin{proof} Let $H'\sim_\R-(K_{X'}+B_{X'})+(\phi ')^*A'$, where $A'$ is an 
+ample $\R$-divisor on $S'$ which is very general in ${\rm NS}_\R(S')$ 
+and $H'$ is a very general very ample $\R$-divisor. 
+Therefore, $K_{X'}+B_{X'}+H'\sim_\R (\phi ')^*A'$ is nef and kawamata log terminal.
+Similarly, let $C$ be a very general very ample $\Q$-divisor on $X$
+such that $K_X+B_X+C$ is nef, kawamata log terminal and
+$K_X+B_X+C \sim _{\R}\phi ^* A$ where $A$ is an 
+ample $\R$-divisor on $S$ which is very general in ${\rm NS}_\R(S)$.
+We may assume that $(W,B_W)$ is log smooth, $p:W\to X$ and $q:W\to X'$ are morphisms and $B_W+p^*C+q^*H'+{\rm Ex}(p)+{\rm Ex}(q)$ has simple normal crossings.
+We let $C_W=(p^{-1})_*C=p^*C$ and $H_W=(q^{-1})_*H=q^*H$, then we may assume that 
+$(W,B_W+cC_W+hH_W)$ is terminal for any $0\leq c,h\leq 2$.
+
+
+\begin{claim}\label{c-1} There exits a finite sequence of links $X_i\dasharrow X_{i+1}$
+for $0\leq i\leq N$ such that $X=X_0$, $h_i:X\dasharrow X_i$ is the induced rational map and
+if $\phi _i:X_i\to S_i$ are the corresponding 
+contraction morphisms and $C_i=(h_i)_*C$, $H_i=(h_i)_*H$,
+then\begin{enumerate}
+\item $p_i:W\dasharrow X_i$ extracts no divisors,
+\item there exist a $\Q$-divisor $B_{X_i}$ on $X_i$ and 
+positive rational numbers $1=c_0\geq c_{1}\geq c_2\geq \ldots \geq c_N=0$ and 
+$0=h_0\leq h_1\leq h_{2}\leq \ldots$
+such that
+$K_{X_i}+B_{X_i}+c_iC_i+h_iH_i$ is nef and $\phi _i$-numerically trivial,
+\item $(X_i,B_{X_i}+c_iC_i+h_iH_i)\leq (W,B_{W}+c_iC_W+h_iH_W)$ cf. \eqref{d-1}.
+\end{enumerate}
+\end{claim}
+\begin{remark}\label{r-1} We have that: \begin{enumerate}\item By \eqref{l-2}, $ (X_i,B_{X_i}+c_iC_i+h_iH_i)$
+is kawamata log terminal.
+\item Let $\Sigma _i$ be a very general $\phi _i$-vertical curve.
+By our choices of $H$ and $C$, we have that 
+$H_i\cdot \Sigma _i>0$ and $C_i\cdot \Sigma _i>0$ for all $i\geq 0$.
+\item We have $h_i\leq 1$. If in fact $h_i>1$, then for $0<\epsilon \ll 1$, 
+replacing $W$ by an appropriate birational model, we write 
+$$K_W+B_W+(1+\epsilon)H_W=q^*(K_{X'}+B_{X'}+(1+\epsilon)H')+E'$$
+where (by our choice of $H'$), $E'$ is effective and $q$-exceptional.
+We also may write
+$$K_W+B_W+c_iC_W+h_iH_W=p_i^*(K_{X_i}+B_{X_i}+c_iC_i+h_iH_i)+E_i$$ where $E_i$
+is effective and $p_i$-exceptional.
+Since $\Sigma _i$ is a very general $\phi _i$ vertical curve. Then $\Sigma _i$
+avoids the image of the exceptional locus of $p_i$ and so we may identify 
+$\Sigma _i$ with $(p_i^{-1})_*\Sigma _i$.
+Then, we have 
+$$0=(K_{X_i}+B_{X_i}+c_iC_i+h_iH_i)\cdot \Sigma _i=
+(K_W+B_W+c_iC_W+h_iH_W)\cdot \Sigma _i\geq$$
+$$(K_W+B_W+(1+\epsilon)H_W)\cdot \Sigma _i=(K_{X'}+B_{X'}+(1+\epsilon)H')\cdot q_*(\Sigma _i)+E' \cdot \Sigma _i>0$$
+which is the required contradiction.
+\item Each link $X_i\dasharrow X_{i+1}$
+will be constructed via a sequence of $K_{X_i}+B_i+c_iC_i+h_iH_i$-trivial
+rational maps (i.e. flops and log-crepant divisorial contractions or extractions). It then follows easily that
+\begin{equation}\label{e-a}
+(X_{i+1},B_{X_{i+1}}+c_iC_{i+1}+h_iH_{i+1})\leq (W,B_{W}+c_iC_W+h_iH_W),
+\end{equation}
+$K_{X_{i+1}}+B_{X_{i+1}}+c_iC_{i+1}+h_iH_{i+1}$ is nef and 
+$\phi _{i+1}$-numerically trivial and that for $0<\epsilon \ll 1$, the 
+contraction morphism $\phi _{i+1}$ is a $K_{X_{i+1}}+B_{X_{i+1}}+
+(c_i-\epsilon)C_{i+1}+h_iH_{i+1}$ Mori fiber space if $c_i>0$ and a 
+$K_{X_{i+1}}+B_{X_{i+1}}+
+c_iC_{i+1}+(h_i-\epsilon)H_{i+1}$ Mori fiber space if $h_i>0$.
+\end{enumerate}\end{remark}
+\begin{proof}[Proof of \ref{c-1}] We let $\Sigma _i$ be a very general $\phi_i$-vertical curve and we set $r_i=
+H_i\cdot \Sigma _i/C_i\cdot \Sigma _i$.
+Let $s_{i+1}$ be the supremum of the real numbers $0\leq \sigma \leq c_i/r_i$
+such that \begin{equation}\label{e-b}K_{X_i}+B_{X_i}+c_iC_i+h_iH_i+\sigma(H_i-r_iC_i)\ {\rm is\ nef,\ and}\end{equation}
+\begin{equation}\label{e-c} (X_i,B_{X_i}+c_iC_i+h_iH_i+\sigma(H_i-r_iC_i))\leq (W,B_W+c_iC_W+h_iH_W+\sigma(H_W-r_iC_W)).\end{equation}
+We will define $X_j$ by induction on $j$. Assume that $X_i$ has allready been defined for some $i\geq 0$. 
+
+If $s_{i+1}=c_i/r_i$, then we let $N=i+1$ so that $c_N=c_i-r_is_{i+1}=0$ and 
+we are done.
+
+If $s_{i+1}<c_i/r_i$, we let  $c_{i+1}=c_i-r_is_{i+1}>0$ and $h_{i+1}=h_i+s_{i+1}\geq 0$.
+Notice that $K_{X_i}+B_{X_i}+c_{i+1}C_{i}+h_{i+1}H_{i}$ is nef
+and kawamata log terminal.
+Let $F$ be the extremal face defined by $K_{X_i}+B_{X_i}+c_{i+1}C_{i}+h_{i+1}H_{i}$. Clearly $R_i\subset F$ where $R_i$ is the ray spanned by $\Sigma _i$.
+
+Suppose that \begin{equation}\label{e-d} a(E,X_i,B_{X_i}+c_{i+1}C_i+h_{i+1}H_i)= 
+a(E,W,B_W+c_{i+1}C_W+h_{i+1}H_W)\end{equation} for some $X$-exceptional
+divisor $E\subset W$ and that \begin{equation}\label{e-e} a(E,X_i,B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i)< 
+a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W)\end{equation}
+for $c'_{i+1}=c_{i+1}-\epsilon r_i$, $h'_{i+1}=h_{i+1}+\epsilon$ and
+$0<\epsilon \ll 1$. 
+It follows that 
+$a(E,X_i,B_{X_i}+c_{i+1}C_i+h_{i+1}H_i)\leq 0$ and so there
+exists a divisorial blow up $\mu :Z\to X_i$ which extracts $E$.
+By \eqref{l-2}, $W\dasharrow Z$ extracts no divisors.
+We let $K_Z+B_Z+c_{i+1}C_Z+h_{i+1}H_Z=\mu ^*(K_{X_i}+B_{X_i}+c_{i+1}C_i+h_{i+1}H_i)$ and we run a minimal model program over $S_i$ for $K_Z+\Delta _Z=
+\mu ^*(K_{X_i}+B_{X_i}+(c'_{i+1}-\delta)C_i+h'_{i+1}H_i)$
+where $c'_{i+1}=c_{i+1}-\epsilon r_i$ and $h'_{i+1}=h_{i+1}+\epsilon$
+for some $0<\delta \ll \epsilon \ll 1$. Note that $K_Z+\Delta _Z$ is a 
+kawamata log terminal pair numerically trivial over $X_i$ 
+and $K_{X_i}+B_{X_i}+(c'_{i+1}-\delta)C_i+h'_{i+1}H_i$
+is negative on $\Sigma _i$.
+Each step of this minimal model program is $K_Z+B_Z+c_{i+1}C_Z+h_{i+1}H_Z$
+numerically trivial. Since $Z$ is covered by $K_Z+\Delta _Z$-negative
+curves (over $S_i$), it follows that $K_Z+\Delta _Z$ is not 
+pseudo-effective (over $S_i$). 
+Therefore, after a finite sequence of flips $\psi :Z\dasharrow Z'$, we either have a $K_Z+\Delta _Z$ minimal model, a $K_Z+\Delta _Z$ Mori fiber space or a $K_Z+\Delta _Z$ divisorial contraction over $S_i$.
+%Let $Z\to Z'$ be the contraction corresponding to the unique $K_Z+\Delta _Z$-negative extremal ray.
+If $Z\dasharrow Z'$ is a minimal model, then $K_X+\Delta _Z$ is pseudo-effective over $S_i$. This is impossible.
+%If $Z\to Z'$ is a flipping contraction, then let $Z^+\to Z'$ be the flip.Then $K_{Z+}+\Delta _{Z^+}$ is nef over $S$ and hence $K_Z+\Delta _Z$ is pseudo-effctive which is a contradiction. Therefore $Z\to Z'$ is either a $K_Z+\Delta _Z$ Mori fiber space or a $K_Z+\Delta _Z$ divisorial contraction.
+
+In the second case, we let let $\phi _{i+1}:X_{i+1}=Z'\to S_{i+1}=Z'$ be the 
+corresponding Mori fiber space. We have obtained a link of type I.
+Notice that since all maps are $K_Z+B_Z+c_{i+1}C_Z+h_{i+1}H_Z$-trivial, for all divisors $E\subset W$, the inequality
+\begin{equation}\label{e-f}
+a(E,X_{i+1},B_{X_{i+1}}+c_{i+1}C_{i+1}+h_{i+1}H_{i+1})\geq 
+a(E,W,B_W+c_{i+1}C_W+h_{i+1}H_W)\end{equation}
+follows easily. Moreover, since $\Sigma _{i+1}$ is negative with respect to
+$K_Z+\Delta _Z=\mu^*(K_ {X_{i  }}+B_{X_{i  }}+(c'_{i+1}-\delta)C_{i  }+h'_{i+1}H_{i})$ for
+all $0<\delta \ll \epsilon \ll 1$, it follows that it is semi-negative
+with respect to
+$\mu^*(K_ {X_{i  }}+B_{X_{i  }}+c'_{i+1}C_{i  }+h'_{i+1}H_{i})$.
+However $\Sigma _{i+1}$ is trivial with respect to $\mu^*(K_ {X_{i  }}+
+B_{X_{i  }}+c_{i+1}C_{i  }+h_{i+1}H_{i})=K_ {X_{i +1 }}+B_{X_{i+1  }}+
+c_{i+1}C_{i +1 }+h_{i+1}H_{i+1}$. It follows that $\mu ^*(H_i-r_iC_i)\cdot
+ \Sigma _{i+1}\leq 0$. But by \eqref{e-e} we have that $\mu ^*(H_i-r_iC_i)=eE+
+H_{i+1}+r_iC_{i+1}$ for some $e>0$. Therefore
+$(H_{i+1}-r_iC_{i+1})\cdot \Sigma _{i+1}\leq 0$, i.e.
+$$r_{i+1}=H_{i+1}\cdot \Sigma _{i+1}/C_{i+1}\cdot \Sigma _{i+1}\leq r_i.$$
+
+
+In the third case we let $\eta :Z'\to X_{i+1}$ be the corresponding divisorial contraction. Since $\rho (X_{i+1}/S_i)=1$, one sees that there is an induced
+contraction morphism $\phi _{i+1}:X_{i+1}\to S_{i+1}:=S_i$
+which (as $K_Z+\Delta _Z$ is not pseudo-effective over $S_i$)
+is a $K_Z+\Delta _Z$-negative 
+fiber space. We have obtained a link of type II.
+Notice that for all divisors $E\subset W$, the inequality \eqref{e-f}
+%$$a(E,X_{i+1},B_{X_{i+1}}+c_{i+1}C_{i+1}+h_{i+1}H_{i+1})\geq a(E,W,B_W+c_{i+1}C_W+h_{i+1}H_W)$$
+follows easily and that since $\Sigma _{i+1}$ is trivial with respect to
+$\eta _* \mu^*(K_ {X_{i  }}+B_{X_{i  }}+(c'_{i+1}-\delta)C_{i  }+h'_{i+1}H_{i})$ for
+all $0<\delta \ll \epsilon \ll 1$, it follows that it is negative
+with respect to
+$\eta _* \psi _*\mu^*(K_ {X_{i  }}+B_{X_{i  }}+c'_{i+1}C_{i  }+h'_{i+1}H_{i})$.
+However $\Sigma _{i+1}$ is trivial with respect to $\eta _*\psi _*\mu^*(K_ {X_{i  }}+
+B_{X_{i  }}+c_{i+1}C_{i  }+h_{i+1}H_{i})=K_ {X_{i +1 }}+B_{X_{i+1  }}+
+c_{i+1}C_{i +1 }+h_{i+1}H_{i+1}$. It follows that $\eta _*\psi _* \mu ^*(H_i-r_iC_i)\cdot
+ \Sigma _{i+1}\leq  0$. But by \eqref{e-e} we have that $\eta _*\psi _* \mu ^*(H_i-r_iC_i)=e\eta _*E+
+H_{i+1}-r_iC_{i+1}$ for some $e>0$. Therefore
+$(H_{i+1}-r_iC_{i+1})\cdot \Sigma _{i+1}\leq 0$ i.e.
+$$r_{i+1}=H_{i+1}\cdot \Sigma _{i+1}/C_{i+1}\cdot \Sigma _{i+1}\leq r_i.$$
+
+Suppose on the other hand that $$a(E,X_i,B_{X_i}+c_{i+1}C_i+h_{i+1}H_i)> 
+a(E,W,B_W+c_{i+1}C_W+h_{i+1}H_W)$$ for all 
+$X$-exceptional divisors $E\subset W$ for which $$a(E,X_i,B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i)< 
+a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W)$$ for any $0<\epsilon \ll 1$. 
+By continuity, this is equivalent to assuming that there are no $X$-exceptional divisors $E\subset W$ for which $$a(E,X_i,B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i)< 
+a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W).$$
+In this case
+$F\ne R_i$, and we may find an extremal ray $P\subset F$ such that 
+$P$ and $R_i$ span a two dimensional face of $F$.
+Let $X_i\to T$ be the corresponding contraction which clearly factors through
+$S_i$. We now run a minimal model program over $T$ for 
+$K_{X_i}+B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i$
+where $c'_{i+1}=c_{i+1}-\epsilon r_i$ and $h'_{i+1}=h_{i+1}+\epsilon$
+for some $0< \epsilon \ll 1$. Notice that $R_i$ is $K_{X_i}+B_{X_i}+c'_{i+1}
+C_i+h'_{i+1}H_i$-trivial and $P$ is $K_{X_i}+B_{X_i}+c'_{i+1}C_i+
+h'_{i+1}H_i$-negative. Consider the contraction ${\rm cont }_P$
+corresponding to the ray $P$. We have that ${\rm cont }_P$ is either a flipping contraction or a divisorial contraction or a Mori fiber space.
+
+%After finitely many flips, we either have a $K_{X_i}+B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i$ minimal model,  divisorial contraction or Mori fiber space (over $T$).
+
+In the first case, we let $X_{i+1}$ to be the flip
+of $X_i$. We have that $K_{X_{i+1}}+B_{X_{i+1}}+c'_{i+1}C_{i+1}+h'_{i+1}
+H_{i+1}$ is nef over $T$ and there is a unique $K_{X_{i+1}}+B_{X_{i+1}}+
+c'_{i+1}C_{i+1}+h'_{i+1}H_{i+1}$ trivial extremal ray which is spanned 
+by $\Sigma _{i+1}$ the pushforward of $\Sigma _i$. Let $\phi _{i+1}:X_{i+1}
+\to S_{i+1}$ be the corresponding fibration. Clearly ${\rm dim}(X_{i+1})>
+{\rm dim}(S_{i+1})$. We have obtained a link of type IVb.
+
+%may write $K_{X_i}+B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i\sim _\R\phi _i^*(K_{S_i}+D_i)$ where $(S_i,D_i)$ is kawamata log terminal. Let $S_{i+1}\to T$ be the flip of $S_i\to T$ so that $S_{i+1}$ is the log-canonical model of $K_{S_i}+D_i$ over $T$. Then $X_{i+1}\to T$ factors through $S_{i+1}$. Let $\phi _ {i+1}: X_{i+1}\to S_{i+1}$. Be the corresponding morphism.\footnote{I think this is correct, but we need to be more careful here.}
+
+In the second case, let $X_i\to X_{i+1}$ be the corresponding divisorial contraction. Since $\rho (X_{i+1}/T)=1$, one sees that there is an induced
+contraction morphism $\phi _{i+1}:X_{i+1}\to S_{i+1}:=T$.
+We have obtained a link of type III.
+
+In the third case we let $\phi _{i+1}:X_{i+1}=X_i\to S_{i+1}$ be the 
+corresponding Mori fiber space. One sees that the
+contraction morphism $X_{i+1}\to T$ factors through $S_{i+1}$.
+We have obtained a link of type IVa.
+
+Notice that in all three cases, the inequality
+$$a(E,X_{i+1},B_{X_{i+1}}+c_{i+1}C_{i+1}+h_{i+1}H_{i+1})\geq 
+a(E,W,B_W+c_{i+1}C_W+h_{i+1}H_W)$$ for all 
+divisors $E\subset W$ is easily seen to hold.
+The inequality
+$$a(E,X_{i+1},B_{X_{i+1}}+c'_{i+1}C_{i+1}+h'_{i+1}H'_{i+1})\geq  
+a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W)$$ for all 
+$X$-exceptional divisors $E\subset W$ 
+for any $0<\epsilon \ll 1$
+also continues to hold. For links of type IVa this is trivial as $X_i=X_{i+1}$.
+For links of type IVb, this is simply because the $X_i\dasharrow X_{i+1}$
+is a $K_ {X_{i}}+B_{X_{i}}+c'_{i+1}C_{i}+h'_{i+1}H_{i}$ flip and hence the 
+discrepancies can only increase.
+Finally, for a link of type III, we only introduce one
+new exceptional divisor $E\subset W$ for which we have that
+$$a(E,X_{i+1},B_{X_{i+1}}+c'_{i+1}C_{i+1}+h'_{i+1}H_{i+1})>a(E,X_{i},B_{X_{i}}+c'_{i+1}C_{i}+h'_{i+1}H_{i}) $$
+$$\geq a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W) .$$ 
+
+We also claim that in all three cases $r_{i+1}\geq r_i$.
+For a link of type III, this follows (as in the case of links of type I or II)
+from the fact that $\Sigma _{i+1}$ can be identified with its inverse image in $X_i$ and so 
+$$(K_{X_{i+1}}+B_{X_{i+1}}+c'_{i+1}C_{i+1}+h'_{i+1}H_{i+1})\cdot \Sigma _{i+1}
+=(K_{X_{i}}+B_{X_{i}}+c'_{i+1}C_{i}+h'_{i+1}H_{i})\cdot \Sigma _{i+1}\leq 0.$$
+For links of type IVa the analogous inequality is clear as the 
+contraction $X_{i}=X_{i+1}\to S_{i+1}$ is $K_{X_{i+1}}+B_{X_{i+1}}+c'_{i+1}C_{i+1}+h'_{i+1}H_{i+1}$-negative.
+For links of type IVb, this is clear because in a neighborhood of $\Sigma _i$,
+$X_{i}\to S_{i}$ is isomorphic to $X_{i+1}\to S_{i+1}$ and hence $r_i=r_{i+1}$.
+\end{proof}
+\begin{claim}\label{c-3}There are only finitely many possibilities for $\phi _i:X\to S_i$.\end{claim}
+\begin{proof} We begin by showing that there are only finitely many possibilities for $X_i$.
+
+Notice that the $(X_i,B_{X_i}+c_iC_i+h_iH_i)$ are minimal models for
+$(W,B_W+c_iC_W+h_iH_W)$ where $0\leq c_i,h_i \leq 1$.
+Suppose that $h_i=0$ for all $i$, then $s_i=h_{i+1}-h_i=0$ for all $i$
+and so $c_i=c_0>0$ for all $i$ and by finiteness of models the claim follows.
+ 
+If $h_i>0$ for some $i$, then $h_j\geq h_i$ for all $j\geq i$
+and again by finiteness of models the claim follows.
+
+The finiteness of the maps $\phi$ now follows as for each $X_i$ there are finitely many negative extremal rays.
+\end{proof}
+\begin{claim}The sequence of links $X_i\dasharrow X_{i+1}$ is finite.\end{claim}
+\begin{proof} Assume that the given sequence of links is infinite.
+By \eqref{c-3}, we may assume that $\phi _i:X_i\to S_i$ is isomorphic to $\phi _k:X_k\to S_k$ for some $i<k$. It then follows easily that
+$c_{k+1}=c_{i+1}$ and $h_{k+1}=h_{i+1}$ and so $c_i=c_j$ for all $j\geq i$. 
+Similarly, we have that $r_i=r_j$ for all $j\geq i$.
+
+Assume that we have a link of type III or IV, then there are no $X$-exceptional divisors $E\subset W$ for which 
+ $$a(E,X_i,B_{X_i}+c'_{i+1}C_i+h'_{i+1}H_i)< 
+a(E,W,B_W+c'_{i+1}C_W+h'_{i+1}H_W).$$
+As we have seen, (since $c_{i+1}=c_i$ and $r_{i+1}=r_i$), this property
+continues to hold on $X_{i+1}$. But then all links are of type III or IV.
+Since links of type III (resp. IV) decrease (do not change) $\rho (X_i)$,
+there are only links of type IV.
+Since links of type IVb (resp IVa) increase the discrepancies with respect 
+to $K_X+B_X+c'C+h'H$ and strictly increase at least some discrepancy (resp.
+do not change any discrepancy), there are no links of type IVb.
+But for any link of type IVa, we have $r_{i+1}<r_i$ which is impossible.
+
+Therefore, we may assume that we only have links of type I and II.
+By considerations on $\rho (X_i)$, it follows that there are no links of type I. But links of type II increase the discrepancies with respect 
+to $K_X+B_X+(c'-\delta)C+h'H$ (for $0<\delta \ll \epsilon \ll 1$)
+and strictly increase at least some discrepancy.
+This is the required contradiction.
+\end{proof}
+
+We may therefore assume that $K_{X_N}+B_{X_N}+h_NH_N$ is nef and
+$\phi _N$ numerically trivial. Abusing notation, we let $p=p_N:W\dasharrow 
+X=X_N$
+\begin{claim} $h:=h_N= 1$ and $X\dasharrow X'$ is an isomorphism inducing
+ an isomorphism $S\to S'$.
+\end{claim}
+\begin{proof} Recall that $h\leq 1$ cf. (3) of \eqref{r-1}. Let $\nu:W'\to W$ be a proper birational morphism such that
+$p'=p\circ \nu$ and $q'=q\circ \nu$ are appropriate log resolutions.
+We may write $K_{W'}+B_{W'}=\nu ^* (K_W+B_W)+E_W$ where 
+$E_W\geq 0$ is exceptional and $B_{W'}=(\nu ^{-1})_*B_W$.
+We have
+$$K_{W'}+B_{W'}+hH_{W'}=(p')^*(K_{X}+B_X+hH_X)+E,$$
+$$K_{W'}+B_{W'}+hH_{W'}=(q')^*(K_{X'}+B_{X'}+hH')+E'.$$
+Note that since $(W,B_W)\geq (X,B_X)$, by \eqref{l-2}, $E$ is effective.
+By (4) of \eqref{r-1}, $E'$ is effective. 
+Since $\Sigma _N$ is a general $\phi _N$-trivial curve, 
+we may identify $\Sigma _N$ with
+its inverse image in $W'$. We let $q'_*\Sigma  _N$ be its image in $X'$.
+We have $$0=(K_{X}+B_X+hH_X)\cdot \Sigma _N=(K_{W'}+B_{W'}+hH_{W'})\cdot \Sigma_N
+$$ $$\geq(K_{X'}+B_{X'}+hH')\cdot q'_*\Sigma _N.$$
+This implies $h\leq 1$ and if $h=1$, then $q'_*\Sigma _N$ is $\phi '$ vertical
+so that $X\dasharrow X'$ induces a rational map $S\dasharrow S'$.
+Now let $\Sigma '$ be a general curve contracted by $\phi '$. 
+We may identify this curve with its inverse image in $W'$ and we let 
+$p'_*\Sigma'$ be its image in $X$. If $h<1$, we then have $$0>(K_{X'}+B_{X'}+hH')\cdot \Sigma '=
+(K_{W'}+B_{W'}+hH_{W'})\cdot \Sigma '$$
+$$=(K_{X}+B_X+hH_X)\cdot q'_*\Sigma'+E\cdot \Sigma'.$$
+Since $E\cdot \Sigma'\geq 0$, we have $(K_{X}+B_X+hH_X)\cdot q'_*\Sigma'<0$ contradicting the fact that $K_{X}+B_X+hH_X$ is nef.
+Therefore $h=1$. Now, let $D$ be an ample divisor on $X$ and $D'$ be its strict transform on $X'$. Then $K_X+B_X+H+\delta D$ and $K_{X'}+B_{X'}+H'+\delta D'$
+are ample and kawamata log terminal for any $0<\delta \ll 1$ and hence 
+they are isomorphic (by uniqueness of log canonical models).
+\end{proof}
+%\begin{claim} We may find a finite sequence of links $X_i\dasharrow X_{i+1}$  for $N\leq i<N'$ such that \begin{enumerate}\item $p_i:W\dasharrow X_i$ extracts no divisors,\item there exist real numbers $h_N\leq h_{N+1}\leq \ldots \leq h_{N'}=1$such that $K_{X_i}+B_{X_i}+h_iH_i$ is nef,\item $(X_i,B_{X_i}+h_iH_i)\leq (W,B_W+h_iH_W)$.\end{enumerate}\end{claim}\begin{proof} We let $\gamma$ be the supremum of all real numbers $h_i\leq h\leq 1$ such that $K_{X_i}+B_{X_i}+hH_i$ satisfies (2) and (3) above. If $h=1$, we are done.If $K_{X_i}+B_{X_i}+h'H_i$ is not nef for $0<h'-h\ll 1$, then we may pick\end{proof}
+\end{proof}
+\begin{thebibliography}{ELMNP}
+
+\bibitem[BCHM07]{BCHM}
+C. Birkar, P. Cascini, C. Hacon, J. M$^{\rm c}$Kernan, \emph{Existence of minimal models for varieties of log general type.} ArXiv:math.AG/0610203.
+\bibitem[Corti95]{Corti95} A. Corti, \emph{Factoring birational maps of threefolds after Sarkisov.}  J. Algebraic Geom.  {\bf 4}  (1995),  no. 2, 223--254.
+\bibitem[FM00]{FM00}
+O. Fujino and S. Mori, \emph{A canonical bundle formula.}  J. Differential Geom.  56  (2000),  no. 1, 167--188. 
+\bibitem[HM07]{HM}
+C. Hacon, J. M$^{\rm c}$Kernan, \emph { Extension Theorems and the existence of Flips}. To appear in: Flips for 3-folds and 4-folds, A. Corti editor. Oxford lecture series in mathematics and its applications, {\bf 35}.
+\bibitem[Kawamata07]{Kawamata07}
+Y. Kawamata,
+\emph{Flops connect minimal models.} ArXiv:math.AG/0704.1013v1 
+\end{thebibliography}
+
+\end{document}
+\end

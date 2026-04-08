@@ -1,0 +1,22 @@
+This is TeX, Version 3.1415 (C version 6.1.2) (format=latex 4.3.9)  31 JAN 2005 11:13
+**&latex2e cv
+(/usr/local/lib/tex/latex2e/unpacked/q.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+File ignored
+)
+! Emergency stop.
+<*> &latex2e cv
+               
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 4 strings out of 28631
+ 49 string characters out of 471675
+ 44419 words of memory out of 524286
+ 3015 multiletter control sequences out of 27000
+ 3640 words of font info for 14 fonts, out of 400000 for 255
+ 14 hyphenation exceptions out of 2003
+ 5i,0n,1p,91b,7s stack positions out of 300i,40n,60p,3000b,4000s
+No pages of output.

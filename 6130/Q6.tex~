@@ -1,0 +1,8 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 6}
+a) Define finite maps of affine varieties. b) Show that all fibers of any such map have finite cardinality and c) show by example that the converse does not hold.
+%{\bf Proof.} 
+\end{document}
+\end

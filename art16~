@@ -1,0 +1,466 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                        %
+%         On surfaces with P_g=q=2                       %
+%                                                        %
+%        by C. D. Hacon and J. A. Chen                   %
+%                                                        %
+%               Latex                                    %
+%                 version                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\documentclass[12pt, a4paper]{amsart}
+
+\usepackage{amsmath,amssymb,amscd,amsfonts}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{assu}[thm]{Assumption}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{ex}[thm]{Example}
+
+\newcommand\delbar{\overline{\partial}}
+\newcommand\PIC{{\text{\rm Pic}}(X)}
+\newcommand\Pic{{\text{\rm Pic}}}
+\newcommand\dimm{{\text{\rm dim}}}
+\newcommand\codim{{\text{\rm codim}}}
+\newcommand\dg{{\text{\rm deg}}}
+\newcommand\PX{{\text {\rm Pic}}^0 (X)}
+\newcommand\PY{{\text {\rm Pic}}^0 (Y)}
+\newcommand\PXT{{\text {\rm Pic}}^{\tau }(X)}
+\newcommand\DI{{\text {\rm dim}}   }
+\newcommand\DX{{\text {\rm dim}}(X)}
+\newcommand\DY{{\text {\rm dim}}(Y)}
+\newcommand\PA{{\text {\rm Pic}}^0(A)}
+\newcommand\ALB{{\text{\rm Alb}}(X)}
+\newcommand\alb{\text{\rm alb}}
+\newcommand\al{{\alpha}}
+\newcommand\bb{{\beta}}
+\newcommand\Alb{\text{\rm Alb}}
+\newcommand\Hom{\text{\rm Hom}}
+\newcommand\lra{\longrightarrow}
+\newcommand\ot{{\otimes}}
+\newcommand\OO{{\mathcal{O}}}
+\newcommand\PP{{\mathcal{P}}}
+\newcommand\PPP{{\mathbb{P}}}
+\newcommand\ox{{\omega _X}}
+\newcommand\FF{{\mathcal{F}}}
+\newcommand\EE{{\mathcal{E}}}
+\newcommand\HH{{\mathcal{H}}}
+\newcommand\GG{{\mathcal{G}}}
+\newcommand\BB{\mathcal{B}}
+\newcommand\LL{\mathcal{P}}
+\newcommand\KK{{\mathcal{K}}}
+\newcommand\QQ{{\mathcal{Q}}}
+\newcommand\Q{{\mathbb{Q}}}
+\newcommand\C{{\mathbb{C}}}
+\newcommand\ZZ{{\mathbb{Z}}}
+\newcommand\CC{{\mathbb{C}}}
+\newcommand\III{{\mathcal{I}}}
+\newcommand\sh{{\hat {\mathcal S}}}
+\newcommand\s{{ {\mathcal S}}}
+
+\newcommand\AAA{{\mathbb{A}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title [$p_g=q=2$...]{An example of surface of general type with
+$p_g=q=2$ and $K_X^2=5$  \footnote{2000 {
+MSC. 14C20, 14K12}}
+}
+\author {Jungkai A. Chen \and Christopher D. Hacon }
+\date{}
+
+%\subjclass{14C20, 14K12}
+
+
+\begin{document}
+
+\abstract We give an example of surface of general type with $p_g=q=2$
+and $K_X^2=5$.
+\endabstract
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Recently, there has been considerable interest in understanding the geometry
+of irregular complex projective
+surfaces with $\chi (X, \omega _X)=1+p_g(X)-q(X)=1$,
+and in particular of surfaces with $p_g=q=2$.
+Let $X$ be a smooth minimal complex surface of general type.
+If $\chi (X, \omega _X)=1$, then one has
+bounds $1\leq K_X^2 \leq 9$. Since, in addition the surface is irregular, i.e.
+$q(X)=h^0(X,\Omega _X^1)>0$, then one also has $K_X ^2 \geq 2p_g (X)$
+and so $p_g(X)\leq 4$. In \cite{Be}, it is shown that the case $p_g=q=4$
+corresponds to the product of two curves of genus 2.
+In \cite{HP} and \cite{Pi}, surfaces with $p_g=q=3$ are completely classified.
+When $K_X^2=2p_g(X)=6$ they are symmetric products of curves of
+genus $3$ and when $K_X^2=8$ they admit an irrational pencil.
+The case $p_g=q=2$ seems considerably more delicate. At any rate
+Catanese suggests that, analogously to the $p_g=q=3$ case,
+a surface of general type with $p_g=q=2$ and with no fibration over
+an elliptic curve, is a degree $2$ covering of
+a principally polarized
+abelian surface $(A,\Theta)$ branched along a divisor in the linear series
+$|2\Theta|$ (cf. \cite{Zu}).
+
+Recently, Zucconi classified surfaces of general type
+with $p_g=q=2$ which admit an irrational pencil \cite{Zu}.
+%He shows that the base is always an elliptic curve and $K_X^2  \ge 8$.
+Manetti \cite{Ma}
+shows that a
+minimal surface of general type with $K_X$ ample and $K_X^2=4$,
+is a degree $2$ covering of a principally polarized
+abelian surface $(A,\Theta)$ branching along $D\in |2\Theta |$.
+Ciliberto and Mendes
+Lopes \cite{CM}, conjecture that this should be the case for any
+minimal surface of general type with $p_g=q=2$ and $K_X^2=4$.
+
+The purpose of this note is to give a counter-example to Catanese's
+conjecture above.
+The example we construct
+is birational to a triple cover of an abelian surface.
+Its canonical divisor $K_X$ is ample, $p_g=q=2$ and $K_X^2=5$.
+The construction was motivated by restrictions
+on the structure of the sheaf $\alb _{X,*}(\omega _X )$ obtained in
+the spirit of \cite{HP}.
+
+\noindent {\bf Acknowledgments}
+We are indebted to Rita Pardini for useful conversations on this subject.
+The first author was supported by NSC 39151F, National Science Council, Taiwan.
+The work is done during the first author's visiting Univ. of California, Riverside.
+The first author would like to thank the University for the hospitality.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ Construction and Verification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $(A,M)$ be a simple polarized abelian surface of type $(1,2)$.
+Assume furthermore that $M$ is symmetric,
+i.e. $(-1)^*M \cong M$. The linear series $|M|$ has $4$ isolated
+base points $\{o,p,q,r\}$. We may assume that $o$
+is the identity of the abelian surface and $p,q,r$ are
+$2$-torsion with $r=p+q$ (see, e.g. \cite{Ba}).
+Each divisor $D \in |M|$ is either a nonsingular curve of genus $3$
+or a singular curve with a simple node
+distinct from the base points.
+
+Let $\hat{A}$ be the dual abelian variety of $A$,
+$\PP$ the Poincar\'e line bundle on $A\times \hat {A}$
+and let $$\FF=\widehat {M^\vee }:=R^2p_{\hat{A}, *}(p_A^* M^\vee \ot \PP )$$
+be the Fourier-Mukai transform
+of $M^\vee$ (cf. \cite{Muk}).
+The vector bundle $\FF$ has rank 2.
+%and by \cite{Muk} it satisfies the WIT with index $0$
+%(in other words $R^ip_{A,*}(p^*_{\hat{A}}\FF \ot \PP)=0$ for $i=1,2$).
+%By cohomology and base change, one sees that $\FF$ satisfies the IT
+%and in particular that $h^0(\hat{A},\FF)=1$, $h^i(\hat{A},\FF)= 0$ for $i>0$.
+Let $\EE =\FF ^\vee$.
+One can check that,
+$$\dim \Hom (S^3 \EE, \Lambda ^2 \EE )=
+h^0(\hat{A}, (S^3\EE)^\vee \ot \wedge ^2 \EE ) =2.$$
+According to Miranda's triple covering construction \cite{Mi},
+there is a $2$-dimensional family of triple coverings
+$\hat{f}:\hat{X} \to \hat{A}$ with
+$\hat{f}_* \OO_{\hat{X}}=\OO_{\hat{A}} \oplus \EE$.
+
+
+The idea is as follows:
+in order to construct a triple covering 
+$\hat{f}: \hat{X} \lra \hat{A}$ over $\hat{A}$ with
+{\it Tschirnhausen module} $\EE$ (cf. \cite{Mi}), we first construct a 
+triple covering $f:X \lra A$ with
+Tschirnhausen module $\phi_{M^\vee}^*\EE$. In               
+Claim 1, we identify those that
+descend to a triple covering $f:X \lra A$. In Claim 2,
+we then verify that for a general such covering, the 
+singularities of $X$ are
+rational. It follows that
+the singularities of $\hat{X}$ are also rational. Finally, 
+one can compute the invariants
+of $\hat{X}$ via invariants of $X$.
+
+Let $\phi_{M^\vee } : A \lra \hat{A}$ be the isogeny defined by $M^\vee $.
+We have the following commutative diagram:
+$$
+\begin{CD}
+X @>{\phi}>> \hat{X} \\
+@V{f}VV      @V{\hat{f}}VV \\
+A @>{\phi_{M^\vee }}>> \hat{A}
+\end{CD}
+$$
+Where $\phi: X \to \hat{X}$ is a $4:1$ etale covering and $f: X \to A$
+is a triple covering
+determined by a section of
+$$\phi_{M^\vee }^* \Hom(S^3\EE ,\wedge^2 \EE )
+\subset \Hom (S^3 \phi_{M^\vee }^*\EE , \wedge^2 \phi_{M^\vee}^*\EE ).$$
+
+By \cite{Muk}, $\phi_{M^\vee }^*\EE \cong M^\vee \oplus M^\vee $. Thus
+$$ \Hom (S^3 \phi_{M^\vee }
+^*\EE , \wedge^2 \phi_{M^\vee}^*\EE ) \cong H^0(A, M)^{\oplus 4}.$$
+
+
+
+In order to determine the corresponding
+$2$-dimensional subspace, we consider the
+Heisenberg group action on $H^0(A,M)$.
+The Heisenberg group can be identified as
+$$\mathcal{G}(\delta):= \{(\alpha,t,l)|
+\alpha \in k^*, t \in \ZZ_2, l \in \hat{\ZZ_2} \}$$
+with group law $(\alpha,t,l)(\alpha,t',l')=(\alpha \alpha' l'(t),t+t',l+l')$.
+Moreover, $H^0(A,M)$ corresponds to $\Hom(\ZZ_2,k)$.
+The action of $\mathcal{G}(\delta)$ on $\Hom(\ZZ_2,k)$
+is given as $(\alpha,t,l)f(x)=\alpha l(x) f(t+x)$.
+Let $X,Y$ be the sections in $H^0(A,M)$ corresponding to the characteristic
+functions of $0,1$ in $\Hom(\ZZ_2,k)$ respectively.
+
+{\bf Claim 1:} The $2$-dimensional subspace is determined as
+$$\phi_{M^\vee}^* \Hom(S^3\EE,\wedge^2 \EE)
+\cong \{(sX,tY,-tX,-sY)|s,t \in k\}\subset
+H^0(A, M)^{\oplus 4}.$$
+
+Grant the claim for the time being. Following Miranda (cf. \cite {Mi})
+we can then construct a triple covering $f: X \to A$
+by using the data $a=sX,b=tY,c=-tX,d=-sY$.
+Over an affine open subset $U$ of $A$,
+the triple covering can be described in
+$U \times \AAA^2$ as
+by the $2\times 2$ minors of
+$$
+\pmatrix Z+a & W-2d & c\\
+b & Z-2a & W+d
+\endpmatrix
+$$
+where $Z,W$ are coordinates for $\AAA^2$.
+
+Following \cite{Mi} \S 4, we have $A=s^2X^2+stY^2$, $B=(t^2-s^2)XY$ and
+$C=s^2Y^2+stX^2$. The branch locus is defined by $D=B^2-4AC \in H^0(M)^{\ot 4}$
+and one can see that it corresponds to a divisor
+$D_1+D_2+D_3+D_4$ with $D_i \in |M|$.
+For general choice of $s,t$, the $D_i$ are all distinct and nonsingular.
+It is easy to check (cf. \cite{Mi} \S 5)
+that for general choices of $s,t$, the  only possible
+singularities of $X$
+lie over the $4$ base points $\{p,q,r,o\}$.
+We remark that $f$ is totally ramified only over these $4$ base points.
+
+Let $x \in X$ be a point lying over one of $\{p,q,r,o\}$.
+
+{\bf Claim 2:} For general $s,t$, the singularity of $X$ at $x$,
+is locally isomorphic to a cone over a twisted cubic.
+
+Therefore, $X$ has only rational singularities.
+A resolution $\mu: \tilde{X} \to X$ can be obtained by
+blowing up along these $4$ points.
+Let $\{E_i\}_{i=1,..,4}$ be the
+exceptional divisors and $\{R_i\}_{i=1,...,4}$ be the proper transform
+of the $D_i$, then
+$$K_{\tilde{X}}= \sum_{i=1,...,4}R_i+\sum_{i=1,...,4}E_i.$$
+Note that $R_i R_j=0$, $R_i E_j=1$ for all $i,j$ and $E_i^2=-3$,
+$E_iE_j=0$ for $i \ne j$.
+Thus we have $K_X^2=20$.
+$$p_g(\tilde{X})=h^0(\tilde{X},\omega_{\tilde{X}})=
+h^2(\tilde{X},  \OO _{\tilde {X}})=h^2(X,\OO_X)=$$
+$$\hskip2cm h^2(A,\OO_A)+2h^2(A,M^{\vee })=5.$$
+Similarly, $q(\tilde{X})=2$ and
+$\chi(\tilde{X}, \omega_{\tilde{X}})=4$.
+One can also check that $K_{\tilde{X}}$ is ample.
+%Suppose there is an irreducible curve $C$ with $C K_X < 0$,
+%then $C$ is a component of $K_X$ which is impossible.
+
+Since $\phi: X \to \hat{X}$ is an etale cover of degree $4$,
+one has a resolution $\hat{\mu}: {\hat{X}}^{\prime }\to \hat{X}$
+such that $\tilde{X} \to {\hat{X}}^\prime $ is an etale cover of degree $4$.
+Therefore $\chi({\hat{X}}^\prime ,\omega_{ {\hat{X}} ^\prime } )=1$.
+It follows that $p_g({\hat{X}}^\prime )=2$, $K_{{\hat{X}}^\prime }$ is ample
+and $(K_{{\hat{X}}^\prime })^2=5$.
+
+\begin{proof} (Claim 1)
+We follow \cite{Mum}. Let $H(M^\vee )$ be the kernel of $\phi _{M^\vee}:
+A\lra \hat {A}$, i.e. the set of points $x\in A$ such that $T_x^*M^\vee
+\cong M^\vee$. Then $H(M)=H(M^ \vee)$.
+Let $\GG (M )$ be the set of pairs $(x, \varphi )$
+such that $x\in H(M)$ and $\varphi$ is an isomorphism
+$\varphi : M\lra T_x^*M$. Then $\GG (M )$ is a group
+sitting in the following exact sequence:
+$$0\lra k^* \lra \GG (M )\lra H(M )\lra 0.$$
+There is an isomorphism of groups $\GG (M )\cong \GG (\delta )$.
+Under this identification, the representation of $\GG (M )$ on
+$H^0(A,M )$ corresponds to the unique representation of
+$\GG (\delta )$ on $V=V(\delta):= \Hom (\ZZ _2,k)$, which is defined
+by $((\alpha ,t,l)f)(x)=\alpha \cdot l(x)\cdot f(t+x)$.
+With respect to the ordered basis $\{ \chi ^0, \chi ^1 \} $ (characteristic
+functions of $0,1$ respectively), this representation is induced
+by
+$$(1,1,1)\rightarrow \left( \matrix 0 & 1 \\ -1 & 0 \endmatrix \right),
+\hskip.25cm
+(1,1,0)\rightarrow \left( \matrix 0 & 1 \\ 1 & 0 \endmatrix \right),
+\hskip.25cm
+(1,0,1)\rightarrow \left( \matrix 1 & 0 \\ 0 & -1 \endmatrix \right).$$
+The corresponding $\GG (\delta )$ representation on $S^3V^\vee \ot \Lambda
+^2 V \ot V$ can easily be computed.
+%Let $\rho,\mu \in D_4$ be generators
+%such that $\rho ^4=\mu ^2=e$ and $\rho \mu =\mu \rho ^3$.
+%With respect to the ordered basis $\{ \chi ^0, \chi ^1 \} $ (characteristic
+%functions of $0,1$ respectively) of $V(\delta):=\Hom
+%(\ZZ _2,k)$, there is a representation of $D_4$ such that
+%$$\rho =\left( \matrix 0 & 1 \\ -1 & 0 \endmatrix \right)\hskip1cm
+%\mu =\left( \matrix 0 & 1 \\ 1 & 0 \endmatrix \right).$$
+%The dual representation can easily be computed.
+By \cite{Muk} Proposition 3.11, we have
+$$\phi _{M^\vee }^* \FF  \cong
+H^2(A,M)\ot M \cong (H^0(A,M)\ot M^\vee )^\vee \cong \phi _{M^\vee }
+^* \EE ^\vee.$$
+One sees that
+$$H^0(A,S^3\phi _{M^\vee }^* \EE ^\vee \ot \Lambda ^2 \phi _{M^\vee }
+^* \EE  ) \cong
+S^3 H^0(A,M) ^\vee \ot \Lambda ^2 H^0(A,M ) \ot H^0(A,M) .$$
+This vector space is in turn isomorphic to $\bigoplus _{i=1}^4 H^0(A,M)$.
+We can now compute the corresponding $\GG (M )$ representation
+in terms of the above $\GG (\delta )$ representation.
+
+Let $p_i, i=1,...,4$ denote the projection onto the $i$-th
+factor.
+With respect to the ordered basis
+$$\{e_1,e_2, ...,e_8\}=\{ p_1^*X,p_1^*Y,...,p_4^*X,p_4^* Y\}=$$
+$$\{ \hat {X}^3\ot X\wedge Y\ot X, \hat {X}^3\ot X\wedge Y\ot Y,
+\hat {X}^2\hat{Y}\ot X\wedge Y\ot X, \hat {X}^2\hat{Y}\ot X\wedge Y\ot Y,$$
+$$\hat {X}\hat{Y}^2\ot X\wedge Y\ot X, \hat {X}\hat{Y}^2\ot X\wedge Y\ot Y,
+\hat{Y}^3\ot X\wedge Y\ot X, \hat{Y}^3\ot X\wedge Y\ot Y\} ,$$
+we have that $ (1,1,1)\rightarrow
+R\in M_8(k)$ with $R_{i,j}=0$ if $i+j\ne 8$ and
+$R_{i,8-i}=\{-1,1,1,-1,-1,1,1,-1 \}$, respectively
+$(1,1,0)\rightarrow M\in M_8(k)$
+with $M_{i,j}=0$ if $i+j\ne 8$ and
+$M_{i,8-i}=\{1,1,1,1,1,1,1,1 \}$. In particular $R^2=M^2=1$ and
+$RM=MR$. There is an induced representation of
+$H(M^\vee )\cong \ZZ _2\times \ZZ _2 $.
+It is easy to see that the $\ZZ _2\times \ZZ _2$
+invariant elements are just the subspace
+$$\{ s(e_1-e_8)+t(e_4-e_5)| s,t\in k\}.$$
+These invariant elements correspond to the subspace $\phi _{M^\vee }^*
+\Hom (S^3 \EE, \Lambda ^2 \EE)$.
+\end{proof}
+
+\begin{proof} (Claim 2) On a neighborhood of one of the base loci $o,p,q,r$
+we may assume that $X,Y$ (or any two distinct sections of
+$H^0(A,M)$) are local coordinates. By \cite{Ha} pg. 14 exercise 1.25,
+the above mentioned $2\times 2$ minors define a twisted cubic if
+and only if for all
+$[u:v]\in \PPP ^1$, the linear forms
+$$u(Z+sX)-vtY,u(W+2sY)-v(Z-2sX),
+-utX-v(W-sY)$$ are linearly independent. In other words, if and only if
+the matrix
+$$
+\pmatrix us & -vt & u & 0\\
+2vs & 2us & -v & u \\
+-ut & vs & 0 & -v
+\endpmatrix
+$$
+has a nonzero $3\times 3$ minor for every value of $u,v$
+By inspection one sees that this is the case for general $s,t$ (more precisely
+for $t\ne 0$ and $t^2\ne 9s^2$).
+\end{proof}
+
+
+\begin{thebibliography}{Kat}
+\bibitem[Ba]{Ba}
+Barth, Wolf,
+{\em Abelian surfaces with $(1,2)$-polarization.}
+Algebraic geometry, Sendai, 1985, 41--84, Adv. Stud. Pure Math.,
+{\bf 10}, North-Holland, Amsterdam, 1987.
+
+\bibitem[Be]{Be} A. Beauville,
+{\it L'in\'egalit\'e $p_g\geq 2q-4$ pour les surfaces de type g\'en\'eral},
+Bull. Soc. math. France, {\bf 110}, 1982, p. 343-346
+
+\bibitem[CM]{CM}
+C. Ciliberto, M. Mendes Lopes,
+{\em On surfaces with $p_g=q=2$ and non-birational bicanonical map}
+Preprint math.AG/0012211
+
+%\bibitem[EL]{EL} L. Ein, R. Lazarsfeld,
+%{\em Singularities of theta divisors, and birational geometry of
+%irregular varieties},
+% Jour. AMS
+%  {\bf 10},  1 (1997),  243--258.
+\bibitem [Ha]{Ha}
+J. Harris,
+{\em Algebraic geometry.
+A first course.} Graduate Texts in Mathematics, {\bf 133}.
+Springer-Verlag, New York, 1992.
+
+
+\bibitem [HP]{HP} C. D. Hacon and R. Pardini,
+{\em Surfaces with $p_g=q=3$},
+To appear in Trans. of the Amer. Math. Soc.
+
+\bibitem [Muk]{Muk}
+S. Mukai,
+{\em Duality between $D(X)$ and $D(\hat {X})$ with its application to Picard
+sheaves},
+Nagoya Math. Jour. {\bf 81}, (1981) 153-175.
+
+\bibitem[Ma]{Ma}
+M. Manetti,
+{\em Surfaces of Albanese general type and the Severi Conjecture},
+Preprint, math.AG/0003006
+
+\bibitem [Mi]{Mi}
+R. Miranda,
+{\em Triple covers in algebraic geometry.}
+Amer. J. Math. {\bf 107} (1985), no. 5, 1123--1158.
+
+\bibitem [Mum] {Mum}
+D. Mumford,
+{\em Abelian Varieties},
+Oxford University Press.
+
+\bibitem[Pi]{Pi}
+G. P. Pirola,
+{\em Surfaces with $p_g=q=3$}, Manuscripta Mathematica (to appear).
+
+\bibitem[Zu]{Zu}
+F. Zucconi,
+{\em Surfaces with $p_{g}=q=2$ and an irrational pencil},
+Preprint math.AG/0110204
+\end{thebibliography}
+\bigskip
+\bigskip
+
+\begin{minipage}{13cm}
+\parbox[t]{6.5cm}{
+Jungkai Alfred Chen\\
+Department of Mathematics\\
+National Chung Cheng University\\
+Ming Hsiung, Chia Yi, 621, Taiwan\\
+jkchen@math.ccu.edu.tw }
+\hfill
+\parbox[t]{5.5cm}{Christopher D. Hacon\\
+Department of Mathematics\\
+University of Utah\\
+155 South 1400 East, JWB 233\\
+Salt Lake City, Utah 84112-0090, USA\\
+hacon@math.ucr.edu}
+\end{minipage}
+\end{document}
+\end
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 7}
+(1) Let $X$ be a quasi-projective variety. Define $\dim X$ and show that if $X
+$ is irreducible then $\dim X$ is a birational invariant.
+
+Answer: If $X$ is irreducible, then let $\dim X={\rm tr.deg.}_k(k(X))$. If
+$X=\cup X_i$ where $X_i$ are the irreducible components, then let $\dim X={\rm max}\{ \dim (X_i) \}$. Since $k(X)$ is a birational invariant (for irreducible quasi-projective varieties), so is $\dim X$.
+
+(2) Show that every irreducible component of a hyprsurface in $\mathbb A ^N$ 
+has codimension $1$.
+
+Answer: By assumption $X=V(f)$ for some $f\in k[t_1,\ldots , t_n]$. Let $f=f_1\cdots f_r$ where $f_i$ are irreducible in $ k[t_1,\ldots , t_n]$.
+It is easy to see that $X_i=V(f_i)$ is irreducible. 
+(If not we would have $gh=0\in k[X_i]$ but $g,h\ne 0$ in $k[X_i]$. But then $gh\in (f_i)$ but as $f_i$ is irreducible $f_i$ divides $g$ or $h$ so that $g$ or $h$ is zero in  $k[X_i]$ a contradiction.)
+
+We may assume that $f_i\not\in  k[t_1,\ldots , t_{n-1}]$ i.e. $t_n$ appears in some monomial of $f_i$. We claim that $t_1,\ldots , t_{n-1}$ are algebraically independent in $k(X_i)$. Suppose not. Let $G$ be a polynomial with $G(t_1, \ldots , t_{n-1})|_{X_i}=0$, then $f_i$ divides  $G(t_1, \ldots , t_{n-1})^k$ for some $k>0$. This is impossible as $t_n$ appears in no monomials of $G(t_1, \ldots , t_{n-1})^k$ .
+\end{document}
+\end

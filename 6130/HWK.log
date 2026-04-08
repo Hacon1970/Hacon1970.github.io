@@ -1,0 +1,162 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=latex 6.2.12)  29 NOV 2013 22:31
+**&latex2e HWK
+(HWK.tex
+LaTeX2e(BETA TEST RELEASE)  <2005/12/01>
+Babel <v3.7h> and hyphenation patterns for english, loaded.
+(/usr/local/lib/tex/latex2e/unpacked/amsart.cls
+Document Class: amsart 2009/07/02 v2.20.1
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+(/usr/local/lib/tex/latex2e/unpacked/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip42
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/lib/tex/latex2e/unpacked/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/lib/tex/latex2e/unpacked/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+(/usr/local/lib/tex/latex2e/unpacked/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(/usr/local/lib/tex/latex2e/unpacked/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count79
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count80
+\leftroot@=\count81
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count82
+\DOTSCASE@=\count83
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
+\dotsspace@=\muskip10
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
+\tag@help=\toks15
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 368.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+(/usr/local/lib/tex/latex2e/unpacked/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+)
+\copyins=\insert233
+\abstractbox=\box28
+\listisep=\skip45
+\c@part=\count91
+\c@section=\count92
+\c@subsection=\count93
+\c@subsubsection=\count94
+\c@paragraph=\count95
+\c@subparagraph=\count96
+\c@figure=\count97
+\c@table=\count98
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen113
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks24
+) (HWK.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/local/lib/tex/latex2e/unpacked/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1]
+Overfull \hbox (20.55873pt too wide) in paragraph at lines 65--66
+[]\OT1/cmr/m/n/12 Define quasi-projective va-ri-ety, reg-u-lar func-tions on qu
+asi-projective
+ []
+
+
+Overfull \hbox (8.32135pt too wide) in paragraph at lines 65--66
+\OT1/cmr/m/n/12 va-ri-eties and ra-tio-nal map / reg-u-lar map be-tween quasi-p
+rojective
+ []
+
+[2] [3]
+Overfull \hbox (4.18037pt too wide) in paragraph at lines 93--94
+[] \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 Y$\OT1/cmr/m/n/1
+2 . What can you say about the func-tion $[](\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$
+ []
+
+
+Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
+ead on input line 98.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 98.
+(/usr/local/lib/tex/latex2e/unpacked/ueuf.fd
+File: ueuf.fd 2002/01/19 v2.2g AMS font definitions
+) [4] (HWK.aux) ) 
+Here is how much of TeX's memory you used:
+ 1413 strings out of 28583
+ 14641 string characters out of 471185
+ 65606 words of memory out of 524286
+ 4218 multiletter control sequences out of 27000
+ 11307 words of font info for 45 fonts, out of 800000 for 255
+ 176 hyphenation exceptions out of 2003
+ 34i,8n,26p,330b,347s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on HWK.dvi (4 pages, 14652 bytes).

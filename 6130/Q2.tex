@@ -1,0 +1,21 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 2}
+
+(1) Let $X$ be a plane curve. When is $P\in X$ a point of multiplicity $r$?
+What can you say about curves of degree $d$ with points of multiplicity $d$ or $d-1$? 
+
+{\bf Solution:} Suppose $P=(\alpha , \beta )$ and $X$ is defined by $f(x,y)=0$ where $f\in k[x,y]$ is a non-zero polynomial. The multiplicity of $P\in X$ is the lowest degree of a monomial with non-zero coefficient in the polynomial $f(x+\alpha , y+\beta )$. (Equivalently, expand $f$ as a polynomial in $(x-\alpha ) $ and $(y-\beta )$, the multiplicity is then
+given by the degree of the leading term. In characteristic $0$,
+the degree is given by the smallest order of a derivative not vanishing  at $P$.)
+
+If $r=d$, then $f(x+\alpha , y+\beta )$ is homogeneous of degree $d$ and hence (assuming $k=\bar k$) it splits as a product of linear terms. Thus $X$ is the union of $d$ lines counted with multiplicity.
+
+If $r=d-1$ and $X$ is irreducible, then $X$ is rational. To see this project from the point $P$ by letting $y-\beta =t(x-\alpha)$. $f(x, \beta +t(x-\alpha))=c(x-\alpha )^{d-1}(x-x_1(t))$ so that $t\to (x_i(t), \beta +t(x_1-\alpha))$ is the required parametrization.
+
+(2) Show that if $f\in k(X)$ is regular at every point of $\mathbb P ^1$ then $f$ is constant. (Assume $k=\bar k$.)
+
+{\bf Solution:} Let $f=a(x)/b(x)$ where $a(x),b(x)\in k[x]$ are coprime. It follows that if $b(\alpha )=0$, then $a(\alpha )\ne 0$ (or else $(x-\alpha)$ divides both polynomials). Suppose that $b(\alpha )=0$ for some $\alpha \in k$. Since $f$ is regular at $\alpha$, we have $f=c(x)/d(x)$ where $d(\alpha )\ne 0$ and $c(x),d(x)\in k[x]$ are coprime. But then $a(x)d(x)=b(x)c(x)$. Substituting $x=\alpha$ we have $0\ne a(\alpha )d(\alpha )=b(\alpha )c(\alpha )=0$. Therefore, $b(\alpha )\ne 0$ for all $\alpha \in k$ and so $b(x)\in k$ and hence we may assume that $f=a(x)\in k[x]$. We have also assumed that $f$ is regular at infinity. This is equivalent to $a(1/y)$ being regular at $0$. Let $d$ be the degree of $a(x)$, then $a(1/y)=a'(y)/y^d$ where $a'(y)\in k[y]$ has degree $d$. By what we have seen above, $d=0$ and hence $f=a(x)$ is constant. 
+\end{document}
+\end

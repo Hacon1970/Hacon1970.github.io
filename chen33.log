@@ -1,0 +1,77 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=amstex 94.6.21)  19 FEB 1999 13:25
+**chen33
+(chen33
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+(/usr/local/lib/tex/ams/amstex/amstex.tex)
+
+(/usr/local/lib/tex/ams/amstex/amsppt.sty version 2.1d (14-Dec-1993):
+Loading utility definitions, more fonts, symbol names
+(/usr/local/lib/tex/inputs/amssym.tex) , page dimension settings, top matter,
+section heads, theorems/proofs/definitions/remarks, rosters, footnotes,
+figures and captions, miscellaneous, references, end of document,
+output routine, hyphenation exceptions (U.S. English)
+
+) [1] [2] [3]
+Overfull \hbox (33.84134pt too wide) detected at line 402
+[] \tenrm = 3\teni D[] \tensy ^^^ [] ^^^ \teni Bs\tensy j\tenrm 2\teni K[] \ten
+sy 
+ \teni Q \tensy 
+ \teni f[]P\tensy j\teni :|
+
+\hbox(14.2829+8.3595)x360.0, glue set - 1.0
+.\hbox(14.26508+8.3595)x50.09131
+..\hbox(14.26508+8.3595)x50.09131
+...\hbox(0.0+0.0)x1.2, shifted -2.5
+...\vbox(14.26508+8.3595)x47.69131 []
+...\hbox(0.0+0.0)x1.2, shifted -2.5
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.\tenrm =
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.\tenrm 3
+.etc.
+
+[4]
+Overfull \hbox (73.94919pt too wide) detected at line 439
+\teni h[]\tenrm (\teni X; \tenrm 2\teni K[] \tensy 
+ \teni Q \tensy 
+ \teni f[]P\tenrm ) = 3\teni Dh[]\tenrm (\teni X; K[] \tensy 
+ \teni M \tensy 
+ \teni Q \tensy 
+ \teni f[]P\tenrm ) = 3\teni Dh[]\tenrm (\teni X; K[] \tensy 
+ \teni M \tensy 
+ \teni Q\tenrm ) = 3\teni Dh[]\tenrm (\teni X; \tenrm 2\teni K[] \tensy 
+ \teni Q\tenrm )\teni ;|
+
+\hbox(8.64003+2.5)x360.0, glue set - 1.0
+.\teni h
+.\hbox(4.51111+0.0)x4.48613, shifted -4.12892
+..\sevenrm 0
+.\tenrm (
+.\teni X
+.\kern0.7847
+.etc.
+
+[5]
+Overfull \hbox (86.28107pt too wide) detected at line 516
+\teni m[] \tenrm = 3\teni Dmax\tensy f\teni m \tensy 2 \tenmsb Z\tensy j\teni h
+[]\tenrm (\teni X; \tenrm 2\teni K[] \tenrm + 2\teni Q \tenrm + \teni f[]P \ten
+sy ^^@ \teni m[]R[] \tensy ^^@ \teni m[]R[] \tensy ^^@ \teni ::: \tensy ^^@ \te
+ni m[]R[] \tensy ^^@ \teni mR[]\tenrm ) \tensy ^^U \tenrm 2\teni ; \tensy 8\ten
+i P \tensy 2 \teni Pic[]\tenrm (\teni Y\tenrm )\tensy g\teni ;|
+
+\hbox(8.64003+2.5)x360.0, glue set - 1.0
+.\teni m
+.\hbox(4.63193+0.0)x3.32928, shifted 1.49998
+..\seveni i
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.\tenrm =
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.etc.
+
+[6] [7] [8] [9] )
+Output written on chen33.dvi (9 pages, 39532 bytes).

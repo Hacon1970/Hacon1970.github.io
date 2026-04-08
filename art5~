@@ -1,0 +1,1052 @@
+From hacon@math.ucr.edu  Tue May 28 12:24:59 2002
+Return-Path: <hacon@math.ucr.edu>
+Received: from mathserv.ucr.edu (mathserv.ucr.edu [138.23.203.200])
+	by sunshine.math.utah.edu (8.9.3/8.9.3) with ESMTP id MAA15384
+	for <hacon@math.utah.edu>; Tue, 28 May 2002 12:24:58 -0600 (MDT)
+From: hacon@math.ucr.edu
+Received: from math-cl-n01.ucr.edu (math-cl-n01.ucr.edu [138.23.203.119])
+	by mathserv.ucr.edu (8.11.0/8.11.0) with ESMTP id g4SIOB715116
+	for <hacon@math.utah.edu>; Tue, 28 May 2002 11:24:11 -0700 (PDT)
+Received: (from hacon@localhost)
+	by math-cl-n01.ucr.edu (8.11.0/8.11.0) id g4SIPYH00567
+	for hacon@math.utah.edu; Tue, 28 May 2002 11:25:34 -0700 (PDT)
+Message-Id: <200205281825.g4SIPYH00567@math-cl-n01.ucr.edu>
+Subject: 5
+To: hacon@math.utah.edu
+Date: Tue, 28 May 2002 11:25:34 -0700 (PDT)
+X-Mailer: ELM [version 2.5 PL2]
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Status: O
+Content-Length: 35781
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                        %
+%        Characterization of Abelian Varieties           %
+%                                                        %
+%        by C. D. Hacon and J. A. Chen                   %
+%                                                        %
+%               amstex                                   %
+%                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input amstex
+
+\documentstyle{amsppt}
+%\magnification \magstep 1
+\def\AA{\Bbb A}
+\def\NN{\Bbb N}
+\def\RR{\Bbb R}
+\def\PP{\Bbb P}
+\def\PPP{\Bbb P}
+\def\CC{\Bbb C}
+\def\ZZ{\Bbb Z}
+\def\QQ{\Bbb Q}
+
+\def\ot{\otimes}
+
+\def\W{\Omega}
+\def\w{\omega}
+\def\A{\Alpha}
+\def\a{\alpha}
+\def\L{\Lambda}
+\def\l{\lambda}
+\def\D{\Delta}
+
+\def\WX{\Omega_X}
+\def\OO{\Cal{O}}
+\def\OX{\Cal{O}_X}
+\def\O#1{\Cal{O}_#1}
+\def\OD{\Cal{O}_X(D)}
+\def\ox{\omega_X}
+\def\oxt{\omega_X^{\otimes 2}}
+\def\TX{\tilde{X}}
+\def\TA{\tilde{A}}
+
+\def\KX{K_X}
+\def\K#1{K_#1}
+\def\FF{\Cal{F}} 
+\def\GG{\Cal{G}}
+\def\PB{\Cal{P}}
+\def\EE{\Cal{E}}
+\def\WW{\Cal{W}}
+\def\UU{\Cal{U}}
+\def\VV{\Cal{V}}
+\def\II{\Cal{I}}
+\def\LL{\Cal{L}}
+\def\MM{\Cal{M}}
+\def\PY{P_y}
+
+\def\OP{\OO \otimes P}
+\def\KP{\KX \otimes P}
+\def\FP{\FF \otimes P}
+\def\FPY{\FF \otimes P_y}
+\def\OPY{\OO \otimes {P_y}}
+\def\KPY{\KX \otimes {P_y}}
+
+\def\PIC{{\text{\rm Pic}}(X)}
+\def\Pic{{\text{\rm Pic}}}
+\def\PX{{\text {\rm Pic}}^0(X)}
+\def\PA{{\text {\rm Pic}}^0(A)}
+\def\ALB{{\text{\rm Alb}}(X)}
+
+\def\L1{\LL^{(1)}}
+\def\BB{{B^ {(1)}}}
+
+
+\def\H#1#2#3{H^{#1}(#2, #3)}
+\def\h#1#2#3{h^{#1}(#2, #3)}
+\def\R#1#2#3{R^{#1} #2_{*} #3}
+\def\SEQ#1#2#3{#1_{#2},\ldots,#1_{#3}}
+\def\WED#1#2#3{#1_{#2} \wedge \ldots \wedge #1_{#3}}
+\def\DI#1{\text{\rm dim}#1}
+\def\alb{\text{\rm alb}}
+\def\Alb{\text{\rm Alb}}
+\def\CDI#1#2{\text{\rm codialbm}_{#2}{#1}}
+\def\lra{\longrightarrow}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\topmatter
+
+\title {  characterization of abelian varieties }\endtitle
+
+\author Jungkai A. Chen, Christopher D. Hacon   \endauthor
+
+\address Jungkai Alfred Chen, Department of Mathematics, National Chung
+Cheng University, Ming %%@
+Hsiung, Chia Yi, 621, Taiwan \endaddress
+
+\email  jkchen\@math.ccu.edu.tw  \endemail
+
+\address Christopher Derek Hacon, UTAH, Department of Mathematics, Salt
+Lake City, UT 84112, USA %%@
+\endaddress
+
+\email   chhacon\@math.utah.edu   \endemail
+
+%  Math Subject Classifications
+\subjclass Primary 14H45, 14H99; Secondary 14H50\endsubjclass
+\footnote""{The first author was partially supported by
+National Science Council (NSC-87-2119-M-194-007)}
+\abstract
+We prove that any smooth complex projective variety $X$
+with plurigenera $P_1(X)=P_2(X)=1$ and
+irregularity $q(X)=\DI (X)$ is birational to an
+abelian variety.
+\endabstract
+
+%\date March 15, 1999 \enddate
+
+\endtopmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\document
+
+\heading Introduction \endheading
+Given a smooth projective variety $X$,
+one would like to characterize it by its birational invariants.
+Classical results include Castelnuovo's criterion for rational surfaces,
+which states that a complex surface with  plurigenera $P_2(X)=0$
+and irregularity $q(X)=0$ must be rational.
+Another well known result %%@
+due to Enriques,
+characterizes abelian surfaces as the only surfaces with
+$P_1(X)=P_2(X)=1$ and $q(X)=2$.
+
+In an attempt to generalize Enriques' result to
+higher dimensional varieties,
+Kawamata proved that a variety $X$ with Kodaira dimension
+$\kappa(X)=0$
+and irregularity $q(X)=\DI (X)$
+admits a birational map to an abelian variety \cite{Ka1}.
+In \cite{Ko1}, Koll\'ar gives an effective characterization by proving that
+if
+$P_1(X)=P_4(X)=1$ and
+$X$ has maximal Albanese dimension,
+then $X$ is birational to an abelian variety.
+Ein and Lazarsfeld prove a similar result by using generic
+vanishing theorems \cite{EL1}.
+Koll\'ar subsequently improved his result by
+weakening the hypothesis to $P_3(X)=1$ and $q(X)=\DI (X)$.
+He conjectured that the result still holds if one assumes that
+$P_2(X)=1$ and $X$ is
+generically finite over an abelian variety \cite {Ko2}.
+
+In this paper,
+we verify Koll\'ar's conjecture.
+% under the additional hypothesis
+%that $p_1(X)=2$.
+Our method is based on the approaches of Koll\'ar and of Ein and
+Lazarsfeld. We would like to emphasize that the above mentioned
+result of Kawamata and a theorem of C. Simpson (cf. Theorem 1.3)
+are essential steps in the proof.
+
+{\bf Acknowledgment.} We are in debt to R. Lazarsfeld, L. Ein,
+Y. Kawamata, and J. Koll\'ar for valuable conversations during the
+preparation of this paper. We would also like to thank the referee
+for the helpful comments.
+
+\heading Conventions and Notations   \endheading
+
+(0.1) Throughout this paper, we work
+over the field of complex numbers $\CC$.
+
+(0.2) For $D_1,D_2$ $\QQ$-divisors on a variety $X$, we
+write $D_1 \prec D_2$ if $D_2-D_1$ is effective,
+and $D_1 \equiv D_2$ if $D_1$ and $D_2$ are numerically equivalent.
+
+(0.3) $|D|$ will denote the linear series associated to the divisor
+$D$, and $Bs|D|$ denotes the base locus of $|D|$.
+
+(0.4) For a real number $a$, let $\lfloor a \rfloor$ be the
+largest integer $\le a$
+and $\lceil a \rceil$ be the smallest integer $\ge a$.
+For a  $\QQ$-divisor $D=\sum a_i D_i$, let
+$\lfloor D \rfloor =\sum \lfloor a_i \rfloor D_i$ and
+$\lceil D \rceil =\sum \lceil a_i \rceil D_i$.
+
+(0.5) Let $\FF$ be a coherent sheaf on $X$,
+then $h^i(X,\FF)$ denotes the complex dimension of $H^i(X,\FF)$.
+In particular,
+the plurigenera $h^0(X,\ox^{ \otimes m})$ are denoted  by $P_m(X)$
+and the irregularity $h^0(X,\Omega_X^1)$ is denoted by $q(X)$.
+
+(0.6) Let $A$ be an abelian variety,
+for all positive integers $n$,
+we will denote by $A_n$ the set of
+$n$-division points of $A$.
+For all subgroups $T$ of $A$,
+$T_0$ will be
+the connected component of $T$ containing the origin.
+%For any divisor $D\subset A$, let $K(D):=\{\ x\in A\ |\
+%x+D\subset D\ \}$.
+For any line bundle
+$L$ there is a canonical homomorphism
+$\phi _L :A\longrightarrow \Pic ^0(A)$
+defined by $x\lra t_x^*L\otimes L^{-1}$.
+Denote by $K(L)$ the kernel of
+$\phi _L$, and by $p_L:A\lra A(L):=A/K(L)_0$
+the induced quotient map.
+
+\heading 1. Cohomological Support Loci \endheading
+We start by recalling  some results about
+cohomological support loci that will be needed in this paper.
+Most of these results may be found in \cite{EL1} and \cite{EV}.
+
+Let $f:X\to A$ be a morphism from a smooth projective variety $X$ to
+an abelian variety $A$.
+If $\FF$ is a coherent sheaf on $X$,
+then one can define the {\it cohomological support loci} by
+
+\proclaim{Definition 1.1}
+$$V_i(X,A,\FF):=\{ P \in \Pic ^0(A) | h^i(X, \FF \otimes f^*P) \ne 0
+\}.$$
+In particular,
+if $f={ {\alb }}_X :X \to \Alb (X)$,
+then we simply write
+$$V_i(X,\FF):=\{ P \in \Pic ^0(X) | h^i(X, \FF \otimes P) \ne 0 \}.$$
+\endproclaim
+
+We say that $X$ has maximal Albanese dimension if $\DI {(\alb _X(X))}=\DI
+(X)$.
+The loci $V_i(X,\ox )$ defined above are very useful
+in the study of irregular varieties
+and in particular of varieties
+of maximal Albanese dimension.
+The geometry of these loci is governed by the following:
+
+\proclaim{Theorem 1.2 (\cite{GL1},\cite{GL2})}
+
+a. Any irreducible component of $V_i(X,\ox )$ is a translate of
+a sub-torus of $\Pic ^0(X)$
+and is of codimension at least
+$i-(\DI (X) -\DI (\alb _X(X)))$.
+
+b. Let $P$ be a general point of an irreducible component $T$ of
+$V_i(X,\ox)$. Suppose that $v \in H^1(X, \OO _X)\cong T_{P }\Pic
+^0(X)$ is not tangent to $T$. Then the sequence
+%\newpage
+
+$$H^{i-1}(X,\ox \otimes P) \overset {\cup v} \to {\longrightarrow}
+H^{i}(X,\ox \otimes P)  \overset {\cup v} \to {\longrightarrow }
+H^{i+1}(X, \ox \otimes P) $$ is exact. If $v$ is tangent to $T$,
+then the maps in the above sequence vanish.
+
+c. If $X$ is a variety of maximal Albanese dimension, then
+$$\Pic ^0(X)\supset V_0(X,\ox )\supset V_1(X,\ox)
+\supset \ ...\ \supset V_n(X,\ox )=\{ \OO _X\}.$$
+\endproclaim
+
+\proclaim{Theorem 1.3 (\cite{S})}
+Under the above hypothesis,
+every irreducible component of $V_i(X,\ox)$ is
+a translate of a sub-torus of $\PX$ by a torsion point.
+\endproclaim
+
+
+\remark{Remark 1} The results listed above also hold when we
+consider an abelian variety $A$ and a morphism $f: X \to A$ with
+$\DI f(X)=\DI (X)$ and we replace $\PX$ by $\Pic ^0(A)$.
+\endremark
+
+
+\proclaim{Proposition 1.4 \cite{EL1, Proposition 2.1}} If
+$P_1(X)=P_2(X)=1$, then the origin is an isolated point of
+$V_0(X,\omega _X)$.
+\endproclaim
+\proclaim{Proposition 1.5 \cite{EL1, Proposition 2.2}} If the
+origin is an isolated point of $V_0(X,\omega _X)$, then the
+Albanese mapping $\alb _X:X\lra \Alb (X)$ is surjective.
+\endproclaim
+\proclaim{Corollary 1.6 \cite{EL1}} Let $D$ be a reduced
+irreducible divisor of an abelian variety $A$. Then there exists a
+positive dimensional sub-group $T_D\subset \Pic ^0(X)$ such that
+for any desingularization $\nu:\tilde {D}\lra D$,
+$h^0(\tilde{D},\omega _{\tilde {D}} \ot \nu ^* P)>0$ for all $P\in
+T_D$.
+\endproclaim
+
+If $X$ has maximal Albanese dimension, then $X$ admits a
+generically finite map to an abelian variety $A$. It is easy to see
+that $P_1(X) \ge 1$ by pulling back sections of $\Omega^n_A$, where
+$n=\dim (X)$. Assume furthermore that $P_2(X)=1$, then necessarily
+$P_1(X)=1$,
+and so the Albanese map is surjective. In particular $q(X)=\dim (X)$.
+Therefore one has:
+
+\proclaim{Corollary 1.7} The following are
+equivalent.
+
+a. $P_1(X)=P_2(X)=1$, and $q(X)=\dim (X)$.
+
+b. $P_2(X)=1$ and $X$ has maximal Albanese dimension.
+\endproclaim
+
+Next we illustrate some examples in which the geometry of $X$ can
+be recovered from information on the loci $V_i(X, \ox)$.
+
+\proclaim{Theorem 1.8 (\cite{EL2})}
+If $X$ is a variety with
+maximal Albanese dimension and $\DI V_0(X,\ox)=0$. Then $X$ is
+birational to an abelian variety.
+\endproclaim
+
+\demo  {Proof}
+Let $a: X \to A$ be the Albanese map. Since $P_1(X) \ge 1$, the
+origin is an isolated point of $V_0(X, \omega_X)$. By Proposition 1.5,
+$a$ is surjective and generically finite.
+By Theorem 1.2, for any $P\in \Pic ^0(A)$ and $v\in H^1(A,\OO _A)$, 
+the complex $D(v)$
+$$ .\ .\ .\ H^{i-1}(A,a_* \omega _X\ot P) 
+\overset {\cup v} \to {\longrightarrow}
+H^{i}(A,a_* \omega _X \ot P)  \overset {\cup v} \to {\longrightarrow }
+H^{i+1}(A,a_* \omega _X\ot P) \ .\ .\ . $$
+is exact. Let $\PPP =\PPP (H^1(A,\OO _A)^*)$, and define the complex
+of vector bundles $\GG _P^{\bullet }$ by
+$$\GG _P ^i=H^i(A,a_*\omega _X \ot P)\ot \OO _{\PPP }(-n+i).$$
+Since the complex $D(v)$ is exact for any $v\in H^1(A,\OO _A)$,
+it follows that the complex $\GG _P^{\bullet }$ is an exact sequence 
+of vector bundles. Let $n=\dim (X)$. An easy computation shows that
+$$H^0(A,a_*\omega _X \ot P)\ot H^{n-1}(\PPP,\OO _{\PPP }(-n))\cong
+H^n(A,a_*\omega _X \ot P)\ot H^{0}(\PPP,\OO _{\PPP }).$$ 
+However, $h^n(A,a_*\omega _X \ot P)=h^n(X,\omega _X \ot a^*P)=
+h^0(X,\OO _X \ot a^*P)$ and this is zero unless $P=\OO _A$.
+It follows that $V_0(X,\omega_X)$ consists of the origin only
+and that $P_1(X)=1$.
+
+Let $\GG ^{\bullet } =\GG  ^{\bullet }_{\OO _A}$.
+Define now the complex of vector bundles $\FF ^{\bullet }$ by
+$$\FF ^i=H^i(A,\OO _A)\ot \OO _{\PPP }(-n+i).$$ 
+Let $i:\OO _A\lra a_* \omega _X$ be the injection of sheaves
+corresponding to a nonzero section of $a_*\omega _X$.
+Since $h^0(A,a_* \omega _X)=1$ this is unique up to multiplication 
+by non-zero scalar. There is a corresponding map of complexes 
+$i ^{\bullet } : \FF ^{\bullet }  \lra \GG ^{\bullet }  $.
+Tensoring by $\OO _{\PPP}(n)$ and taking global sections,
+this induces an isomorphism
+$H^0(A,\OO _A)\cong H^0(A,a_* \omega _X)$.
+Proceeding by induction (tensoring by $\OO _{\PPP}(n-r)$ and 
+taking global sections),
+we obtain isomorphisms
+$$H^r(A,\OO _A)\cong H^r(A,a_* \omega _X).$$
+
+Let $\Cal{Q}$
+be the cokernel of $ \OO _A \hookrightarrow a_*\omega _X$. 
+%Since $f$ is generically finite, one sees that
+%$h^i(A,f_*\omega _X \ot P)=h^i(X, \omega _X \ot P)$ for all $i$ and for all
+%$P \in \Pic ^0(X)=\Pic ^0(A)$. 
+The induced maps $H^i(A,\OO _A\ot P)\lra H^i(A,a_*\omega _X \ot P)$ are
+all isomorphisms for all $P \in \Pic ^0(A)$.
+Therefore, $h^i(A, \Cal{Q} \ot P)=0$ for all $i$ and all $P \in \Pic ^0(A)$.
+By \cite{M}, $\Cal{Q}=0$ and thus
+$\OO _A \cong  a_*\omega _X$. Therefore, $a: X \to A$ is
+birational. \hfill \qed \enddemo
+
+
+\proclaim{Corollary 1.9 (\cite{EL2})} Let $X$ be a variety of
+maximal Albanese dimension. If $X$ is not birational to an abelian
+variety. Then there exists a torsion line bundle $Q\in \Pic ^0(X)$
+and a positive dimensional subgroup $T$ of $\Pic ^0(X)$, such that
+$h^0(X, \oxt \ot Q^{\ot 2} \ot P)\geq 2$ for all $P\in T$. In
+particular, if $V_0(X,\ox)$ contains a positive dimensional
+component through the origin $\OO _X$ (or through any 2-torsion
+point $P\in \Pic ^0(X)_2$), then $P_2(X) \ge 2$.
+\endproclaim
+
+\demo{Proof} Let $T_Q$ be any positive dimensional component of
+$V^0(X,\omega _X)$ containing $Q \in \Pic ^0(X)$ and let
+$T=T_Q-Q$. Since $T$ is a subgroup of $\Pic ^0(X)$, one sees that
+$-T=T$. Consider the natural map $$H^0(X,\ox \ot Q \ot P_y)
+\otimes H^0(X, \ox \ot Q \ot P_y^*) \to H^0(X, \ox^{ \otimes 2}
+\ot Q^{ \otimes 2})$$ and let $P_y$ vary in $T$. Both $H^0(X,\ox
+\ot Q \ot P_y)$ and $H^0(X,\ox \ot Q \ot P_y^*)$ are non-zero. The
+natural map above gives rise to a map of linear series $$ |K_X
++Q+P_y| \times |K_X+Q -P_y| \to |2K_X+2Q |.$$ Since there are
+infinitely many $P_y \subset S$, $|2K_X+2Q|$ cannot consist of
+only one element. Therefore $h^0(X,\ox^{\ot 2}\ot Q^{ \otimes
+2})\ge 2$. \hfill \qed
+\enddemo
+
+
+We end this section by recalling a few results that will
+frequently be used in what follows.
+\proclaim{Theorem 1.10 \cite  {EV2, Ka2, Ko1, }}
+Let $f:X\lra Y$ be a surjective morphism from a smooth
+projective variety $X$ to a normal variety $Y$. Let $L$ be a line bundle on
+$X$
+such that $L\equiv f^* M +\Delta$, where $M$ is a $\QQ$-divisor on $Y$
+and $(X,\Delta )$ is klt. Then
+
+a. $R^jf_*(\ox \ot L) $ is torsion free for $j\geq 0$.
+
+b. Assume furthermore that $M$ is nef and big. Then
+$H^i(Y,R^jf_*(\ox \ot L)) =0$ for $i>0$, $j\geq 0$.
+
+c. Let $D$ be a effective divisor on $X$
+such that $f(D) \ne Y$. Then
+
+$$H^j(X,\ox \ot L) \to H^j(X, \ox \ot L(D)) \text{ is
+injective.}$$\endproclaim
+
+
+
+\proclaim{Theorem 1.11 \cite  {Ko2, 14.7}}
+Let $f:X\lra Y$ be a surjective morphism from a smooth
+projective variety $X$ to a smooth variety $Y$, birational
+to an abelian variety.
+Let $L$ be a nef and big $\QQ$-divisor on $Y$, $\Delta$ be a $\QQ$-divisor
+with normal crossings such that $\lfloor \Delta \rfloor =0$. Let $U\subset
+Y$ be a dense open set, and $N$ a Cartier divisor on $X$, $N\equiv
+K_X+\Delta
++f^*L$. Assume that $N|_{g^{-1}U}$ is linearly equivalent to an effective
+divisor. Then $h^0(X,N)\not \hskip-.12cm {=}0$.
+\endproclaim
+
+
+
+
+\heading 2. Birational invariants \endheading In this section we
+study  birational invariants of varieties with maximal Albanese
+dimension.
+Let $f:X \to Y$ be a birational model of the Iitaka fibration of $X$.
+We may assume that $X$ and $Y$ are
+smooth projective
+varieties. Suppose that there is an abelian variety $A$ and
+a generically finite map
+$a:X\lra A$.
+Let $K$ be the image
+
+\noindent of the generic fiber $X_y$ of $f$ via the map
+$a:X\lra A$. Since $\kappa (X_y )=0$, by \cite {Ka1},
+it follows
+that $X_y\lra K$ is \'etale in codimension 1. Moreover, $K$ is a fixed
+abelian
+subvariety of $A$, and
+there is a generically finite map $Y \longrightarrow \Alb (X)/K$.
+Thus $Y$ is also of maximal Albanese dimension. Let $D$ be an
+non-exceptional
+irreducible
+component of the ramification divisor with respect to the
+map $a: X \to A$. Then $P_1(D) \ge 1$, and $f(D) \ne Y$.
+
+\proclaim{Lemma 2.1} Suppose that $X$ has maximal Albanese
+dimension, and positive Kodaira dimension $\kappa(X) >0$. Fix $Q$
+a torsion element of $ \Pic ^0(X)$. Then $h^0(X,\oxt \ot Q \ot
+f^*P)$ is constant for all torsion $P \in \Pic ^0(Y)$.
+\endproclaim
+
+\demo{Proof} The assertion is clear if $|2K_X + Q + f^*P|$ is
+empty for all $P \in \Pic ^0(Y)$. We therefore may assume that for
+given $P$ and $Q$, $|2K_X + Q + f^*P|$ is not empty. Fix a nef and
+big divisor $H$ on $Y$. The linear series $|mK_X-f^*H|$ is
+nonempty for all $m$ sufficiently large. Fix a sufficient large
+$m_2$ such that $|m_2K_X-f^*H|$ is non-empty, and fix a sufficient
+large even integer $m_1$ such that
+$\frac{m_1}{2}P=\frac{m_1}{2}Q=\OO_X$
+ and $\dim |m_1K_X| \ge 1$.
+Moreover, let $F_{2,Q+f^*P}$ be the base divisor of $|2K_X + Q +
+f^*P|$.
+
+Replacing $X$ by an appropriate birational model, we may assume
+that both the linear system $|m_1K_X|$ and $|m_2K_X-f^*H|$ have
+base locus of pure codimension 1. For general memebers $B_1 \in
+|m_1K_X|$ and $B_2 \in |m_2K_X-f^*H|$, we may write $$B_1=D_1 +
+\sum^{r}_{i=1} a_iF_i, \quad B_2=D_2 + \sum^{r}_{i=1} b_iF_i,$$
+where $\sum^{r}_{i=1} a_iF_i$ and $\sum^{r}_{i=1} b_iF_i$ denote
+the base divisors respectively. One can arrange that $D_1 \ne D_2$
+and  $D_i \ne F_j$ for all $i=1,2$ and $j=1,...,r$. Blowing up $X$,
+we may assume furthermore that $Supp(B_1) \cup
+Supp(B_2)$ is normal crossing.
+
+Consider $B=kB_1+B_2 \in |(km_1+m_2)K_X -f^*H|$. We claim that for
+$k \gg 0$
+
+
+$$ \lfloor \frac{B}{km_1+m_2} \rfloor \prec
+\frac{3}{2m_1}\sum^{r}_{i=1} a_iF_i $$
+and
+$$ \frac{2}{m_1}\sum^{r}_{i=1} a_iF_i \prec F_{2,Q+f^*P},
+\quad \frac{2}{m_1}\sum^{r}_{i=1} a_iF_i \prec F_{2,Q}.$$
+
+The second inequality is easily seen since
+$\frac{m_1}{2}|2K_X+Q+f^*P| \subset |m_1K_X|$. It follows that
+ $\sum^{r}_{i=1} a_iF_i \prec
+\frac{m_1}{2} F_{2,Q+f^*P}$. The third inequality holds similarly.
+
+For the first inequality, we proceed by comparing the
+multiplicities of each component. Recall that
+$B=kD_1+D_2+\sum^{r}_{i=1} (ka_i+b_i)F_i$.
+First of all, $\lfloor \frac{k}{km_1+m_2} \rfloor=\lfloor
+\frac{1}{km_1+m_2} \rfloor=0$. Moreover, if $a_i=0$ then
+
+
+$$\lfloor \frac{ka_i+b_i}{km_1+m_2} \rfloor =
+\lfloor \frac{b_i}{km_1+m_2} \rfloor =0 \le \frac{3a_i}{2m_1},$$
+for all $k \gg 0$. If $a_i>0$, then
+$$\lfloor \frac{ka_i+b_i}{km_1+m_2} \rfloor \le
+\frac{ka_i+b_i}{km_1+m_2} \le \frac{3a_i}{2m_1},$$
+for all $k \gg 0$.
+Hence the claim holds.
+
+
+Now let $m=km_1+m_2$, and define
+$$M:= K_X(- \lfloor \frac{B}{m} \rfloor) \equiv f^*
+(\frac{H}{m}) + \{ \frac{B}{m} \}.$$
+
+By comparing fixed loci as above, one sees that $h^0(X, \ox (M)
+\ot Q \ot f^*P)=h^0(X,\oxt \ot Q \ot f^*P)$, and $h^0(X,\ox (M)
+\ot Q)=h^0(X,\oxt \ot Q)$. Since the support of $B$ has only
+normal crossing singularities, $\{ \frac{B}{m} \}$ is Kawamata log
+terminal. By Theorem 1.10, it follows that $H^i(Y,R^j{f}_*(\ox (M)
+\ot Q)\ot P)=0$ for all $i>0$, $j\geq 0$ and all $P \in \Pic
+^0(Y)$. In particular $$h^0(Y,{f}_*(\ox ( M) \ot Q)\ot
+P)=\chi(Y,{f}_*(\ox (M) \ot Q)\ot P),$$ which is deformation
+invariant. So, the quantity $h^0(X,\ox (M) \ot Q \ot f^*P)$ is
+positive and constant for all $P \in \Pic ^0(Y)$. Therefore, for
+any torsion element $P$ of $\Pic ^0(Y)$, $$h^0(X,\oxt \ot Q \ot
+f^*P)=h^0(X,\ox  (M) \ot Q \ot f^*P)=$$ $$h^0(X,\ox (M) \ot
+Q)=h^0(X,\oxt  \ot Q). \hfill \qed $$
+\enddemo
+
+
+An immediate consequence of Lemma 2.1 is the following
+
+\proclaim{Theorem 2.2} Let $X$ be a smooth projective variety with
+maximal Albanese dimension. If $X$ is of general type, then
+$P_2(X)= h^0(X, \ox^{\ot 2}) \ge 2$.
+\endproclaim
+
+
+\demo{Proof} Since $X$ is not birational to an abelian variety, by
+Corollary 1.9, there exists a torsion line bundle $Q \in \Pic
+^0(X)$, such that $h^0(X,\oxt \ot Q^{\ot 2}) \ge 2$. By Lemma 2.1,
+$h^0(X,\oxt) \ge 2$. \hfill \qed
+\enddemo
+
+
+\proclaim{Lemma 2.3}  Let $X$ be a smooth projective variety with
+maximal Albanese dimension,
+and positive Kodaira dimension $\kappa(X) >0$. Let $f:X
+\to Y$ be a birational model of the Iitaka fibration of $X$. Fix a canonical
+divisor $K_X$ and let
+$K'=(K_X)_{red}$.  If $Q$ is a torsion element of $ \Pic ^0(X)$
+such that $h^0(X,\ox \ot Q) >0$. Then $h^0(X,\ox(K') \ot Q \ot
+f^*P)>0$ for all $P \in \Pic ^0(Y)$.
+\endproclaim
+\demo{Proof} The proof proceeds as in Lemma 2.1.
+Let $K'=\sum F_i$.
+For general memebers $B_1 \in
+|m_1K'|$ and $B_2 \in |m_2K'-f^*H|$, we may write $$B_1=D_1 +
+\sum  a_iF_i, \quad B_2=D_2 + \sum b_iF_i,$$
+where $\sum a_iF_i$ and $\sum b_iF_i$ denote
+the base divisors respectively. One can arrange that $D_1 \ne D_2$
+and  $D_i \ne F_j$ for all $i=1,2$ and $j$. Blowing up
+$X$, we may assume furthermore that $Supp(B_1) \cup Supp(B_2)$ has
+normal crossing support.
+
+Consider $B=kB_1+B_2 \in |(km_1+m_2)K' -f^*H|$.
+We proceed by comparing the
+multiplicities of each component.
+
+Clearly, $m_1K' \in |m_1K'|$. Thus $a_i \le m_1,$ for all
+$i$. One can easily check that for $k \gg 0$, $\lfloor
+\frac{ka_i+b_i}{km_1+m_2} \rfloor \le  1.$
+
+It follows that  $$\lfloor \frac{B}{m} \rfloor
+\prec \sum F_i = K'.$$
+
+Let $$M:=K'-\lfloor \frac{B}{m} \rfloor.$$ Then
+$h^0(X, \ox(M) \ot Q )>0$. As in the
+proof of Lemma 2.1, $h^0(X, \ox(M) \ot
+Q  \ot f^*P) )$ is constant for all $P \in \Pic ^0(Y)$ .
+Thus $h^0(X, \ox(M)\ot Q \ot f^*P) >0$ for all
+$P \in \Pic ^0(Y)$. It follows that  $h^0(X, \ox(K')\ot f^*P) >0$
+for all $P \in \Pic ^0(Y)$. \hfill \qed
+\enddemo
+
+
+
+
+\proclaim{Theorem 2.4} Let $X$ be a smooth projective variety with
+maximal Albanese dimension and positive Kodaira dimension $\kappa(X) >0$.
+Let $f:X\to Y$ be
+the Iitaka fibration. If $Y$ is birational to an abelian variety,
+then $P_2(X) \ge 2$.
+\endproclaim
+
+\demo{Proof}  Let $q:Y \to S$ be a birational morphism to an
+abelian variety $S$. We identify $\Pic ^0(Y)$ with $\Pic ^0(S)$.
+In what follows, we assume that $h^0(X,\oxt) =1$ and derive a
+contradiction.
+
+{\bf Step 1.} Let $K'=(K_X)_{red}$. By Lemma 2.3, $h^0(X,\ox(K')
+\ot f^*P) \ge 1$ for all $P \in \Pic ^0(Y)$. As $h^0(X, \oxt) =1$,
+equality holds for all $P$ in an appropriate neighborhood $U
+\subset \Pic ^0(Y)$ of the origin $\OO_Y$.
+
+Since $X$ is not birational to an abelian variety, by Corollary
+1.9, there is a torsion line bundle $Q$ in a positive dimensional
+component $T$ of $V_0(X, \ox)$ such that $h^0(X, \ox \ot Q) \ge
+1$. If $T \subset \Pic ^0(Y)$, then $h^0(X, \oxt \ot Q^{\ot 2})
+\ge 2$ by Corollary 1.9, and by Lemma 2.1, $h^0(X, \oxt) \ge 2$.
+Therefore we may assume that $Q \not \in \Pic ^0(Y)$. By Lemma 2.3
+and its proof, $h^0(X,\ox(M) \ot Q \ot f^*P) =c \ge 1$ for all
+torsion $P \in \Pic ^0(Y)$.
+
+{\bf Step 2.} We claim that there is a theta divisor $\Theta$ on $S$ and an
+effective divisor $G$ such that $$|K_X+K'+f^*P|=f^*q^*|\Theta +P| + G,$$
+for all $P \in U$.
+
+To this end, let $M$ be a divisor chosen as in the proof of Lemma
+2.3 (in particular $\lfloor \frac{B}{m} \rfloor \prec K'$). We
+wish to compute the cohomology groups of the direct image sheaf
+$q_*f_*(K_{X}+M) $. From the Leray spectral sequence associated to
+the morphism $q:Y \lra S$, one sees that for all $P\in \Pic
+^0(Y)$, $$h^0(X,\ox \ot M\ot f^*P)=h^0(S,q_*f_*(\ox \ot M) \ot P
+)=1,$$ and there is an injection $$H^i(S,q_*{f}_*(\ox \ot M)\ot P
+)\hookrightarrow H^i(Y,{f}_*(\ox \ot M) \ot P).$$ It follows that
+for all $i>0$, both of the above cohomology groups vanish. So
+$q_*{f}_*(\ox \ot M)$ is coherent sheaf generically of rank one,
+which is a "cohomological principal polarization". In other words,
+for all $P\in \Pic ^0(S)$, the cohomology groups of $q_*{f}_*(\ox
+\ot M)\ot P$ are of the same dimension as the cohomology groups of
+a principal polarization of $S$.
+
+By \cite{H, Proposition 2.2}, there exists an appropriate theta
+divisor $\Theta$ on $S$ and an isomorphism of sheaves
+$q_*{f}_*(\ox \ot M)
+ = \OO _S(\Theta )$.
+Pulling back with respect to $q$ and $f$, for all $P\in \Pic ^0
+(Y)$, we get a map of linear series $${f}^*q^*|\Theta +
+P|@>{\times G}>> |K_{X}+K' + f^*P|$$ which factors through
+$|K_{X}+ M+ f^*P|$, where $G$ is a (possibly empty) effective
+divisor in $|K_{X}+K'-f^*q^*\Theta|$. Since for $P\in U$, the
+groups $H^0(X,\oxt \ot f^*P)$ are one dimensional, the above map
+of linear series is an isomorphism, and so $G$ is contained in
+$Bs|K_{X}+K' + f^*P|$ for all $P\in U\subset \Pic ^0(Y)$.
+
+{\bf Step 3.} We wish to show that the divisor $G$ is non-zero and
+not exceptional with respect to the map $X\lra S$.
+
+If $c =h^0(X,\ox(M) \ot Q)=1$.
+It follows as in Step 2 that there is a theta
+divisor $\Theta'$ on $S$ and effective divisor $G'$ such that
+$$f^*q^*|\Theta' +P| + G' \hookrightarrow |K_X+K'+Q+f^*P|,$$
+is an injection for all $P \in \Pic ^0(Y)$.
+
+If $\Theta \equiv \Theta'$, then $\Theta'=
+\Theta -P_0$ for some $P_0 \in \Pic ^0(Y)$. Replacing $Q$ by $Q \ot f^*P_0$,
+and $P$ by $P\ot P_0^{-1}$, we
+conclude that also
+$$   f^*q^*|\Theta+P| + G' \hookrightarrow |K_X+K'+Q+f^*P|,$$
+is an injection for all $P \in \Pic ^0(Y)$.
+
+In particular, $ h^0(X, G') = h^0(X, G \ot Q) \ne 0$. It is easy to see
+(eg. \cite
+{Ch, Lemma 7.2}) that $G$ is non-zero and non-exceptional.
+
+We remark now that if $D$ is any ample divisor on $S$ which is not
+numerically equivalent to $\Theta$, then $D^{s-i+1}\cdot \Theta ^{i-1}>
+D^{s-i}\cdot \Theta ^{i}$ for some $1\leq i \leq s=\DI {S}$.
+
+%it is easy to see that
+%$(\Theta')^r (\Theta)^{s-r} >(\Theta')^{r-1} (\Theta)^{s-r+1}$ for
+%some $r \le s$, where $s$ is the dimension of $S$.
+In particular, if  $\Theta  \not \equiv \Theta'$,
+there are ample divisors $D_1,\ldots ,D_{s-1}$ on $S$ such that $$
+\Theta' \cdot D_1 \cdots D_{s-1} > \Theta \cdot D_1 \cdots
+D_{s-1}.$$
+Let $H_i$ be the pull back of $D_i$ and $H'$ be the pull back of
+an ample divisor on $A=\Alb (X)$.
+We then have the numerical inequality
+$$ (K_{X}+K') \cdot H_1 \cdots H_{s-1} \cdot (H')^{n-s}= (K_{X}+K'+Q)  \cdot
+H_1 \cdots H_{s-1} \cdot (H')^{n-s} $$
+$$ \ge  (f^*q^*\Theta') \cdot H_1 \cdots H_{s-1} \cdot (H')^{n-s}
+>(f^*q^*\Theta) \cdot H_1 \cdots H_{s-1} \cdot (H')^{n-s}.$$
+>From the injection of linear series $${f}^*q^*|\Theta + P|@>{
+\times G}>> |K_{X}+K' + f^*P|,$$ one sees that the effective
+divisor $G$ is not exceptional with respect to the map $X\lra S$.
+
+If $c=h^0(X,\ox(M) \ot Q) \ge 2$.
+Let $F$ be a maximal effective divisor such that for all $P\in
+\Pic ^0(Y)$, $K_X+K'+Q+ f^* P$ is linearly equivalent to $F+V_P$,
+and $h^0(V_P)\geq 2$.
+
+We may assume that
+$D_P,\ D'_P$ are two distinct general members of $|V_P|$, which do
+not contain any components of the ramification divisor of $X\lra
+Y$. Therefore
+there exist divisors $\Delta _P,\Delta '_P$ on $Y$
+such that modulo $X\lra Y$ exceptional divisors $D_P={f}^*(\Delta _P)$ and $D'_P={f}^*(\Delta '_P)$. The map $Y
+\lra S$ is birational, so there exist effective divisors $\bar {\Delta
+}_P$ and $\bar {\Delta }'_P$ on $S$ and arbitrary $q$-exceptional
+divisors $E_P,\ E'_P$ such that
+
+$$\Delta _P=q^*(\bar {\Delta }_P)+E_P,\ \ \ \Delta '_P=q^*( \bar
+{\Delta }'_P)+E'_P.$$
+If $h^0(S,\OO _S(\bar {\Delta }_P))=1$, then $\bar {\Delta }_P=
+\bar {\Delta }'_P$ and similarly since $Y \lra S$ is birational,
+$\Delta _P=\Delta '_P$, which is a contradiction. So $\bar {\Delta
+}_P$ is a divisor on $S$ with at least two sections. We may also
+assume that $\bar {\Delta }_P$ is an ample divisor on $S$, since
+otherwise there would exists a non trivial map of abelian
+varieties $S\lra \Sigma$ such that $\bar {\Delta }_P$ is the pull
+back of a divisor on $\Sigma$. However then for general $P_1,$
+$P_2\in \Pic ^0 (S)$, $V_{P_1}-V_{P_2}$ is rationally equivalent to
+$P_1-P_2$ and is an element of $\Pic ^0 (\Sigma )$. The only way
+this can occur is if $S=\Sigma$ as required.
+
+Hence,  we again obtain the
+numerical inequality
+$$(K_{X}+K')  \cdot H_1 \cdots H_{s-1} \cdot (H')^{n-s}>
+(f^*q^*\Theta)\cdot  H^{s-1}\cdot (H')^{n-s}.$$
+It follows as above that the divisor $G$ is non-zero and
+not exceptional with respect to the map $X\lra S$.
+
+{\bf Step 4.} We show that  $G$ being non-exceptional would lead
+to the desired contradiction. Consider now $G_0$ an irreducible
+reduced component of $G$ which is not exceptional with respect to
+the map $X\lra S$. Since we assumed that $h^0(X,\oxt)=1$, it
+follows that $h^0(X,\ox \ot P)$ $=0$ and $h^0(\oxt \ot P)=1$ for
+all $P\in (\Pic ^0(Y)- \OO _Y)$ in an appropriate neighborhood of
+the origin $\OO _S$ which we again denote by $U$. From the exact
+sequence of sheaves $$0\lra \ox \ot P\lra \ox(G_0) \ot P\lra
+\omega_{G_0} \ot P\lra 0,$$ we see that for $P\in U^0=U-\{\OO
+_Y\}$, there is an isomorphism $$H^0(X,\ox(G_0) \ot P)\cong
+H^0(G_0,\omega_{G_0} \ot P).$$ By Corollary 1.6, there exists a
+positive dimensional subgroup $T_{G_0}\subset \Pic ^0(X)$ such
+that for all $P\in T_{G_0}$, $h^0(G_0,\omega_{G_0} \ot P)>0$.
+Since $G_0 \prec K_X+K'$, $G_0$ is vertical with respect to the
+Iitaka fibration $X\lra Y$. We may therefore assume that $T_{G_0}$
+is in fact contained in $\Pic ^0(Y)$. It follows that for $P\in
+T_{G_0}\cap U^0$, $G_0$ is not contained in the base locus of the
+linear series $|K_X+G_0 + P|$. Let $$|K_X+G_0 + P| @>{K'-G_0}>> |
+K_X+K' + P|$$ be the map of linear series induced by
+multiplication by the effective divisor $K' -G_0$. Since $G_0$ is
+in the base locus of $|K_X+K' + P|$, $G_0$ must be an irreducible
+component of $K' -G_0$.  This is the required contradiction since
+$K'$ is reduced. \qed
+
+\enddemo
+
+%------------------------------------------------------------
+\heading 3. Proof of the Main Theorem \endheading
+
+\proclaim{Lemma 3.1}
+Let $X$ and $Y$ be smooth varieties and
+let $A$ and $C$ be abelian varieties.
+Suppose that there is a commutative diagram
+
+$$ \CD X &@>{a}>>&A \\ @V{f}VV && @VV{\pi}V \\ Y & @>{q}>>& C,\\
+\endCD
+$$ such that both $a$ and $q$ are generically finite and
+surjective. Then $P_m(Y) \le P_m(X)$, for all $m \ge 1$.
+\endproclaim
+
+\demo{Proof}
+Let
+$\{ \bar{z}_1,\ldots,\bar{z}_k\}$ be coordinates on $C$
+such that
+$\{z_i= \bar{z}_i\circ \pi \ |\ 1\leqq i\leqq k\ \}$
+
+\noindent may be extended to coordinates $\{ z_1,\ldots,z_n  \}$
+on $A$, where $n$ and $k$ are the dimensions of $A$ and of $C$
+respectively. Let $\Lambda=\WED {a^*dz} {k+1} n \in H^0(X, \Omega
+^{n-k}_{X})$, we claim that $$ (f^* \omega_Y)^{\otimes m}
+@>{\wedge \Lambda ^{\otimes m}}>> \omega_X^{\otimes m}$$ induces
+the desired injective map $$\Lambda _m: H^0(Y,\omega_Y^{\otimes
+m}) @>>> H^0(X,\omega_X^{\otimes m}).$$ Since $q:Y \to C$ is
+generically finite and surjective, for a general point $y \in Y$,
+there are isomorphic Euclidean open neighborhoods $\UU_y$ and
+$\VV_{q(y)}$ of $y$ and $q(y)$ respectively. For a non-zero
+section $\eta \in H^0(Y,\omega_Y^{\otimes m})$, we may assume that
+$\eta(y) \ne 0$. On $\UU_y$, $\eta$ is represented by $\zeta\cdot
+(\WED {q^*d\bar{z}} 1 k)^m$, with $\zeta (y) \ne0$. On
+$f^{-1}(\UU_y)$ $$ \Lambda _m( \eta) |_{f^{-1}(\UU_y)} = f ^*\zeta
+\cdot (a^*dz_1 \wedge  \ldots \wedge a^*dz_n)^m\not \equiv 0.$$
+Therefore (by choosing harmonic representatives, see \cite{GL2,
+Lemma 3.1}), $\Lambda _m: H^0(Y,\omega_Y^{\otimes m}) @>>>
+H^0(X,\omega_X^{\otimes m})$ is injective and so $P_m(Y) \le
+P_m(X)$. \hfill \qed
+\enddemo
+
+
+\proclaim{Theorem 3.2}
+Let $X$ be a smooth projective variety with
+$P_1(X)=P_2(X)=1$ and $q(X)=\DI (X)$.
+Then $X$ is birational to an abelian variety.
+\endproclaim
+
+\demo{Proof}
+Since $P_1(X)=P_2(X)$ and $q(X)=\DI (X)$, by Proposition 1.5,
+it follows that the Albanese morphism is surjective, and hence
+a generically finite map.
+
+If the Kodaira dimension of $X$ is zero, then
+by Kawamata's theorem \cite {Ka1}, $X$ is birational to an abelian variety.
+
+Suppose that $\kappa(X) >0$.
+By Theorem 2.2, the variety $X$ cannot be of general type.
+Therefore $X$ admits a nontrivial Iitaka fibration.
+Let $f: X \to Y$ be a birational model of the Iitaka fibration.
+The generic fiber $F$ has
+$\kappa(F)=0$ and $\DI ({\alb _X(F)}) =\DI (F)$.
+Thus $\alb _X(F)$ is an abelian sub-variety which we denote by $K$.
+We obtain a diagram
+$$
+\CD
+ X & @>{ \alb _X}>> & \Alb (X) \\
+@V{f}VV & & @VV{\pi}V \\ Y & @>{q}>> & \Alb (X)/K\\
+\endCD
+$$
+\noindent
+where the morphism $g: Y @>>> \Alb (X)/K$ is generically finite.
+By Lemma 3.1, we have $P_1(Y)=P_2(Y)=1$.
+By iterating this procedure,
+we eventually produce a
+variety $Y'$
+either of maximal Kodaira dimension $\kappa (Y') = \DI (Y')$,
+or with Kodaira dimension $0$ (and hence birational to an abelian variety).
+By applying Theorem 2.2 or Theorem 2.4,
+respectively, in conjunction with Lemma 3.1,
+we conclude that $P_2(X) \ge 2$.
+\hfill
+\qed
+\enddemo
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+
+\Refs
+\widestnumber\key{GL1 }
+
+
+%\ref\key B
+%\by A. Beauville
+%\book Complex Algebraic Surfaces
+%\publ London Math. Soc. Student Texts {\bf 34}, Cambridge University Press
+%\yr 1992
+%\endref
+
+
+%\ref\key Bi
+%\by I. Biswas
+%\paper On the cohomology of parabolic line bundles
+%\jour Math. Res. Lett.
+%\yr 1996 \vol 2 \issue 1\pages 783--790
+%\endref
+
+\ref\key Ch
+\by J. Chen
+\paper Birational geometry of irregular varieties
+\book Ph.D. thesis, University of California, Los Angeles
+\yr 1997
+\endref
+
+%\ref\key D
+%\by H. Dunio
+%\paper \"{U}ber generische Verschwindungssatze.
+%\jour Diplomarbeit, Essen
+%\yr 1991
+%\endref
+
+\ref\key EL1
+\by L. Ein, R. Lazarsfeld
+\paper Singularities of theta divisors, and birational geometry of
+irregular varieties
+\jour Jour. AMS
+\yr 1997 \vol 10 \issue 1 \pages 243--258
+\endref
+
+\ref\key EL2
+\bysame
+\paper Unpublished personal communication
+\endref
+
+%\ref\key Es
+%\by H. Esnault
+%\paper Fibr\'{e} de Milnor d'un cone sur une curve plane singuli\`{e}re
+%\jour Invent. Math.
+%\yr 1982 \vol 68 \pages 477--496
+%\endref
+
+
+\ref\key EV
+\by H. Esnault, E. Viehweg
+\book Lectures on Vanishing Theorems
+{\rm DMV {\bf 20}}
+\publ Birkhauser
+\yr 1992
+\endref
+
+\ref\key EV2
+\bysame
+\paper Rev\^etements cyclique II
+\jour G\'eom\'etrie Alg\`ebrique et Applications II, La R\'abida. Herman,
+Paris
+\pages 81--94
+\yr 1987
+\endref
+
+
+%\ref\key H1
+%\by C. D. Hacon
+%\paper Divisors on principally polarized abelian varieties
+%\jour  Compositio Mathematica (to appear)
+%\endref
+
+\ref\key H
+\by C. D. Hacon
+\paper Fourier transforms, generic vanishing theorems and
+polarizations of abelian varieties
+\jour  to appear in Math. Zeit.
+\yr 1999
+\endref
+
+\ref\key GL1
+\by M. Green, R. Lazarsfeld
+\paper Deformation  theory, generic vanishing theorems,
+and some conjectures of Enriques, Catanese and Beauville
+\jour Invent. Math.
+\yr 1987 \vol 90 \pages 389--407
+\endref
+
+\ref\key GL2
+\bysame
+\paper Higher obstruction to deforming cohomology groups of line bundles
+\jour Jour. Amer. Math. Soc.
+\yr 1991 \vol 4 \pages 87--103
+\endref
+
+\ref\key Ka1
+\by Y. Kawamata
+\paper Characterization of abelian varieties
+\jour Comp. Math.
+\yr 1981 \vol 43 \pages 253--276
+\endref
+
+\ref\key Ka2
+\bysame
+\paper Pluricanonical systems on minimal algebraic varieties
+\jour Invent. Math.
+\yr 1985 \vol 79 \pages 567--588
+\endref
+
+\ref\key Ko1
+\by J. Koll\'ar
+\paper Higher direct images of dualizing sheaves I
+\jour Ann. Math.
+\yr 1986 \vol 123 \pages 11--42
+\endref
+
+\ref\key Ko2
+\bysame
+\book Shafarevich Maps and Automorphic Forms
+\yr 1995
+\publ Princeton University Press
+\endref
+
+%\ref\key LB
+%\by H. Lange C. Birkenhake
+%\paper Complex Abelian Varieties
+%\jour  Grundlehren der mathematischen Wissenschaften, Springer Verlag
+%\endref
+
+\ref \key Mo
+\by S. Mori
+\paper Classification of higher-dimensional varieties
+\book Algebraic Geometry, Bowdoin 1985, Proc. Symp. Pure Math., vol 46
+\yr 1987
+\endref
+
+
+\ref \key M
+\by S. Mukai
+\paper Duality between $D(X)$ and $D(\hat {X})$,
+with application to Picard sheaves
+\jour Nagoya math. J. {\bf 81}
+\pages 153--175
+\yr 1981
+\endref
+
+
+
+
+
+
+\ref\key S
+\by C. Simpson
+\paper Subspaces of moduli spaces of rank one local systems
+\jour Ann. Sci. \'{E}cole Norm. Sup. (4) \vol 26 \yr 1993 \issue 3
+\pages 361--401
+\endref
+
+
+\ref\key Ue
+\by K. Ueno
+\book Classification Theory of Algebraic
+Varieties and Compact Complex Spaces
+{\rm LNM} \bf{439} \year 1975
+\publ Springer Verlag
+\endref
+
+\endRefs
+
+\enddocument
+\end
+
+
+
+
+

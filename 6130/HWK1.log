@@ -1,0 +1,19 @@
+This is TeX, Version 3.1415 (C version 6.1.2.1) (format=plain 6.2.12)  28 AUG 2013 16:43
+**HWK1
+(HWK1
+! Undefined control sequence.
+l.1 \UseAMSsymbols
+                  
+? q
+OK, entering \batchmode...
+! Undefined control sequence.
+l.5 \begin
+          {enumerate}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ [1] )
+Output written on HWK1.dvi (1 page, 1208 bytes).

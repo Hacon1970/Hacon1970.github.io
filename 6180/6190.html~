@@ -1,0 +1,56 @@
+
+
+
+
+
+<HTML>
+
+<HEAD>
+<TITLE>  Math 6130 Instructor Christopher Hacon</TITLE>
+
+
+
+<H2> Math 6130 Intro to Algebraic Geometry </H2>
+<H4> Instructor: Christopher D. Hacon </H4>
+<H5> Location: Tu, Th, 12:25-13:45 </H5>
+<H5> Office hours Tu, Th, 11:30-12:20 </H5>
+<H5> Book: Basic Algebraic Geometry By I. Shafarevich </H5>
+<H5> Grading: There will be weekly quizzes (on Tuesdays) on the assigned homework.</H5>
+<P><A HREF="6130/HWK.pdf">Homework</A>
+<P><A HREF="http://www.math.utah.edu/~defernex/FRG.html">Cremona Groups workshop</A>
+<H2> No Quiz November 26. </H2>
+<P><A HREF="6130/Q1.pdf">Quiz 1</A>
+<P><A HREF="6130/Q2.pdf">Quiz 2</A>
+<P><A HREF="6130/Q3.pdf">Quiz 3</A>
+<P><A HREF="6130/Q4.pdf">Quiz 4</A>
+<P><A HREF="6130/Q5.pdf">Quiz 5</A>
+<P><A HREF="6130/Q6.pdf">Quiz 6</A>
+<P><A HREF="6130/Q7.pdf">Quiz 7</A>
+<P><A HREF="6130/Q8.pdf">Quiz 8</A>
+<P><A HREF="6130/Q9.pdf">Quiz 9</A>
+<BR>
+
+<!-- Begin inclusion of bottom.html  -->
+
+<FONT SIZE=2>
+<P>
+
+
+
+</FONT>
+
+<!-- END Column 2: main page text -->
+</td>
+
+<!-- Column 3: blank right margin -->
+<td width=60 valign=top> 
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- End inclusion of bottom.html  -->
+</HTML>
+

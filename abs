@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\textwidth 6in
+%\textheight 9in
+ \oddsidemargin .0in
+\evensidemargin .0in
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage{amssymb}
+
+
+
+\title{Classifying  Algebraic Varieties}
+
+\author{{\bf Christopher  Hacon} \\
+Department of Mathematics, University of Utah}
+\date{}
+
+\begin{document}
+\maketitle
+
+ The zeros of a polynomial, and the locus of simultaneous zeros of several polynomials, have been studied for 500 years.  These loci are simplest when one uses complex numbers, compactifies, and perturbs the equations to remove singularities.   The loci are then smooth projective varieties.  These are the central objects in algebraic geometry.  They are studied by a combination of algebraic and geometric methods, and a central problem is their classification. \\These talks will describe the progress toward classification.  The first lecture will focus on the classical case of complex curves (Riemann surfaces) and some general features of the problem.   The second lecture will describe the classification of two-dimensional varieties (complex surfaces)  done in the years 1900-1960 and introduce some of the ideas of S. Mori's program for extending this classification to higher dimensions.  The last talk will discuss the  Mori program in more detail, ending with the recent theorem proved by J. M$^{\rm{c}}$Kernan and myself,  that completes an important step of this program in all dimensions.
+ 
+ 
+ 
+ \vspace{3cm}
+ 
+ \noindent {\bf Christopher Hacon}  received his PhD from U.C.L.A. in 1998. His outstanding work in algebraic geometry has been recognized by an Sloan Fellowship (2003) and AMS Centennial Fellowship (2006).  Hacon and his collaborator James M$^{\rm{c}}$Kernan were recently awarded   the very prestigious 2007 Clay Research Award for their work  `` advancing our understanding of the birational geometry of algebraic varieties''.  Their theorem the canonical ring of  any smooth algebraic variety is finitely-generated is a major advance in mathematics.
+ 
+ 
+\end{document}

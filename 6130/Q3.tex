@@ -1,0 +1,21 @@
+\documentclass[12pt]{amsart}
+\begin{document}\bigskip\bigskip\bigskip\bigskip
+\centerline{\bf MATHEMATICS 6130}
+\centerline{Quiz 3}
+
+(1) Show how to recover a closed subset from
+its ring of regular function and the rational map $X\to Y$
+between two closed subsets from a homomorphism between their rings of rational 
+functions $\Psi : k[Y]\to k[X]$.
+
+
+{\bf Solution:} If $A$ is a finitely generated commutative ring, then there is a surjective homomorphism $\phi:k[x_1,\ldots , x_N]\to A$ (which sends $x_i\to f_i$ where $f_1,\ldots, f_N$ generate $A$ over $k$). Let $I$ be the kernel of $\phi$, then $X$ is the zero set of the ideal $I$ and $k[X]=A=k[x_1,\ldots , x_N]/I$. Assume that $X\subset \mathbb A^n$ and $Y\subset \mathbb A^m$ so that we have surjective homomorphisms $\phi:k[x_1,\ldots , x_n]\to k[X]$ and $\psi:k[y_1,\ldots , y_m]\to k[X]$. Given $\Psi :k[Y]\to k[X]$, let $f_i=\Psi (\psi (y_i))\in k[X]$, then $X\to Y$ is defined by $(f_1,\ldots ,f_m)$. .
+
+(2) Let $I_X$ be the ideal of a closed subset $X\subset\
+ \mathbb A ^n$. Show that $k[X]=k[\mathbb A ^n]/I_X$ has no nilpotents.
+
+
+{\bf Solution:} Let $f\in k[x_1,\ldots x_n]$ such that $f^m=0\in k[X]$ for some $m>0$, then $f^m(P)=0$ for all $P\in X$ and so $f(P)=0$ (note that $f(P)\in k$ which is a field). But then $f\in I_X=\{ g\in k[x_1,\ldots x_n]|g(P)=0\ \forall 
+P\in X\}$.
+\end{document}
+\end

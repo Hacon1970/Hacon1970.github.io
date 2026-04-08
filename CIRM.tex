@@ -1,0 +1,1192 @@
+\documentclass[10pt]{amsart}
+\baselineskip=30pt         % double-space
+\normalbaselineskip=20pt
+
+\usepackage{amsmath,amssymb,amscd,amsfonts}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{assu}[thm]{Assumption}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{pb}[thm]{Problem}
+
+\newcommand\Pic{{\text{\rm Pic}}}
+\newcommand\alb{{ a}}
+\newcommand\lra{\longrightarrow}
+\newcommand\Alb{{ A}}
+\newcommand\Mod{\text{\rm Mod}}
+\newcommand\ot{{\otimes}}
+\newcommand\OO{{\mathcal{O}}}
+\newcommand\HH{{\mathcal{H}}}
+\newcommand\QQQ{{\mathcal{Q}}}
+\newcommand\PP{{\mathcal{L}}}
+\newcommand\LL{{\mathcal{P}}}
+\newcommand\FF{{\mathcal{F}}}
+\newcommand\GG{{\mathcal{G}}}
+\newcommand\PPP{{\mathbb{P}}}
+\newcommand\Z{{\mathbb{Z}}}
+\newcommand\Q{{\mathbb{Q}}}
+\newcommand\QQ{{\mathbb{Q}}}
+\newcommand\CC{{\mathbb{C}}}
+ \newcommand\C{{\mathbb{C}}}
+ \newcommand\II{{\mathcal{I}}}
+\newcommand\Hom{{\mathcal{H}om}}
+ \newcommand\sh{{\hat {\mathcal S}}}
+ \newcommand\s{{ {\mathcal S}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Lecture plan
+% L1=1,2 
+% L2=3,4
+% L3=5,6
+% L4=7
+% L5=8
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ \title{On the birational geometry of Irregular Varieties}
+ \author {Christopher D. Hacon}
+ \date{}
+ \begin{document}
+ \abstract{The purpose of this course is to illustrate how the theory of Fourier
+Mukai transforms can be used to give surprisingly precise results
+in the birational classification of irregular varieties.}
+ \endabstract
+ \maketitle
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \section{Introduction}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $X$ be a smooth complex projective variety
+and $\omega _X$ the canonical
+ line bundle. We will denote by
+\begin{itemize}
+\item $P_m(X):= h^0(\omega _X^{\ot m})$ the $m$-th {\em plurigenus of} $X$.
+\item $q(X):=h^0(\Omega ^1_X)$ the {\em irregularity} of $X$.
+\end{itemize}
+These numbers are birational invariants of the variety $X$. (Recall that
+two varieties $X,X'$ are birational if and only if they have 
+some isomorphic open subset $U\cong U'$.)
+They are interesting because when they are positive, $X$ comes
+equipped with a natural algebraic map.
+
+If $P_m(X)>0$, then the sections of $H^0(X,\omega _X^{\ot m})$  
+define a rational map
+$$\varphi ^m_X:X \dashrightarrow \PPP \left( 
+H^0(X,\omega _X ^{\ot m})\right) .$$
+Recall that the {\em Kodaira dimension}  
+$$\kappa (X)\in \{-\infty,0,1,...,\dim (X)\},$$ 
+is defined as follows: if $P_m(X)=0$ for all
+$m>0$ we set $\kappa (X)=-\infty$, and otherwise $\kappa (X)$ is 
+the maximum of the dimensions of the images
+of $\varphi ^m_X$ for all $m>0$. This is also a birational invariant of $X$.
+
+If $q(X)>0$, then by integrating the holomorphic one forms
+$\omega \in H^0(X,\Omega ^1_X)$, one obtains a morphism
+$$\alb :X \lra \Alb (X):= \frac {H^0(X,\Omega ^1_X)^\vee }{H_1(X,\Z )}.$$
+The dimension of the image of $\alb$ is the {\em Albanese dimension of} $X$.
+The Albanese variety $\Alb (X)$ is an abelian variety i.e. a complex 
+projective torus. Its dual abelian variety 
+$$\widehat {\Alb (X)}=\Pic ^0(\Alb )\cong\Pic ^0(X)$$
+parametrises the topologically trivial line bundles on $X$ and $\Alb$.
+
+One of the standard questions in Algebraic geometry is to study the 
+geometry of these natural maps and their interaction.
+For example one may ask:
+
+\bigskip \noindent {\bf Question:}
+{\it If $X$ is of general type (i.e. $\kappa (X)=\dim (X))$, 
+then what is the smallest
+value of $m$ for which $\varphi^m_X$ is a birational map?}
+\bigskip
+
+If $\dim (X)=1,2$ then $m=3,5$ will suffice. However, when $\dim (X)\geq 3$
+any explicit estimate seems extremely hard to obtain. 
+In contrast to this, it is shown in \cite{CH3} 
+that for varieties with maximal Albanese dimension, $m=6$ always 
+suffices (regardless of the dimension of $X$!).  
+
+
+
+
+Ideally, one could even hope to characterize (the birational equivalence class
+of) a projective variety $X$ by its birational invariants. 
+For example recall the following result for surfaces:
+
+\bigskip \noindent 
+{\bf Castelnuovo's Criterion:} {\it If $P_2(X)=q(X)=0$ then $X$ is a 
+rational surface.}
+
+\bigskip \noindent
+{\bf Enriques:} {\it If $P_2(X)=1$ and $q(X)=2$, then $X$ is birational to an 
+abelian variety.}
+
+\bigskip
+Classification results of this kind are extremely rare, 
+however there is a famous 
+result of Kawamata that generalizes Enriques' result to higher dimensions:
+\begin{thm} \label{KAW} \cite{Ka1}
+If $X$ is a smooth complex 
+projective variety with $\kappa (X)=0$ then 
+its Albanese morphism is surjective (in particular $q(X)\leq \dim (X)$).
+If also $q(X)=\dim (X)$, then $X$ is 
+birational to an abelian variety.
+\end{thm} 
+This 
+is somewhat unsatisfactory as the Kodaira dimension is
+not a naive invariant, it depends on $P_m(X)$ for all $m>0$.
+Koll\'ar has proved an effective version of this result: {\em If $X$ is
+a smooth complex projective variety with $P_m(X)=1$ for some $m\geq 3$,
+then its Albanese map is surjective. If $P_m(X)=1$ for some $m\geq 4$
+and $q(X)=\dim (X)$, then $X$ is birational to an abelian variety.}
+In \cite{CH1}, Koll\'ar's result was refined as follows:
+
+\bigskip\noindent
+{\bf Chen-Hacon}: 
+{\it If $P_m(X)=1$, for some $m\geq 2$, then the Albanese map
+$\alb :X \lra \Alb$ is surjective. If also $\dim (X)=q(X)$ then 
+$X$ is birational to an abelian variety.}
+\bigskip
+
+Recently it has been shown that if $P_3(X)=2$ (resp. $P_3(X)=3$) 
+and $q(X)=\dim (X)$, then $X$ is a double (resp. bi-double) cover of
+an abelian variety cf. \cite{HP1}, \cite{Hac2}.
+
+\bigskip
+The main techniques used in obtaining these kinds of results are:
+
+\begin{itemize}
+
+\item The theory of Fourier-Mukai transforms \cite{Mu} which characterizes 
+coherent sheaves $\FF$ on an abelian variety $A$, 
+in terms of the cohomology groups $H^i(A,\FF \ot P)$ with
+$P\in \Pic ^0(A)$. (Actually a sheaf theoretic version of this 
+statement is necessary.)
+
+\item The Generic Vanishing Theorems of Green and Lazarsfeld, 
+which for example imply
+that if $X$ is a smooth projective variety 
+of maximal Albanese dimension, then $\chi (\omega _X)\geq 0$.
+
+\item The vanishing theorems of Nadel, Kawamata, Viehweg and the 
+results on higher 
+direct images of dualizing sheaves due to Koll\'ar.
+\end{itemize}
+ 
+\newpage
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \section{Sheaves on abelian varieties}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Let $A$ be a $g$-dimensional abelian variety and $\hat{A}=\Pic ^0(A)$ its 
+dual abelian variety. We will denote by $p_A,p_{\hat {A}}$ the projections
+of $A\times \hat{A}$ on to $A,\hat {A}$. Let $\LL $ be the 
+normalized Poincar\'e 
+line bundle on $A\times \hat {A}$.
+So for $\hat {a}\in \hat {A}$, the line bundle $\LL |A\times \hat {a}$
+is just the topologically trivial line bundle $\LL _{\hat{a}}$
+corresponding to the
+point $\hat {a}\in \Pic ^0(A)=\hat{A}$.
+The main tool in understanding sheaves on an abelian variety is the 
+Theory of Fourier-Mukai transforms. Recall that Mukai defines the 
+functor $\s _A :D^b_{qc}(A)\lra D^b_{qc}(\hat {A})$ by
+$$\s_A (F)=Rp _{\hat{A},*}(\LL \ot ^L p_A ^*M).$$ 
+Similarly 
+one defines $\s _{\hat{A}}:D^b_{qc}(\hat {A})\lra D^b_{qc}(A)$.
+Here $D^b_{qc}(A)$ denotes the derived category of quasi-coherent sheaves
+on $A$ with bounded cohomology. We will mostly just be interested
+in the case where $F$ is a sheaf. In this case, for general
+$\hat {a} \in \hat {A}$, one has that $H^i(\s _A (F))\ot \CC (\hat {a})
+\cong H^i( F\ot \LL _{\hat{a}})$.
+ By \cite{Mu}, one has: 
+ \begin{thm} \label{mukai} {\bf (Mukai)} There exists isomorphisms of functors
+ $$\s _A \circ \s _{\hat {A}}\cong (-1_{\hat{A}})^*[-g]$$
+ and
+ $$\s _{\hat {A}}\circ \s _A \cong (-1_{{A}})^*[-g].$$
+ \end{thm}
+Here $[-g]$ means: shift the corresponding complex $g$ spaces to the right.
+Loosely speaking this means that one can recover a sheaf $F$ from its 
+cohomology groups $H^i(F\ot P)$. 
+
+\begin{ex}\label{E1} If 
+$H^i(A,F\ot P)=0$ for $0\leq i \leq g$ and all $P\in \Pic ^0(A)$,
+then by $\s _A(F)=0$ and so $F=0$. 
+Similarly, if $\phi :F\lra G$ is an inclusion of sheaves
+inducing isomorphisms $H^i(F\ot P)\lra H^i(G\ot P)$ for $0\leq i \leq g$ 
+and all $P\in \Pic ^0(A)$, then $F\cong G$.
+\end{ex}
+\begin{ex}\label{E2} Let $F=\CC (\hat {a})$ for some point $\hat{a}\in 
+\hat{A}$, then $S_{\hat{A}}(F)=\LL _{\hat {a}}$ (i.e. the complex
+given by $F^i=0$ for $i\ne 0$ and $F^0=\LL _{\hat {a}}$).
+Therefore, $S_A(\LL _{\hat {a}})=\CC (\hat {a})[-g]$, in particular
+$R^ip_{\hat{A},*}(p_A^* \OO _A \ot \LL)=0$ for $i\ne g$ and
+$R^gp_{\hat{A},*}(p_A^* \OO _A \ot \LL)=\CC (0_{\hat{A}})$. 
+\end{ex}
+
+
+ \begin{ex} \label {exM} {\bf (Mukai)}
+ A vector bundle $U$ on $A$ is unipotent if there exists a filtration
+ $$0=U_0\subset U_1\subset ...\subset U_{n-1}\subset U_n=U$$
+ such that $U_i/U_{i-1}\cong \OO _A$ for all $1\leq i\leq n$. One has that
+ $R\sh (U)=R^g\sh (U)$ and $R^g\sh (U)$ is supported on
+ $\hat {0}\in \hat{A}$. This gives an equivalence between the category of
+ unipotent vector bundles on $A$ and the category of coherent sheaves on
+ $\hat {A}$ supported on $\hat{0}$ i.e. the category of Artinian $\OO 
+ _{\hat{A},\hat{0}}$-modules.
+ \end{ex}
+\begin{ex} \label{Ex4}
+Let $\FF$ be a coherent sheaf on $A$ such that for all $P\in
+\Pic ^0(A)$ one has
+$$h^0(\FF \ot P)=1,\ \ and\ \ h^i(\FF \ot P)=0\ \ \forall\ i>0.$$
+Then by cohomology and base change $L:= \s _A (\FF )=H^0
+\s _A (\FF )$ is a line bundle on $\hat {A}$.
+Moreover, one has that $\s _{\hat{A}}(L)=H^g\s _{\hat {A}} (L)$ and
+hence $h^g(L\ot P_x)\ne 0$ for some $x\in A$. 
+Line bundles on an abelian variety are particularly well understood.
+One sees that $L$
+is negative semidefinite (i.e. $L^\vee$ is nef). 
+It follows that there exists a (surjective with connected fibers)
+homomorphism of abelian varieties $p:\hat{A}\lra B$
+and a non-degenerate line bundle $M$ on $B$ such that $L\ot P_x=p^*M$.
+In particular $h^g(L\ot P_x \ot Q)=0$ for all $Q\notin \hat {B}$
+and therefore, $\FF$ is supported on the abelian subvariety $\hat{B}
+\hookrightarrow A$.
+
+If the generic rank of $\FF$ is 1, then $h^g(L \ot P)=1$ for general
+$P\in \Pic ^0(\hat{A})=A$ and so $L$ is dual to a principal polarization
+and hence $\FF$ is a principal polarization (and in particular
+a line bundle).
+
+\end{ex}
+
+% We also recall that 
+% $$D_{\hat {A}}\circ \s _A \cong ((-1_{\hat {A}})^*\circ 
+% \s _A \circ D_A)[g].$$
+%(For an $n$-dimensional variety $X$, 
+%the dualizing functor is defined by $D_X(?)=
+%R\HH om (?, \omega ^._X[n])$ where $\omega ^._X$ is the dualizing
+%complex of $X$. Therefore, $D_A= R\HH om (?, \OO _A[g])$.)
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+ \section{Generic Vanishing Theorems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For $X$ a smooth complex projective variety (or more generally a K\"ahler
+manifold), one can define {\em cohomological support loci}  
+$$V^i(\omega _X):=\{ P\in \Pic ^0(X)| h^i(\omega _X \ot P)\ne 0\}.$$
+In view of the Fourier-Mukai transform, one would expect the $V^i(\omega _X)$
+to ``determine'' the sheaves $\alb _* (\omega _X)$, so
+it is not surprising that
+these loci are very important in the study of irregular varieties.
+Their geometry is governed by the following result of Green and Lazarsfeld
+\cite{GL}
+\begin{thm}\label{GVT}(Generic Vanishing Theorem) 
+
+(1) Any irreducible component of $V^i(X,\omega _X )$ is a translate\footnote 
+{If $X$ is 
+(deformation equivalent to)
+a projective manifold, then Simpson has shown that: {\it 
+Every irreducible component of $V^i(X,\omega _X)$ is
+a torsion translate of an abelian  subvariety of $\Pic ^0(X)$.}} of
+an abelian subvariety of $\Pic ^0(X)$
+and is of codimension at least
+$i-(\dim (X) -\dim (\alb _X(X)))$.
+
+(2) Let $P \in T$ be a general point of an irreducible component
+$T$ of $V^i(X,\omega _X)$.
+Suppose that $v
+\in H^1(X, \OO
+_X)\cong T_{P }\Pic ^0(X)$ is not tangent to $T$. Then the sequence
+$$H^{i-1}(X,\omega _X \otimes P) \overset {\cup v}  {\longrightarrow}
+H^{i}(X,\omega _X \otimes P)  \overset {\cup v}  {\longrightarrow }
+H^{i+1}(X, \omega _X \otimes P) $$
+is exact.
+If $v$ is tangent to $T$, then the maps in the above sequence vanish.
+
+(3) If $X$ is a variety of maximal Albanese dimension, then
+$$\Pic ^0(X)\supset V^0(X,\omega _X )\supset V^1(X,\omega _X)
+\supset \ ...\ \supset V^n(X,\omega _X )=\{ \OO _X\}.$$
+
+\end{thm}
+The above result is even true for K\"ahler manifolds and its proof
+depends on Hodge theory. 
+The idea behind this result is that the cohomology of the 
+above complex measures
+the first order deformations of cohomology classes in
+$H^i(X,\omega _X)$, and that if a class deforms to first order, then
+all higher obstructions automatically vanish.
+
+From (1), one sees that if $X$ has maximal Albanese dimension, then
+$\chi (\omega _X)\geq 0$. If $X$ is a subvariety of general type
+of an abelian variety, then it has been shown that $\chi (\omega _X)>0$.
+It was conjectured by Koll\'ar that 
+(as in the case of surfaces of general type),
+if $X$ is of  
+maximal Albanese dimension and general type, then $\chi (\omega _X)>0$
+and $P_1(X)\geq 2$. This is however not the case (cf. \cite{EL}, \cite{CH4}).
+
+Green and Lazarsfeld also conjecture the following statement which is
+closely related to their generic vanishing theorems (cf. \cite{GL}):
+
+\bigskip \noindent{\bf Conjecture:} {\em Let $X$ be a smooth complex projective
+variety with maximal Albanese dimension, then for the universal family
+of topologically trivial line bundles $\PP\lra X\times \Pic ^0(X)$,
+one has that $$R^i\pi _{\Pic ^0(X),*}(\PP)=0$$
+for all $i<\dim (X)$.}
+
+In section \ref{GL}, 
+we will show that this is true, and if $X$ is not of 
+maximal Albanese dimension, an appropriate statement still follows.
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\label{DC}A derived category approach to generic vanishing theorems}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $L$ be an ample vector bundle on $\hat{A}$. 
+By \cite{Mu} Proposition 3.11, 
+ $\hat {L}:=H^0\s _A(L)\cong  \s _A(L)$ is a vector bundle on $A$ of rank
+ $h^0(L)$. Moreover,
+ $$\phi _L^* \left( \hat{L}^\vee \right) 
+\cong \left( L \right) ^{\oplus h^0(L)}.$$
+(Recall that the isogeny $\phi _L:\hat {A}\lra A$ is defined by $\phi _L
+(\hat {a})=t^*_{\hat {a}}L^\vee \ot L$.)
+
+ \begin{thm} \label{TDC} \cite{Hac4}
+ Let $\FF$ be a coherent sheaf on an abelian variety $A$.  
+ The following are equivalent:
+ \begin{enumerate}
+ \item 
+ For any sufficiently 
+ ample line bundle
+ $L$ on $\hat{A}$,  
+ $$H^i(A, \FF \ot \hat {L}^\vee )=0\ \ \ \forall \ i>0;$$
+ \item 
+ There is an isomorphism
+ $$\s _A D_A(\FF ) \cong H^0 \left( \s _A
+ D_A(\FF )\right) .$$
+ \end{enumerate}
+ \end{thm}
+Recall that for an $n$-dimensional variety $X$, 
+the dualizing functor is defined by $D_X(?)=
+R\HH om (?, \omega ^._X[n])$ where $\omega ^._X$ is the dualizing
+complex of $X$. Therefore, $D_A= R\HH om (?, \OO _A[g])$.
+
+ \begin{proof}
+ By Grothendieck Duality (G.D.)\footnote{(G.D.) 
+Let $f:X\lra Y$ be a morphism of 
+projective varieties, $F\in D^b_{qc}(X)$, then $Rf_*D_X(F)=D_Y(Rf_*(F))$.
+In particular one has $R\Gamma (D_XF)\cong D_k(R\Gamma (F))$ where $R\Gamma 
+=R\gamma _*$ and $\gamma : X \lra Spec (k)$ is the structure morphism.}
+and the projection formula 
+(P.F.)\footnote{(P.F.) Let $f:X\lra Y$ be a proper morphism of 
+quasi-projective varieties, then there is an isomorphism
+$Rf_*(F)\ot G\lra Rf_*(F\ot Lf^*G)$.} it follows that
+$$ D_k (R \Gamma (\FF \ot 
+ \hat {L}^\vee ))\cong^{G.D.}R \Gamma (D_A(\FF \ot \hat{L}^\vee ))\cong$$ 
+ $$R \Gamma (D_A(\FF )\ot \hat{L})\cong 
+R \Gamma (D_A(\FF )\ot p_{A,*}(\LL \ot p_{\hat{A}}^*L))\cong ^{P.F.}$$
+ $$R \Gamma (L p_A^* D_A (\FF) \ot \LL \ot p_{\hat{A}}^*L)\cong^{P.F.}
+R \Gamma (\s _A (D_A(\FF ))\ot L).$$
+In particular, $D_k (R \Gamma (\FF \ot 
+ \hat {L}^\vee ))$ is a sheaf if and only if $R \Gamma (\s _A
+ (D_A (\FF)) \ot L)$ is a sheaf.
+The theorem now follows from the following remarks:
+\begin{enumerate} 
+\item Notice that there is an isomorphism
+$$H^0(A,\FF \ot \hat {L}^\vee )^\vee \cong D_k (R \Gamma (\FF \ot 
+ \hat {L}^\vee ))$$ 
+if and only if $$H^i(A,\FF \ot \hat {L}^\vee )=0\ for\ all\ i>0.$$
+ 
+\item For $L$ sufficiently ample, the coherent sheaves
+ $H^j\s _A (D_A (\FF))\ot L$ are globally generated and 
+have vanishing higher cohomology. 
+Consider the spectral sequence
+ $$E_2^{i,j}=R^i\Gamma (H^j\s _A (D_A (\FF ))\ot L)\Rightarrow R^{i+j}\Gamma (
+ \s _A (D_A(\FF )) \ot L).$$
+ Since $E_2^{i,j}=0$ for all $i\ne 0$, this sequence degenerates at the $E_2$
+ level and hence $$H^0(\hat{A}, H^j\s _A (D_A(\FF ))\ot L)\cong 
+ R^j\Gamma (\s _A ( D_A(\FF ))\ot L ).$$
+Therefore, 
+$$R \Gamma (\s _A ( D_A (\FF))\ot L)\cong
+R^0 \Gamma ( \s _A (D_A (\FF)) \ot L)$$
+if and only if 
+$$ \s _A (D_A(\FF ))\cong H^0\s _A (D_A(\FF )).$$
+\end{enumerate}
+ \end{proof}
+\begin{cor} \label{C} Let $\FF$ be a coherent sheaf as above. For all $i>0$, 
+the support of $H^i\s _A (\FF )$ 
+has codimension at least $i$ in $\hat {A}$.
+\end{cor}
+\begin{proof} Since $D_{\hat {A}}\circ \s _A \cong (-1_A)^*\circ \s_{\hat{A}}
+\circ D_A [g]$ (cf. \cite{Mu} (3.8)), one has that
+$$\s _A (\FF) \cong 
+D_{\hat{A}} \left((-1_{\hat {A}}^*\circ  \s _A 
+\circ D_A)(\FF)[g]\right)\cong
+R\Hom \left( \GG,\OO _{\hat{A}} \right),$$
+where $\GG:=-1^*_{\hat{A}}( \s _A ( D_A(\FF )))$ is a sheaf.
+It suffices therefore to show that for any coherent sheaf $\GG$ on a smooth 
+affine variety $Y=Spec(A)$, one has that
+the sheaves $R^i\Hom( \GG, \OO _Y)$ are supported in codimension at 
+least $i$.
+Let $M=\Gamma (Y,\GG )$ and $W$ be an irreducible component of the support of 
+$R^i\Hom ( \GG, \OO _Y)={Ext^i(M,A)}^\backsim$. Let $P\in Spec (A)$ such that
+$W=Spec (A/P)$. 
+Since localization is exact, one has that
+$$0\neq Ext^i (M,A)\ot   A_P\cong
+Ext^i (M_P,A_P).$$
+Since $A$ is regular, it follows that $A_P$ is regular and hence that
+$$i\leq\dim A_P=\dim (Y)-\dim (W)$$ (cf. \cite{Ha1} \S III.6).
+\end{proof}
+ \begin{cor}\label{C1} Let $\FF$ be a coherent sheaf as above, 
+and $P\in \hat{A}
+$,
+ then:
+ \begin{enumerate}
+ 
+ \item If $i\geq 0$ and $H^i(A,\FF \ot P)=0$, then $H^{i+1}(A,\FF \ot P)=0$.
+
+\item For all $i>0$ any irreducible component of the loci
+$$V^i(\FF ):=\{ P\in \Pic ^0(A)\ |\ h^i(\FF \ot P)\ne 0\}$$
+has codimension at least $i$ in $\hat {A}$.
+ 
+ \item If $H^0(A, \FF \ot P)=0$ then $H^0\s _A (D_A(\FF))\ot k(P^\vee )=0$.
+
+ \item If $H^0(A,\FF \ot P)=0$ for all $P\ne \OO _A$, then $\FF$ is a 
+ unipotent vector bundle.
+ \end{enumerate}
+ \end{cor}
+ \begin{proof} 
+ (1) Since
+$$0=H^i(A,\FF \ot P)^\vee \cong H^{-i}(D_\CC R
+ \Gamma (\FF \ot P))\cong R^{-i}\Gamma (D_A(\FF )\ot P^\vee ),$$
+by Cohomology and Base Change, one sees that the natural
+homomorphism
+$$0=H^{-i-1}\s _A (D_A(\FF ))\ot k(P^\vee)
+\lra R^{-i-1}\Gamma (D_A(\FF)\ot P^\vee)
+$$ 
+is surjective and hence that $H^{i+1}(A,\FF \ot P)=0$.
+
+(2) Let $W$ be an irreducible component of $V^i(\FF)$ and $P$ 
+a general point in
+ $W$.
+ Let $j$ be the largest integer such that $W\subset V^j(\FF )$.
+By Cohomology and Base Change (for sheaves), one 
+has that $H^j\s _A (\FF )\ot k(P)
+\ne 0$
+and by the previous corollary, one has that $W$ has codimension at least $j$.
+
+ (3) This follows immediately from Cohomology and Base Change.
+
+ (4) By (3), we have that $H^0\s _A (D_A(\FF ))$ is supported on 
+ the closed point $\hat{0}\in \hat {A}$ corresponding to $\OO _A$.
+ By Example \ref{exM}, $H^0 \s _A (D_A(\FF ))$ is an Artinian
+ module and hence
+ $$D_A(\FF )\cong (-1_A)^* \s _{\hat {A}}  \s _A (D_A (\FF ))[-g]$$
+ is (the shift of) a unipotent vector bundle say $V$. Finally it is easy to see
+ that $$\FF=D_A(D_A(\FF))=V^\vee$$ is also a unipotent vector bundle.
+ \end{proof}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\label{GL}A conjecture of Green and Lazarsfeld}
+%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+We will need the following results about higher direct images of dualizing
+sheaves:
+
+ \begin{thm} \label{kollar} {(\cite {Ko1}, \cite{Ko2})}
+ Let $X,Y$ be complex projective varieties of dimension $n,k$
+ with $X$ smooth.
+ Let $f:X\lra Y$ be a surjective map and $L$ an ample line bundle on $Y$. Then
+ \begin{enumerate}
+ \item $R^if_* \omega _X $ is torsion free for $i\geq 0$,
+ \item $H^j(Y,L\ot R^if_*\omega _X )=0$ for $j>0$,
+ \item $R f_* \omega _X \cong \sum R^if_* \omega _X [-i],$
+ \item $R f_* \OO _X \cong \sum {}^dR^if_* \OO _X$, where 
+ ${}^dR^if_* \OO _X=D_Y(R^{n-k-i}f_* \omega _X [k+i])$.
+ \end{enumerate}
+ \end{thm}
+ 
+For future reference, we also recall the following vanishing theorem 
+(cf. \cite{Ko3} \S 10).
+\begin{thm} \label{omegavan}Let $f\colon X\to  Y$ be a  surjective 
+map of projective
+varieties, $X$ smooth, $Y$ normal. Let $M$ be a line bundle on $X$
+such that $M\equiv N+f^* L +\Delta$, where $N$ is a 
+$\Q$-divisor on $X$ which is either
+nef and big or numerically trivial, $L$
+is a $\Q-$divisor on $Y$
+and $\Delta$ has normal crossing support with 
+$\lfloor \Delta \rfloor=0$. Then
+\begin{itemize}
+\item $R^jf_*(\omega _X\ot M) $ is torsion free for $j\geq 0$;
+
+\item If $L$ is nef and big, and $g:Y\lra Z$ is any morphism with $Z$ 
+projective,
+then $H^i(Y,R^jf_*(\omega _X\ot M))
+=0$ for $i>0$, $j\geq 0$ and
+$$H^i(Y,R^jf_*(K_X+M))=H^i(Z,g_*(R^jf_*(K_X+M))),\ \ i,j\geq 0.$$
+
+
+\end{itemize}
+\end{thm}
+
+ When $X$ is a smooth complex projective variety and $\alb :X\lra A$ is the
+ Albanese morphism, the results of the previous section
+allow us to recover a generalization of the conjecture of
+ Green and Lazarsfeld mentioned above.
+To fix the notation, let $\PP=(\alb ,id_{\hat{A}})^*\LL$ and 
+let $\pi _{\hat A}$ denote
+ the projection of $X\times \hat {A}$ onto $\hat{A}$.
+ \begin{thm} \label{conjGL} \cite{Hac4}
+ Let $X$ be a smooth complex projective variety of dimension 
+ $n$, and Albanese dimension $k:=\dim \alb (X)$. 
+ Then $$R \pi _{\hat {A },*}(\PP )\cong \sum _{i=0}^{n-k}H^{k+i}
+ \s _A ({}^dR^i\alb _* \OO _X)[-k-i].$$
+ In particular, when $X$ is of maximal Albanese dimension (i.e. $k=n$),
+ one has that $R \pi _{\hat {A},*}(\PP )\cong 
+H^n\s _A ({}^d R^0\alb_* \OO _X)$ is
+ a sheaf.
+ \end{thm}
+\begin{proof} 
+ Let $Y:=\alb (X)$. We have that
+ $$R \pi _{\hat {A},*}(\PP )\cong R \pi _{\hat {A},*}
+((\alb \times id_{\hat{A}})
+^*
+ \LL)\cong ^{P.F.}
+ R p_{\hat {A},*}( L p_A^* (R \alb _* \OO _X)\ot \LL )\cong$$
+ $$R p_{\hat {A},*}( L p_A^*
+ (\sum _{i=0}^{n-k}{}^dR^i\alb _* \OO _X)\ot \LL)
+ \cong 
+ \sum _{i=0}^{n-k} \s _A ({}^dR^i\alb_* \OO _X).$$
+ Since $${}^dR^i\alb _* \OO _X\cong D_Y(R^{n-k-i}\alb _* \omega _X[k+i])\cong
+ D_A(R^{n-k-i}\alb _* \omega _X[k+i])$$
+ it suffices to show that the sheaves $\FF ^{n-k-i}:= 
+R^{n-k-i}\alb _* \omega _X
+$
+ satisfy the hypothesis of Theorem \ref{TDC}. 
+ This is however an immediate consequence of Theorem \ref{kollar} and the  
+observations that follow:
+
+ Let $\FF =\FF ^{n-k-i}$. As mentioned in the section \ref{DC},
+ $\hat {L}:=H^0\s _A(L)\cong  \s _A(L)$ is a vector bundle on $A$ of rank
+ $h^0(L)$ and
+ $$\phi _L^* \left( \hat{L}^\vee \right) \cong \left( L \right) 
+^{\oplus h^0(L)}
+.$$
+ We have that 
+ $H^i(A,\FF \ot \hat {L}^\vee )$ is a direct summand of 
+ $$H^i(A,\phi _{L,*}(\OO _{\hat {A}})\ot \FF \ot \hat {L}^\vee  )
+\cong ^{P.F.}H^
+i(\hat {A},
+ \phi _L^* (\FF \ot \hat {L}^\vee ))\cong \bigoplus _{i=1}
+^{h^0(L)}H^i(\hat {A},
+ \phi _L^* (\FF )\ot L ).$$ So it suffices to show that $H^i(\hat {A},
+ \phi _L^* (\FF )\ot L )=0$ for all $i>0$.
+ Let $X^\prime:=X\times _A \hat {A}$ and $\alb ^\prime:X^\prime
+\lra \hat {A}$ be the induced morphism.
+ By flat base change, $\phi _L^* (\FF )\cong R^{n-k-i}{\alb }^\prime_* \omega 
+_{X^\prime}$, and so by
+ Theorem \ref{kollar}, we have the required vanishing: $$h^i(\hat {A}, 
+ R^{n-k-i}{\alb }^\prime_* \omega _{X^\prime}\ot L)=0\ for \ all\ i>0.$$
+
+ \end{proof}
+ \begin{cor} \label{C2}
+Let $\alb:X\lra \Alb$ be as in the preceding theorem, then
+\begin{enumerate}
+\item Every irreducible component of the loci $V^i(R^ja_*\omega _X)$ has
+codimension at least $i$ in $\hat {A}$.
+
+ \item  For all $i<\dim \alb (X)$ and general $P\in \Pic ^0(X)$,
+ one has that $H^i(X,P)=0$.
+
+ \item If $H^j(R^i\alb _*\omega _X\ot P)=0$, then 
+$H^l(R^i\alb _*\omega _X\ot P)
+=0$
+ for all $l>j\geq 0$ and $0\leq i\leq k$.
+\item If $H^0( R^i\alb _*\omega _X\ot P)=0$ for all $P\ne \OO _A$,
+then $ R^i\alb _*\omega _X$ is a unipotent vector bundle.
+\end{enumerate} 
+\end{cor}
+ \begin{proof} This is analogous to Corollary \ref{C1}.
+ \end{proof}
+ \begin{cor} \label{k0}
+If $\kappa (X)=0$, then the Albanese map $\alb :X \lra A$
+is surjective.
+ \end{cor}
+ \begin{proof} By a result of Fujita,
+there is a generically finite cover $\tilde {X}\lra X$ 
+with $\kappa (\tilde {X}
+)=0$ and $P_1(\tilde {X})=1$. We claim that since $\kappa (\tilde {X}
+)=0$, then $h^0(K_{\tilde {X}}\ot P)=0$ for all $P\ne \OO _{\tilde {X}}$.
+If this where not the case, then by Simpson's resulf (cf. Theorem
+\ref{GVT}), one can assume that $h^0(K_{\tilde {X}}\ot P)\ne 0$
+for some torsion element $P\in \Pic ^0(X)$. Pick a divisor 
+$D\in |K_X+P|$, then for sufficiently divisible $t$, one has
+that $tD\in |t(K_X+P)|=|tK_X|$ and hence $h^0(2K_X)>1$ which is
+impossible. 
+By the above corollary, $\alb _{\tilde {X},*}\omega _{\tilde {X}}$ is
+a unipotent vector bundle on $\Alb (\tilde {X})$ and hence
+$ {\alb _{\tilde {X}}}:\tilde {X}\lra \Alb (\tilde {X})$ is surjective.
+It follows easily that $X\lra A(X)$ is also surjective.
+  \end{proof}
+%\begin{cor} Let $f:X\lra Y$ be a morphism of smooth projective varieties
+%which induces an inclusion $\omega _Y\lra f_* \omega _X$.
+%If $h^0(\omega _Y\ot P)=h^0(f_* \omega _X\ot P)$ for all $P\in 
+%\Pic ^0(Y)$, then $\alb _{Y,*}(\omega _Y)=\alb _{Y,*}(\omega _X)$.
+%\end{cor}
+% \begin{proof} Let $K=coker (\omega _Y\lra f_* \omega _X)$
+% \end{proof}
+
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Effective criteria for birational morphisms}
+%%%%%%%%%%%%%%%%%%%%%%%
+Throughout this section, $f:X\lra Y$ denotes a surjective
+morphism of smooth complex projective varieties, with
+$\dim (X)=\dim (Y)=n$. Recall that $X$ is of {\em general type} if 
+$\kappa (X)=\dim (X)$.
+\begin{thm}\label{birational} {\bf (Hacon-Pardini)} \cite{HP1}
+ If $Y$ is of  general type and maximal Albanese dimension,
+then $f:X\lra Y$ is birational if and only if $P_m(X)=P_m(Y)$ for some
+$m\geq 2$.
+\end{thm}
+\begin{proof} Assume for simplicity that $m=2$. The Albanese morphism
+$\alb _{Y}:Y\lra \Alb (Y)$ is generically finite onto its image. 
+We would like to compare
+$\alb_{Y,*}(f_* \omega _X ^{\ot 2})$ and $\alb _{Y,*}(\omega _Y^{\ot 2})$. If
+these are generically isomorphic, then the generic degree
+of $f$ is 1. The first step is to extract the positive part of 
+$\omega _Y,\omega _X$.
+
+Let $H$ be any ample divisor on $\Alb (Y)$, for some $t\gg 0$,
+one has that $|tK_Y-\alb _Y^*H|$ is nonempty.
+Fix a general divisor $$B_Y\in |tK_Y -\alb _Y^*H|$$ and let
+$B_X:=f^*B_Y+tK_{X/Y}$.  After replacing $X,Y$ by appropriate birational 
+models, we may  assume that $B_X,B_Y$ have simple normal crossings support.
+Let $$L_Y:=K_Y-\lfloor \frac {B_Y}{t}\rfloor \cong \frac {1}{t}\alb _Y^*H+\{
+\frac {B_Y}{t}\},$$
+$$L_X:=K_X-\lfloor \frac {B_X}{t}\rfloor \cong \frac {1}{t}f^*\alb _Y^*H+\{
+\frac {f^* B_Y}{t}\}.$$
+
+\noindent {\bf Claim 1.} For $t\gg 0$, one has that $|2K_Y|=|K_Y+L_Y|
++\lfloor \frac
+{B_Y}{t}\rfloor$.
+
+\bigskip
+\noindent {\bf Claim 2.} The divisor $K_{X/Y}+f^*(\lfloor B_Y/t\rfloor )
+-\lfloor f^*B_Y /t \rfloor$ is effective.
+
+\bigskip
+Grant these for the time being. By Claim 2, there is an inclusion 
+$$f^*(\omega _Y\ot L_Y)\lra \omega _X \ot L_X$$
+and hence an inclusion
+$$i: \alb _{Y,*}(\omega _Y \ot L_Y) \lra \alb _{Y,*} f_*(\omega _X \ot L_X).$$
+By Theorem \ref{omegavan}, 
+one has that for all $i>0$ and $P\in \Pic ^0(Y)$
+$$H^i(\Alb (Y),\alb _{Y,*}(\omega _Y \ot L_Y) \ot P)=
+H^i(\Alb (Y), \alb _{Y,*} f_*(\omega _X \ot L_X)\ot P)=0.$$
+We also have that $$h^0(\omega _Y \ot L_Y)=P_2(Y)=P_2(X)\geq 
+h^0( \omega _X \ot L_X)
+\geq h^0(\omega _Y \ot L_Y)$$
+and therefore for all $P\in \Pic ^0(Y)$
+$$h^0(\alb _{Y,*}(\omega _Y \ot L_Y)\ot P)=\chi (\alb _{Y,*}
+(\omega _Y \ot L_Y)\ot P)=$$
+$$\chi (\alb _{Y,*}(\omega _Y \ot L_Y))= h^0(\alb _{Y,*}(\omega _Y \ot L_Y))=$$
+$$ h^0( \alb _{Y,*}f_*(\omega _X \ot L_X))=\chi( \alb _{Y,*}
+f_*(\omega _X \ot L_X))= $$
+$$\chi( \alb _{Y,*}f_*(\omega _X \ot L_X)\ot P)=h^0
+( \alb _{Y,*}f_*(\omega _X \ot L_X)\ot P).$$
+So the inclusion $i$ induces isomorphisms in cohomology 
+for all $i\geq 0$ and all
+$P\in \Pic ^0(Y)$ and hence 
+$$\alb _{Y,*}(\omega _Y \ot L_Y) \cong \alb _{Y,*} f_*(\omega _X \ot L_X).$$
+In particular the generic degrees of $\alb _Y, \alb _Y\circ f$ coincide and
+hence $f$ is birational.
+We now turn to the proof of the above claims.
+
+\bigskip \noindent{\it Proof of Claim 1.} After replacing $Y$ by an 
+appropriate birational 
+model, we may assume that $$|2K_Y|=|M|+F$$
+where $|M|$ is free and $F+B_Y$ has simple normal crossings support.
+For $l\gg 0$ let $G\in |lM|$ be general.
+Consider $$B^\prime _Y:=B_Y+lF+G\in |(t+2l)K_Y-\alb _Y^*H|.$$
+We may write $B_Y=\sum b_iB_i$ and $F=\sum f_iB_i$ for distinct 
+reduced irreducible
+divisors $B_i$ on $Y$. We have that for $l\gg 0$,
+the multiplicity of $B^\prime _Y$ along $B_i$
+satisfies $$\lfloor \frac {mult _{B_i}(B^\prime _Y)}
+{t+2l}\rfloor =\lfloor \frac
+{b_i+lf_i}{t+2l}\rfloor\leq \lfloor \frac {b_i}{2l}+\frac 
+{f_i}{2}\rfloor \leq f_i
+=mult _{B_i} F.$$
+We now replace $t$ and $B_Y$ by $t+2l$ and $B^\prime _Y$.
+
+\bigskip 
+\noindent{\it Proof of Claim 2.} This follows from a local computation
+(see also Proposition 2.8 
+of \cite{Ein}). 
+
+Let $B_Y=\sum b_iB_i$ where $B_i$ are distinct prime divisors. 
+If the $b_i$ are integers, then $\lfloor (f^* B_Y)/t \rfloor =f^*
+\lfloor B_Y/t \rfloor$. So we may assume that $\lfloor B_Y/t \rfloor =0$
+and $B_Y/t\ne 0$.
+Let $Q\in X$ be any point and $P=f(Q)\in Y$ be its image.
+We may assume that $P\in B_i$ for $1\leq i\leq s$. Let $(y_1,...,y_n)$ be local
+coordinates centered in $P$ such that $y_i$ is a local equation for $B_i$
+for $1\leq i\leq s$. Let $E$ be any component of $f^*B_Y$ containing $Q$ and
+choose local coordinates $(x_1,...,x_n)$
+on $X$ centered in $Q$ such that $x_1$
+is a local equation of $E$. One has that $f^*y_i=x_1^{n_i}\epsilon _i$,
+with $n_i\geq 0$ and $\epsilon _i$ a regular function not vanishing on $E$.
+One sees that a local equation for $K_{X/Y}$ near $Q$ is given by
+the determinant of the Jacobian matrix $\left( \frac {\partial f^*y_i}
+{\partial x_j} \right)$, which vanishes on $E$ to order at least
+$\left( \sum n_i\right) -1$. So the coefficient of $E$ in
+$K_{X/Y}-\lfloor (f^*B_Y)/t\rfloor +f^* \lfloor B_Y/t\rfloor$
+is at least $$\sum n_i -\lfloor \sum n_i\frac{b_i}{t} \rfloor 
+ -1\geq 0.$$
+\end{proof}
+We remark that the above theorem also holds if $Y$ has sufficiently large 
+algebraic fundamental group (see \cite{Hac4} for a discusion of this case).  
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Theta divisors: Singularities and Cohomological characterization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $(A,\Theta )$ be a principally polarized abelian variety
+(PPAV), i.e. $\Theta$ is an ample divisor with $h^0(A,\OO (\Theta ))=1$.
+The singularities of such divisors are closely related to the geometry
+of the abelian variety $A$. For example, Kempf has shown that if
+$A$ is the Jacobian variety of a curve, then the theta divisor has rational
+singularities. More recently Koll\'ar has shown
+\begin{thm} \label{K1}
+{\bf (Koll\'ar)} \cite{Ko3}
+Let $(A,\Theta )$ be a PPAV, then the pair 
+$(A,\Theta )$ is log canonical
+\footnote{In this section, we will use the formalism of multiplier ideals
+and some of their applications. We refer to \cite{Ein} for an overview of
+these and related concepts}. In particular if
+$$\Sigma _k(\Theta )=\{ x\in A| mult _x(\Theta )\geq k \},$$
+then every component of $\Sigma _k$ has codimension at least $k$. 
+\end{thm}
+\begin{proof}
+Let $\nu :A'\lra A$ be a log resolution of the pair $(A,\Theta
+)$ (i.e. a proper birational morphism such that $\nu ^{-1}(\Theta)\cup
+\{ exceptional\ set\ of\ \nu \}$ is a divisor with normal crossings support).
+For any fixed $1\gg \epsilon >0$ let $$\II :=\nu _*(\OO _{A'}(K_{A'/A}-
+\lfloor (1-\epsilon)\nu ^* \Theta \rfloor ) \subset \OO _A$$
+be the {\it multiplier ideal sheaf} of the pair $(A,\Theta)$.
+Multiplier ideals are a measure of the singularities of the pair
+$(A,(1-\epsilon)\Theta )$. Their definition does not depend on the choice
+of the log-resolution $\nu$.
+By definition, the pair $(A,\Theta )$ is log canonical if for all $1\gg
+\epsilon > 0$, one has $\II ((1-\epsilon)\Theta )=\OO _A$.
+We now proceed to show that $\II =\OO _A$. 
+First of all, we have that
+$$\nu ^* (\Theta +P) +K_{A'/A}  -
+\lfloor (1-\epsilon)\nu ^* \Theta \rfloor \equiv
+K_{A'}+\epsilon \nu ^* \Theta +\{(1-\epsilon) \nu ^* \Theta \}$$
+and hence by Theorem \ref{omegavan}, for all $P\in \Pic ^0(A)$,
+$$h^i(A, \OO _A(\Theta )\ot P \ot \II )=0\ \ \ for\ all\ i>0.$$
+If $\II \ne \OO _A$, then $h^0(A, \OO _A(\Theta )\ot P \ot \II )=0$
+for general $P\in \Pic ^0(A)$ (as a general translate of $\Theta$ will
+not vanish on the cosupport of $\II$).
+But then for all $P\in \Pic ^0(A)$,
+$$h^0(A, \OO _A(\Theta )\ot P \ot \II )=
+\chi (\OO _A(\Theta )\ot P \ot \II )=\chi (\OO _A(\Theta )\ot \II )=0$$
+and hence (cf. Example \ref{E1}) 
+$\OO _A(\Theta )\ot \II$ is trivial, 
+which is impossible.
+\end{proof}
+The above proof, is due to Ein and Lazarsfeld. 
+The same argument also shows that if $D\in |m\Theta |$ ,
+then the pair $(A,(1/m)\Theta )$ is log canonical. 
+
+One can easily construct examples of abelian varieties where the bound
+on the codimension of $\Sigma _k(\Theta )$ 
+is achieved by considering products of abelian varieties of smaller dimension. 
+The following result of Ein and Lazarsfeld shows that this is essentially 
+the only case in which such a phenomenon occurs.
+\begin{thm}\label{el}
+ {\bf(Ein-Lazarsfeld) \cite{EL}} If $\Theta \subset A$ is an irreducible 
+theta divisor, then $\Theta$ is normal and has only rational singularities.
+\end{thm}
+\begin{proof} Let $\nu :A'\lra A$ be a log resolution of the pair 
+$(A,\Theta )$ and $Z$ be the proper transform of $\Theta$.
+Pushing forward exact sequence
+$$0\lra \omega  _{A'}\lra \omega _{A'}(Z)\lra \omega _Z\lra 0$$
+via $\nu :A'\lra A$, one obtains a short exact sequence\footnote{Recall that
+by Theorem \ref{kollar}, $R^1\nu _* \omega _{A'}=0$.}
+$$0\lra \OO _A \lra \OO _A (\Theta ) \ot \II \lra \nu_* \omega _Z\lra 0$$ 
+where $\II := \nu _* (\omega _{A'/A}(Z-\nu ^* \Theta ))$ is the {\it
+adjoint ideal} of $\Theta$ (cf. \cite{Ein} \S 3).
+In order to show that $\Theta$ has rational singularities,
+it suffices to show that $\II =\OO _A$\footnote{Since $\Theta$ is Gorenstein
+and $K_{A'/A}
+(Z-\nu ^* \Theta)|Z=K_Z-\nu^*K_{\Theta }$, it follows that $\II =\OO _A$
+iff $\nu _* K_Z=K_{\Theta }$ i.e. iff $\Theta $ has canonical and hence
+rational singularities cf. \cite{Ein}.}.
+By the generic vanishing theorem Theorem \ref{GVT}, one sees that
+for general $P\in \Pic ^0(A)$
+$$h^i(\nu _* (\omega _Z )\ot P)=h^i(\omega _Z \ot \nu ^*P)=0\ \ for\ all\ 
+i>0.$$
+If $\II\ne \OO _A$, then also $h^0(\nu _*(\omega _Z) \ot P)=
+h^0(\OO _A (\Theta ) \ot \II \ot P)=0$ for general $P\in \Pic ^0(A)$
+and so $\chi (\nu _* \omega _Z)=0$.
+This contradicts a result of Kawamata and Viehweg.  
+\end{proof}
+This leads to the following cohomological characterization of principal
+polarizations (cf. \cite{Hac1}).
+\begin{thm}\label{theta} {\bf (Hacon)} 
+Let $\Theta \subset A$ be an irreducible reduced divisor of a
+$g$-dimensional abelian variety,
+$\nu :A'\lra A$ a log resolution of $(A,\Theta )$ and $Z$ the proper transform
+of $\Theta$. Then $\Theta$ is a principal polarization
+iff  $$h^i(\omega _Z)=\binom {g}{i+1}\ for \ 
+0\leq i\leq g-1\ \ \ \ and$$
+$$h^i(\omega _Z \ot \nu ^* P)
+=0\ \forall \ \OO _A \ne P\in \Pic ^0(A),\ i>0$$
+\end{thm}
+\begin{proof} If $\Theta$ is a principal polarization, then
+for all $P\in \Pic ^0(A)$ one has $$h^0(\OO _A(\Theta )\ot P)=1\ \ \  and
+\ \ h^i(\OO _A(\Theta )\ot P)=0\ \  \forall i>0.$$
+For all $P\ne \OO _A$ and $0\leq i\leq g$, one has $h^i(P)=0$.
+Consider the exact sequence
+$$0\lra \OO _A \lra \OO _A (\Theta )\lra \nu _*\omega _Z\lra 0.$$
+Twisting it by $P\in \Pic ^0(A)$, one immediately computes
+$h^i(\omega _Z \ot \nu ^* P)=h^i(\nu _*(\omega _Z )\ot P)$.
+
+Suppose now that $h^i(\omega _Z \ot \nu ^* P)$ are as above.
+By Example \ref{Ex4}, 
+it suffices to show that for all $P\in \Pic ^0(A)$, one has
+$h^0(\OO _A(\Theta )\ot P \ot \II )=1$ and
+$h^i(\OO _A (\Theta )\ot P \ot \II )=0$ for all $i>0$
+(then $\OO _A (\Theta )\ot \II$ is a line bundle and hence $\II=\OO _A$
+and $h^0(\OO _A(\Theta ))=1$).
+When $P\ne \OO _A$, from the above exact sequence, one sees that 
+$h^i(\OO _A (\Theta )\ot P \ot \II )=h^i(\nu _*\omega _Z \ot P)$
+as required. (Notice that since $h^i(\nu _*\omega _Z \ot P)=0$ for
+all $i>0$, one has $$h^0(\nu _*\omega _Z \ot P)=\chi (\nu _*\omega _Z \ot P)=
+\chi (\nu _*\omega _Z)=1.)$$
+The homomorphism $$H^0(\Omega _A^{g-i-1})\lra 
+H^0(\Omega _Z ^{g-i-1})$$ is injective.
+Otherwise, there would be a morphism $\Theta \lra \bar{\Theta}=
+\Theta /K$ where $K$ is a subtorous of $A$. Let $F=F_{Z/\bar{\Theta }}$,
+for general $P\in \Pic ^0(A)$, one has $P|K\ne \OO _K$
+and so $$h^0((\omega _Z\ot P)|F)\cong h^0(\omega _F\ot P)\cong
+h^0(\omega _K \ot P)=0.$$
+Therefore $h^0(Z,\omega _Z \ot P)=0$ which is impossible. 
+By Hodge symmetry and Serre duality, it follows that
+the homomorphisms $$H^i(\nu _* \omega _Z)\lra H^{i+1}(\OO _A)$$
+is surjective. By dimensional considerations it 
+is an isomorphism and hence $$h^0(\OO _A(\Theta ) \ot \II )
+=h^0(\OO _A)=1\ \ \ \   and\  
+\ h^i(\OO _A(\Theta ) \ot \II )=0\ for \ i>0.$$ 
+\end{proof}
+
+In general the hypothesis in the above theorem can't be weakened,
+however, in \cite{HP1} it is shown that: {\em If $X$ is a smooth
+projective variety of maximal Albanese dimension, with 
+$P_1(X)=q(X)=\dim (X)+1$, and the Albanese variety of $X$ is simple,
+then $X$ is birational to a theta divisor.}
+
+As an application of the above result, one can also classify
+surfaces with $p_g=q=3$ (cf. \cite{HP2}, \cite{Pi}). 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Characterization of abelian varieties} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We begin by recalling the following result of 
+Kawamata which is a generalization
+to higher dimensions of Enriques' Theorem for surfaces 
+mentioned in the introduction. 
+\begin{thm}\label{kaw}
+{\bf (Kawamata)} \cite{Ka1} Let $X$ be a smooth complex 
+projective variety
+with $\kappa (X)=0$, then $\alb :X\lra \Alb $ is surjective (in particular
+$q(X)\leq \dim (X)$). If moreover, $q(X)=\dim (X)$, then
+$X$ is birational to an abelian variety.
+\end{thm}
+This gives (a partial) answer to a conjecture of Ueno which in turn is
+an important test case for the $C_{n,m}$ conjecture of Iitaka. On the other
+hand, the invariant $\kappa (X)$ is highly nontrivial as it involves knowing
+$P_m(X)$ for infinitely many values of $m$. 
+Therefore it would be more satisfactory
+to give an "effective" statement such as the following:
+\begin{thm}\label{ko4} 
+{\bf (Koll\'ar) \cite{Ko4}} Let $X$ be a smooth projective variety.
+If $P_m(X)=1$ for some $m\geq 3$, then $\alb : X \lra \Alb $ is surjective.
+If $P_m(X)=1$ for some $m\geq 4$ and $q(X)=\dim (X)$, then
+$X$ is birational to an abelian variety.
+\end{thm}
+We will give an idea of the proof of the 
+following result conjectured by Koll\'ar:
+\begin{thm}\label{ch} {\bf (Chen-Hacon) \cite{CH1}, \cite{CH2}}
+Let $X$ be a smooth projective variety.
+\begin{enumerate}
+\item If $P_m(X)=1$ for some $m\geq 2$, then $\alb : 
+X \lra \Alb $ is surjective.
+\item If $P_m(X)=1$ for some $m\geq 2$ and $q(X)=\dim (X)$,
+then $X$ is birational to an abelian variety.
+\end{enumerate}
+\end{thm}
+\begin{proof} 
+If $\kappa (X)=0$, both results follow from Kawamata's Theorem above.
+We will therefore assume that $\kappa (X)>0$ and derive a contradiction
+(i.e. that $P_2(X)\geq 2$).
+
+(1) Let $f:X\lra V$ be a birational model of the Iitaka fibration of 
+$X$\footnote{ By definition, one has that $\kappa (X_v)=0$, $f$ is surjective,
+the general fiber is irreducible and $\dim (V)=\kappa (X)$. 
+For all sufficiently big and divisible integers $m$, 
+the morphism $f$ is birational
+to $\varphi _m$.}.
+Let $X_v$ be a generic geometric fiber of $f$, then $\kappa (X_v)=0$
+and by Kawamata's Theorem, one sees that $\alb (X_v)$ is an 
+abelian subvariety of $\Alb$. Since abelian subvarieties of 
+a fixed abelian variety
+$A$ are rigid, it follows that there is an abelian subvariety $K\subset \Alb$
+such that for general $v$, the images $\alb (X_v )$ are translates of $K$.
+Let $S=A/K$. We will denote by $Z,W$ the images of $X,V$ in $A,S$.
+After replacing $X,V$ by appropriate birational models,
+we may assume that there is a commutative diagram:
+$$
+\begin{CD}
+X @>>> Z @>{\subset}>>A \\
+@V{f}VV  & &     @V{\hat{f}}VV \\
+V @>>> W @>{\subset}>> S
+\end{CD}
+$$
+Let $\pi :X \lra S$ be the induced morphism.
+Fix $H$ an ample divisor on $S$. For $r\gg 0$ the linear series
+$|rK_X-\pi ^* H|$ will be non empty. After replacing $X$
+by an appropriate birational model, we may assume that
+$$|rK_X-\pi ^* H|=F+|M|$$
+with $|M|$ base point free and $F$ with normal crossings support.
+Fix $B$ a general member in $|rK_X-\pi ^*H|$ and let
+$$L:=\omega _X \ot \OO _X\left( -\lfloor \frac {B}{r}\rfloor \right)
+\equiv \frac {\pi ^*H}{r}-\{ \frac {B}{r} \} .$$
+(One may think of $L$ as being the positive part of $\omega _X$
+and $ \lfloor \frac {B}{r}\rfloor$ as being some negligible divisor.
+For example if $K_X$ is ample, take $L=\omega _X$ and 
+$ \lfloor \frac {B}{r}\rfloor =0$.)
+As in the proof of Theorem \ref{birational}, 
+one may arrange that $$|2K_X|=|K_X +L|+\lfloor
+B/r\rfloor .$$ Since $ {H}/{r}$ is ample and $\{ B/r\}$ is KLT
+(it has simple normal crossings support and $\lfloor \{ B/r\}
+\rfloor =0$), by Theorem \ref{omegavan}
+one has that $$h^i(W, \pi _* (\omega _X \ot L)\ot P)=0\ \ \  for\  all\ i>0
+\ \ \ and\ all\ P\in \Pic ^0(S).$$
+Let $$\FF:=\pi _* (\omega _X \ot L).$$
+One has
+$$h^0(W,\FF )=h^0( W, \pi _* (\omega _X \ot L))=h^0(X, \omega _X \ot L)=
+h^0(X,\omega _X ^{\ot 2})$$
+It follows that 
+$$h^0(W, \FF \ot P)=\chi (W, \FF \ot P)=\chi (W, \FF )=h^0(W,\FF )=1.$$
+By Example \ref{Ex4}, any sheaf $\FF$ as 
+above must be supported on a translate
+of an abelian subvariety of $S$. By Theorem \ref{kollar}, 
+the sheaf $\FF$ is a torsion free
+sheaf on $W$. However, $W$ generates $S$ and hence $W=S$
+and so $Z=\Alb$ i.e. $\alb :X\lra \Alb$ is surjective.
+
+(2) Here we will only consider the case $P_m(X)=1$ for some $m\geq 4$.
+By the proof of
+part (1), one sees that $$|K_X+L+\eta|>0\ \ \  for\ all\  \eta \in 
+\Pic ^0(S).$$
+From the morphism $$|K_X+L+\eta|\times |K_X+L-\eta|\lra
+|2K_X+2L|$$
+one sees that
+$$P_4(X)\geq h^0(\omega _X ^{\ot 2}\ot L^{\ot 2})\geq \dim (S)+1$$
+and so $\kappa (V)=\dim (V)\leq \dim (S)=0$ and the result follows 
+from Kawamata's 
+theorem mentioned above.
+\end{proof}
+
+
+We now give an idea of the proof in the case $m=2$.
+Assume that $\kappa (X)=\dim (X)$. By a result of Ein and Lazarsfeld 
+(see \cite{CH1}),
+one has that if $\kappa (X)>0$, then
+$$\dim V^0(X,\omega _X)>0.$$
+So fix $T$ a positive dimensional component of $V^0(X,\omega _X)$.
+By Simpson's result (cf. Theorem \ref{GVT}), we may write
+$$T=P_0+T_0$$ where $P_0$ is a torsion element
+of $\Pic ^0(X)$ and $T_0$ is a sub-abelian variety of $\Pic ^0(X)$.
+Consider now for all $Q\in T_0$ the map
+$$|K_X+P_0+Q|\times |K_X +P_0-Q|\lra |2K_X+2P_0|.$$
+Since for all $Q\in T_0$, the linear series $|K_X+P_0+Q|,|K_X +P_0-Q|$
+are non-empty and any effective divisor can be decomposed in to the 
+sum of two effective divisors in finitely many ways, one has that 
+$$h^0(X,\omega _X ^{\ot 2}\ot P_0^{\ot 2})\geq 2.$$
+Proceeding as in the proof of Theorem \ref{birational},
+one sees that $$h^0(\omega _X ^{\ot 2}\ot P_0^{\ot 2})= P_2(X).$$
+This is the required contradiction.
+
+The case when $0<\kappa (X) <\dim (X)$ is based on a similar idea,
+but it is unluckily much more technical.
+We refer the reader to \cite{CH1}
+for this part of the proof.
+
+
+
+\begin{thebibliography}{Ka12}
+\bibitem[CH1]{CH1}
+{\sc Chen J.\,A.} and {\sc Hacon C\,D.}:
+Characterization of abelian varieties,
+Invent. Math. {\bf 143}, 435-447 (2001)
+
+\bibitem[CH2]{CH2}
+{\sc Chen, J.\,A.} and {\sc Hacon, C.\,D.}:
+On algebraic fiber spaces over varieties of maximal albanese dimension,
+Duke Math. J., Vol. 111, No. 1, 2002
+
+\bibitem[CH3]{CH3}
+{\sc Chen, J.\,A.} and {\sc Hacon, C.\,D.}:
+{Linear series of irregular varieties},
+Proceedings  of the symposium
+on Algebraic Geometry in East Asia. World Scientific (2002)
+
+\bibitem[CH4]{CH4}
+{\sc Chen, J.\,A.} and {\sc Hacon, C.\,D.}:
+On the irregularity of the image of the Iitaka fibration.
+To appear in Comm. in Algebra.
+
+\bibitem[Ein]{Ein}
+{\sc Ein, L.}:
+Multiplier ideals, vanishing theorems and applications,
+Algebraic Geometry (Santa Cruz 1995), Proc. Sympos. 
+Pure Math. {\bf 62} (1), Amer. Math. Soc.,
+Providence, RI, 1997, pp. 203-219
+
+\bibitem[EL]{EL}
+{\sc Ein, L.} and {\sc Lazarsfeld, R.}:
+Singularities of theta divisors, and the birational geometry of irregular
+varieties, J. Amer. Math. Soc {\bf 10} (1997), 243-258
+
+%\bibitem[EV]{EV}
+%{\sc Esnault, H.} and {\sc Viehweg W.}:
+%Lectures on Vanishing Theorems, DMV Seminar, {\bf 20}. 
+%Birkh\"{a}user Verlag, 1992
+
+%\bibitem[Fu]{Fu}
+%{\sc Fujino, O.}:
+%Algebraic fiber spaces whose general  fibers
+%are of maximal albanese dimension. Preprint math.AG/0204262
+
+
+\bibitem[GL]{GL}
+{\sc Green, M.} and {\sc Lazarsfeld, R.}:
+Higher obstructions to deforming cohomology groups of line bundles,
+Jour. Amer. Math. Soc.
+vol. 4, {\bf 1}, 1991,  87-103
+
+\bibitem[Hac1]{Hac1}
+{\sc Hacon, C.\,D.}: Fourier transforms, generic vanishing theorems
+and polarizations of abelian varieties, Math. Zeitschrift {\bf 235} (2000)
+717-726
+
+\bibitem[Hac2]{Hac2}
+{\sc Hacon, C.\,D.}:
+Varieties with $P_3=3$ and $q=\dim (X)$, to appear in Math. Nach.
+
+\bibitem[Hac3]{Hac3}
+{\sc Hacon, C.\,D.}:
+Effective criteria for birational morphisms.
+Jour. London Math. Soc. Vol. {\bf 67} part 2 April 2003, 337-348
+
+\bibitem[Hac4]{Hac4}
+{\sc Hacon, C.\,D.}:
+A derived category approach to generic vanishing theorems.
+Preprint
+
+\bibitem[HP1]{HP1}
+{\sc Hacon, C.\,D.} and {\sc Pardini, R.}:
+On the birational geometry of varieties of
+maximal Albanese dimension, Jour. Reine Angew. Math. {\bf 546} (2002)
+
+\bibitem [HP2]{HP2} C. D. Hacon and R. Pardini,
+{\em Surfaces with $p_g=q=3$},
+Trans. of the Amer. Math. Soc. {\bf 354}, No. 7, 2631-2638
+
+\bibitem[Ha1]{Ha1}
+{\sc Hartshorne, R.}:
+Algebraic Geometry, Graduate texts in Math., 1977, {\bf 52} Springer Verlag
+
+%\bibitem[Ha2]{Ha2}
+%{\sc Hartshorne, R.}:
+%Residues and Duality, L.N.M. {\bf 20}, 1996, Springer Verlag
+
+\bibitem[Ka1]{Ka1}
+{\sc Kawamata, Y.}:
+Characterization of abelian varieties,
+Compositio Math. {\bf 43}, 1981, 253-276
+
+
+\bibitem[Ko1]{Ko1}
+{\sc Koll\'ar, J.}:
+Higher direct images of dualizing sheaves I,
+ Ann. Math. {\bf 123},
+1986, 11--42
+
+\bibitem[Ko2]{Ko2}
+{\sc Koll\'ar, J.}:
+Higher direct images of dualizing sheaves II,
+ Ann. Math. {\bf 124},
+1986, 171--202
+
+\bibitem[Ko3]{Ko3}
+{\sc Koll\'ar, J.}:
+Shafarevich maps and automorphic forms,
+M. B. Porter Lectures, Princeton Univ. Press, Princeton, 1995
+
+\bibitem[Ko4]{Ko4}
+{\sc Koll\'ar, J.}:
+Shafarevic maps and plurigenera of algebraic varieties, Invent. Math {\bf 113},
+1993, 177-215
+
+%\bibitem[La]{La}
+%{\sc Lazarsfeld, R.}:
+%Positivity in Algebraic Geometry,
+%Preprint
+
+%\bibitem[Mo]{Mo}
+%{\sc Mori, S.}:
+%Classification of higher dimensional varieties, Algebraic Geometry 
+%(Brunswick, Maine, 1985), Proc. Sympos. Pure Math. {\bf 46},
+%Amer. Math. Soc., Providence, 1987, 269-331
+
+\bibitem[Mu]{Mu}
+{\sc Mukai, S.}:
+Duality between $D(X)$ and $D(\hat {X})$
+with its application to Picard sheaves,
+Nagoya math. J. {\bf 81},
+1981, 153-175
+
+\bibitem[Pi]{Pi}
+G. P. Pirola,
+{\em Surfaces with $p_g=q=3$}, Manuscripta Mathematica (to appear).
+
+%\bibitem[V1]{V1}
+%{\sc Viehweg, E.}:
+%Weak positivity and the additivity of the Kodaira dimensionof certain fiber spaces.
+%Adv. Studies in Pure Math 1, 1983, 329-353
+
+%\bibitem[V2]{V2}
+%{\sc Viehweg, E.}:
+%Quasi-projective moduli for polarized manifolds,
+%Ergenbisse der Mathematik 30 (Springer, 1995)
+
+
+\end{thebibliography}
+
+\end{document}
+\end
+

@@ -1,0 +1,59 @@
+\section{Proof of \eqref{t_m}}
+\label{s_pl}
+
+\begin{theorem}\label{t_model} Let $\pi\colon\map X.Z.$ be a projective morphism 
+to an affine normal variety $Z$.  Suppose that $(X,\Delta=S+A+B)$ is purely log terminal,
+$S=\rdown \Delta.$ is irreducible and not contained in the stable base locus of $K_X+\Delta$, $A\geq 0$ is an ample $\mathbb Q$-divisor
+and $B$ is an effective $\mathbb Q$-divisor.
+
+Then there is a birational morphism $\nu\colon\map T.S.$, a positive integer $l$ and a
+kawamata log terminal pair $(T,\Theta)$ such that
+$$
+R_S(X,l(K_X+\Delta))\cong R(T,l(K_T+\Theta)).
+$$
+\end{theorem}
+\begin{proof} Let $A'\sim_{\mathbb Q}A$ be a gereral ample $\mathbb Q$-divisor and $\Delta '=S+A'+B\sim _{\mathbb Q}\Delta $.
+If $\mu\colon\map Y.X.$ is a log resolution of $(X,\Delta')$ then we may
+write
+$$
+K_Y+\Gamma'=\mu^*(K_X+\Delta')+E,
+$$
+where $\Gamma'\geq 0$ and $E\geq 0$ have no common components, $\mu_*\Gamma'=\Delta'$ and
+$\mu_*E=0$.  We may choose $\mu$ so that $(T,\Psi)$ is terminal, where $T$ is the strict
+transform of $S$ and $\Psi'=(\Gamma'-T)|_T$.  Let $\nu=\mu|_T\colon\map T.S.$.  Pick a
+$\mathbb Q$-divisor $F$ 
+such that $\mu^*A'-F$ is ample and $(Y,\Gamma ' +F)$ is purely log terminal.  
+Pick $m$ so that
+$m(\mu^*A'-F)$ is very ample and pick $mC\in |m(\mu^*A'-F)|$ general.  Note that for any
+$\epsilon>0$ sufficiently small
+$$
+(Y,\Gamma=\Gamma'-\epsilon \mu^*A'+F+C \sim_{\mathbb{Q}}\Gamma'),
+$$
+is purely log terminal and $(T,\Psi=(\Gamma-T)|_T)$ is terminal.  On the other hand
+\begin{align*} 
+R(X,k(K_X+\Delta))&\cong R(Y,k(K_Y+\Gamma))  \qquad \text{and}\\ 
+R_S(X,k(K_X+\Delta))&\cong R_T(Y,k(K_Y+\Gamma)),
+\end{align*} 
+for any $k$ sufficiently divisible.  Note also that for any $k$ sufficiently divisible, we have that $S\not\subset {\rm Bs}(k(K_X+\Delta))$ so that 
+$T\not\subset {\rm Bs}(k(K_Y+\Gamma ))$. Now apply
+\eqref{t_rational} to $(Y,\Gamma)$. The theorem follows from \eqref{l_truncation}. \end{proof}
+
+\begin{proof}[Proof of \eqref{t_m}] By \eqref{t_restricted} we may assume that $Z$ is
+affine and by \eqref{l_restricted}, it suffices to prove that the restricted algebra is finitely generated.  As $Z$
+is affine, $S$ is mobile and as $f$ is birational, the divisor $\Delta-S$ is big.  But
+then
+$$
+\Delta-S\sim_{\mathbb{Q}} A+B,
+$$ 
+where $A$ is ample and $B$ is effective.  As $S$ is mobile, we may assume that the support of $B$ does
+not contain $S$.  Now
+$$
+K_X+\Delta'=K_X+S+(1-\epsilon)(\Delta-S)+ \epsilon A+\epsilon B\qle K_X+\Delta, 
+$$
+is purely log terminal, where $\epsilon$ is any sufficiently small positive rational
+number. By \eqref{l_truncation}, we may replace $\Delta$ by $\Delta'$. We may therefore assume
+that $\Delta=S+A+B$, where $A$ is ample and $B\geq 0$.  Since we are assuming
+\eqref{c_generation}$_{n-1}$, \eqref{t_model} implies that the restricted algebra is
+finitely generated.\end{proof}
+
+

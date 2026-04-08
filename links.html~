@@ -1,0 +1,99 @@
+HTML>
+<HEAD>
+<TITLE>
+  Eprints
+</TITLE>
+
+
+<!-- Begin inclusion of top.html  -->
+
+<BODY BGCOLOR="f5efee" link="#5050C0"  vlink="#AA4040" >
+
+<table border="0">
+
+<tr>
+
+<!-- Column 1: blank left margin -->
+<td width=80 valign=top> 
+
+</td>
+
+<!-- BEGIN Column 2: main page text -->
+<td align = top>
+
+<center>
+<!-- img src = "/~hacon/images/redbar.jpg" border = 0 align=bottom --></a>
+</center>
+
+
+<hr>
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+<hr>
+
+
+<br>
+
+<!-- End inclusion of top.html  -->
+
+
+
+
+
+
+
+
+
+<H2>Links</H2> 
+
+<UL>
+  
+<LI>  <B> UC Davis Math.AG front
+<A HREF="http://www.math.ucdavis.edu/math.AG">mathAG</A>
+      </B>
+      <BR> 
+      <BR>
+
+
+
+
+<!-- Begin inclusion of bottom.html  -->
+
+<FONT SIZE=2>
+<P>
+<HR>
+<center>
+
+
+
+<center>
+  <a href="/~hacon/">Home</a> | 
+  <a href="/">Math</a> <a href="/">Dept</a>
+</center>
+
+</center>
+<HR>
+
+
+
+</FONT>
+
+<!-- END Column 2: main page text -->
+</td>
+
+<!-- Column 3: blank right margin -->
+<td width=60 valign=top> 
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- End inclusion of bottom.html  -->
+
+</HTML>
